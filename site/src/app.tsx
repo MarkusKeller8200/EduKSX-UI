@@ -20,7 +20,8 @@ import { BrandWordmark } from '../../src/components/brand-wordmark';
 import { cn } from '../../src/lib/cn';
 import { deviceFrame } from './devices';
 import { ENTRIES, GROUPS, type Entry } from './registry';
-import { EMBEDDED, setSetting, useApplyScheme, useRoute, useSettings, type Ansicht, type Ausrichtung, type Schema } from './settings';
+import { EMBEDDED, setSetting, useApplyScheme, useRoute, useSettings, type Ansicht, type Ausrichtung, type Schema, type Theme } from './settings';
+import { BUILTIN_THEMES } from '../../src/generated/tokens';
 import { docUrl, IssueLinks, REPO, StatusBadge } from './ui';
 import { Uebersicht } from './sections/uebersicht';
 
@@ -47,6 +48,21 @@ function PreviewBar() {
                             { value: 'system', label: 'Wie System', icon: SunMoon },
                         ]}
                     />
+                    <label className="inline-flex items-center gap-1.5 text-sm">
+                        <span className="sr-only desk:not-sr-only">Theme</span>
+                        <select
+                            value={s.theme}
+                            onChange={(e) => setSetting('theme', e.target.value as Theme)}
+                            className="min-h-9 rounded-md border border-border bg-background px-2 text-sm text-foreground"
+                        >
+                            <option value="eduksx">EduKSX</option>
+                            {BUILTIN_THEMES.map((t) => (
+                                <option key={t.key} value={t.key}>
+                                    {t.name}
+                                </option>
+                            ))}
+                        </select>
+                    </label>
                     <button
                         type="button"
                         aria-pressed={s.vergleich}

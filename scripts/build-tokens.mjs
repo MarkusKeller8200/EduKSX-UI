@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const tokens = JSON.parse(readFileSync(join(root, 'tokens/tokens.json'), 'utf8'));
 const pairs = JSON.parse(readFileSync(join(root, 'tokens/contrast-pairs.json'), 'utf8')).pairs;
+const themeFile = JSON.parse(readFileSync(join(root, 'tokens/themes.json'), 'utf8')).themes;
 
 const HEX = /^#[0-9a-f]{6}$/;
 const colors = Object.entries(tokens.color).map(([name, t]) => {
@@ -16,6 +17,18 @@ const colors = Object.entries(tokens.color).map(([name, t]) => {
         throw new Error(`Token ${name}: hell und dunkel müssen #rrggbb sein`);
     }
     return { name, light, dark, description: t.$description ?? '' };
+});
+// Mitgelieferte Themes (DS11): nur Abweichungen, nur bekannte Tokens, nur #rrggbb.
+const known = new Set(colors.map((c) => c.name));
+const themes = Object.entries(themeFile).map(([key, t]) => {
+    if (!/^[a-z0-9-]+$/.test(key)) throw new Error(`Theme ${key}: Schlüssel nur a-z, 0-9, -`);
+    for (const mode of ['light', 'dark']) {
+        for (const [name, value] of Object.entries(t[mode] ?? {})) {
+            if (!known.has(name)) throw new Error(`Theme ${key}: unbekanntes Token ${name}`);
+            if (!HEX.test(value)) throw new Error(`Theme ${key}: ${name} muss #rrggbb sein`);
+        }
+    }
+    return { key, name: t.name, description: t.description, light: t.light ?? {}, dark: t.dark ?? {} };
 });
 const fontStack = (font) => font.$value.map((f) => (/\s/.test(f) ? `"${f}"` : f)).join(', ');
 const fontSans = fontStack(tokens.font.sans);
@@ -107,7 +120,22 @@ const tokensCss =
     '/* Weniger Bewegung (WCAG 2.3.3): Übergänge und Animationen ohne Dauer. */\n' +
     `@media (prefers-reduced-motion: reduce) {\n    :root {\n${lines(
         durations.map((d) => `        --duration-${d.name}: 0ms;`),
-    )}\n    }\n}\n`;
+    )}\n    }\n}\n` +
+    '\n/* Standard «EduKSX» ausdrücklich, z. B. für einen Bereich in einer Seite mit anderem Theme. */\n' +
+    `[data-theme="eduksx"] {\n${decl('light')}\n}\n\n` +
+    `.dark[data-theme="eduksx"],\n.dark [data-theme="eduksx"],\n[data-theme="eduksx"] .dark {\n${decl('dark')}\n}\n` +
+    themes
+        .map((t) => {
+            // Volles Farbset (Standard + Abweichungen), damit ein Bereich nie Farben eines äusseren Themes erbt.
+            const vars = (mode) => lines(colors.map((c) => `    --${c.name}: ${t[mode][c.name] ?? c[mode]};`));
+            const sel = `[data-theme="${t.key}"]`;
+            return (
+                `\n/* Theme «${t.name}» (DS11): data-theme="${t.key}" am Wurzelelement oder an einem Bereich. */\n` +
+                `${sel} {\n${vars('light')}\n}\n\n` +
+                `.dark${sel},\n.dark ${sel},\n${sel} .dark {\n${vars('dark')}\n}\n`
+            );
+        })
+        .join('');
 
 // Tailwind 4: Farben als Theme (bg-primary, text-muted-foreground …). Basis-Tokens als «reference»: Tailwind
 // erzeugt die Klassen (text-sm, rounded-md, shadow-sm, max-w-page-optimized, ease-out …), die Werte kommen aus
@@ -163,7 +191,8 @@ const eduksxCss =
 const generated =
     '// Erzeugt aus tokens/tokens.json – nicht von Hand ändern (npm run tokens).\n' +
     `export const TOKENS = ${JSON.stringify(colors, null, 4)} as const;\n\n` +
-    `export const CONTRAST_PAIRS = ${JSON.stringify(pairs, null, 4)} as const;\n`;
+    `export const CONTRAST_PAIRS = ${JSON.stringify(pairs, null, 4)} as const;\n\n` +
+    `export const BUILTIN_THEMES = ${JSON.stringify(themes, null, 4)} as const;\n`;
 
 mkdirSync(join(root, 'dist'), { recursive: true });
 mkdirSync(join(root, 'src/generated'), { recursive: true });
@@ -179,4 +208,4 @@ writeFileSync(
         `export const THEME_CSS = ${JSON.stringify(themeCss)};\n` +
         `export const EDUKSX_CSS = ${JSON.stringify(eduksxCss)};\n`,
 );
-console.log(`Tokens: ${colors.length} Farben, ${baseVars.length} Basis-Werte, ${roles.length} Textrollen → dist/tokens.css, dist/theme.css, dist/eduksx.css`);
+console.log(`Tokens: ${colors.length} Farben, ${themes.length} Themes, ${baseVars.length} Basis-Werte, ${roles.length} Textrollen → dist/tokens.css, dist/theme.css, dist/eduksx.css`);

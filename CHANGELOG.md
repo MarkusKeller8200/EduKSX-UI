@@ -8,6 +8,11 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Mitgelieferte Themes Hoher Kontrast und Violett (#42, DS11):** `tokens/themes.json` (nur Abweichungen, Werte aus
+  den INTRANET-Vorlagen auf die EduKSX-Tokens angepasst); der Build schreibt sie als `[data-theme="…"]` hell und
+  dunkel in `tokens.css`, jeweils mit vollem Farbset, dazu `[data-theme="eduksx"]` für den Standard. `BUILTIN_THEMES`
+  im Paket; beide bestehen die Kontrastprüfung (`tests/themes.test.ts`). Testseite: Seite «Themes» und Auswahl
+  «Theme» in der Vorschau-Leiste.
 - **Flow-Icon (#30):** EduKSX-Flow erhält sein Icon (Flussdiagramm mit Entscheidungs-Raute) aus dem
   Prototyp-Entwurf, freigegeben 22.11.2026; alle Varianten als SVG und PNG, Baustein `EduksxIcon name="flow"`.
 - **Grundbausteine auf der Testseite (#27, #15):** eigene Seiten für Button, Tooltip, Formularfelder, Tabelle,

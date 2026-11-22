@@ -34,6 +34,7 @@ Tailwind 4 und Lucide sind nur Entwicklungsabhängigkeiten der Testseite, nicht 
 | Gruppe | Optionen (Lucide-Symbol) | Herkunft |
 | --- | --- | --- |
 | Farbschema | Hell (`Sun`), Dunkel (`Moon`), Wie System (`SunMoon`) | Idee #17, KONZEPT-MARKE 6.2 |
+| Theme | Auswahl EduKSX, Hoher Kontrast, Violett; setzt `data-theme` am Wurzelelement | DS11, #42 |
 | Vergleich | Beispiele hell und dunkel nebeneinander (`Columns2`); die Seite bleibt dabei hell | #15 |
 | Ansicht | Handy (`Smartphone`), Tablet (`Tablet`), Darstellungsoptimiert (`Laptop`), Breit (`MoveHorizontal`), Voll (`Maximize2`) | Idee #19, KONZEPT-TOKENS 4.3 |
 | Ausrichtung (Handy, Tablet) | Hochformat (`RectangleVertical`), Querformat (`RectangleHorizontal`) | Idee #19 |
@@ -67,7 +68,6 @@ Neue Grundlagen (Tokens) oder Prüfseiten genauso; statische HTML-Prüfseiten zu
 
 ## 6. Später
 
-- Ausbau zum GUI-Tester (#21): je Baustein Reiter Beispiele, Versionen & Status, Überarbeitung, Wünsche; Themes in
-  der Vorschau-Leiste (#18).
+- Ausbau zum GUI-Tester (#21): je Baustein Reiter Beispiele, Versionen & Status, Überarbeitung, Wünsche (#44).
 - axe-core auf der Testseite in der CI (#14, DS7: serious/critical lassen die CI scheitern).
 - Sprachwahl und Prüfseite der Übersetzungen (UEBERNAHME-INTRANET-GUI §4).

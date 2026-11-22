@@ -1,4 +1,4 @@
-export { TOKENS, CONTRAST_PAIRS } from './generated/tokens';
+export { TOKENS, CONTRAST_PAIRS, BUILTIN_THEMES } from './generated/tokens';
 export { luminance, contrastRatio, checkTheme, defaultColors, KNOWN_TOKENS } from './contrast';
 export type { Mode, ThemeColors, ContrastFinding } from './contrast';
 export { BrandWordmark } from './components/brand-wordmark';
