@@ -16,6 +16,12 @@ describe('Kontrast', () => {
         expect(findings.some((f) => f.foreground === 'link' && f.mode === 'light')).toBe(true);
     });
 
+    it('verlangt 3:1 für Rahmen von Eingabefeldern', () => {
+        // früherer Wert aus dem Glossary: 1,5 : 1
+        const findings = checkTheme({ light: { input: '#cbd5e1' } });
+        expect(findings).toContainEqual(expect.objectContaining({ foreground: 'input', background: 'background', min: 3 }));
+    });
+
     it('lässt nur bekannte Tokens und #rrggbb zu', () => {
         expect(() => checkTheme({ light: { erfunden: '#000000' } })).toThrow(/Unbekanntes Token/);
         expect(() => checkTheme({ dark: { link: 'blue' } })).toThrow(/#rrggbb/);

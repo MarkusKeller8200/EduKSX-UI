@@ -1,5 +1,5 @@
 {
-  "$description": "Farbpaare der Kontrastprüfung (Text 4,5:1, Linien und Fokus 3:1), übernommen aus EduKSX-Glossary tests/Unit/ContrastTest.php",
+  "$description": "Farbpaare der Kontrastprüfung (Text 4,5:1, Linien und Fokus 3:1), übernommen aus EduKSX-Glossary tests/Unit/ContrastTest.php, ergänzt um input/background 3:1 (WCAG 1.4.11)",
   "pairs": [
     {
       "foreground": "foreground",
@@ -88,6 +88,11 @@
     },
     {
       "foreground": "term-underline",
+      "background": "background",
+      "min": 3.0
+    },
+    {
+      "foreground": "input",
       "background": "background",
       "min": 3.0
     }

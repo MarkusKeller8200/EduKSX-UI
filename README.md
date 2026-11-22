@@ -35,7 +35,12 @@ npm install github:MarkusKeller8200/EduKSX-UI#v0.1.0
 @source "../../node_modules/@eduksx/ui/dist";
 ```
 
-Schrift Inter selbst hosten (kein Abruf bei Google Fonts); `--font-sans` ist gesetzt.
+- **Dunkelmodus:** nur über die Klasse `.dark` (z. B. auf `<html>`), kein automatisches `prefers-color-scheme`.
+  Das Modul setzt die Klasse selbst, etwa über einen Umschalter System/Hell/Dunkel.
+- **Plugins (`eduksx.css`):** `--eduksx-*` verweist auf die Variablen aus `tokens.css`; fehlt diese, gelten die
+  hellen Standardwerte.
+- **Schrift:** Das Paket liefert keine Schriftdatei. Module hosten Inter selbst (kein Abruf bei Google Fonts);
+  `--font-sans` ist gesetzt, ohne Inter greift `system-ui`.
 
 ## Entwickeln
 

@@ -16,4 +16,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 - **Kopfzeile mit Modulwechsel (#6):** `AppHeader`, `ModuleSwitcher` (Plattform S7), Tastatur und `aria-current`.
 - **Verlauf (#7):** `HistoryList` für `data_changes` (DB-Standard A7), Datum DD.MM.YYYY HH:MM:SS, keine Werte bei
   «changed».
+- **Rahmen von Eingabefeldern (#4):** `input` dunkler (hell #8a94a6, dunkel #6b7a90), neues Prüfpaar
+  `input`/`background` 3 : 1 (WCAG 1.4.11).
+- **Markentokens (#3):** nur noch `brand-orange`, `brand-blue`, `brand-neutral` (und `brand-violet`); die doppelten
+  `brand`, `brand-accent`, `brand-ink` entfallen – im Glossary nachziehen.
+- README: Dunkelmodus über `.dark`, Rückfall von `eduksx.css` auf helle Werte, Inter selbst hosten.
 - Grundgerüst: GitHub-Blueprint, Lizenz MIT, `npm run check`, Steckbrief bestätigt.

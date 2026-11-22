@@ -62,6 +62,18 @@ describe('Verlauf', () => {
         expect(screen.getByText(/Wiederherstellung/)).toBeInTheDocument();
     });
 
+    it('beschriftet alle vier Aktionen deutsch', () => {
+        const actions = ['created', 'updated', 'deleted', 'restored'] as const;
+        render(<HistoryList entries={actions.map((action, i) => ({ event_id: String(i), action, occurred_at: '2026-11-22T10:00:00Z' }))} />);
+        const texts = screen.getAllByRole('listitem').map((li) => li.textContent);
+        expect(texts).toEqual([
+            '22.11.2026 11:00:00 · angelegt',
+            '22.11.2026 11:00:00 · geändert',
+            '22.11.2026 11:00:00 · gelöscht',
+            '22.11.2026 11:00:00 · wiederhergestellt',
+        ]);
+    });
+
     it('formatiert Datum und Zeit nach DB D2', () => {
         expect(formatDateTime('2026-01-05T23:30:00Z')).toBe('06.01.2026 00:30:00');
     });
