@@ -351,7 +351,7 @@ EduKSX-Architektur #89 (A10, A12, A13, DS4 nach M3), EduKSX-Prototyp #72 (A11 na
 | M4 | Signatur «Developed by MarKusSXCH» | abschaltbar (Vorgabe ein) / immer sichtbar | abschaltbar durch Admin der Instanz, Vorgabe eingeschaltet | BESCHLOSSEN 22.11.2026 |
 | M5 | GitHub-Vorschaubilder | CI-Farben im Blueprint / bleibt neutral | CI-Farben: `[social_preview]` mit `farbe = "#151b24"`, `akzent = "#ff8a00"` in jedem EduKSX-Repo; Vorschlag als Vorgabe im Blueprint | BESCHLOSSEN 22.11.2026 |
 | M6 | Schriften (3.4) | Aptos als Rückfall wie CI / nur freie, selbst gehostete Schriften | keine plattformabhängigen Schriften; Inter für Oberfläche, JetBrains Mono für Code und IDs, Rückfall nur generische System-Stacks; kein Aptos | BESCHLOSSEN 22.11.2026 |
-| M7 | Schriftgewichte (3.4) | 450/550 mit Inter Variable / 400/500/600/700 statisch | statisch 400, 500, 600, 700; keine Zwischengewichte, Inter Variable nicht Pflicht (Vergleichsseite geprüft) | BESCHLOSSEN 22.11.2026 |
+| M7 | Schriftgewichte (3.4) | 450/550 mit Inter Variable / 400/500/600/700 statisch | statisch 400, 500, 600, 700; keine Zwischengewichte, Inter Variable nicht Pflicht (geprüft mit `docs/pruefseiten/schriftgewichte.html`) | BESCHLOSSEN 22.11.2026 |
 
 Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architektur); M1/M2 das Modulregister.
 Änderungen in anderen Repos als EduKSX-UI erst nach Rückfrage.
