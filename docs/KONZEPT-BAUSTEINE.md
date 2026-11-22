@@ -14,8 +14,7 @@ Die ersten Grundbausteine in `@eduksx/ui`, damit Module Knöpfe, Formulare, Tabe
 selbst bauen (Auftrag Markus 22.11.2026, Issue #27).
 
 **Nichtziele:** bearbeitbare Tabelle mit Filtern und Excel-Bedienung (später eigener Baustein), Auswahl mit Suche,
-Mehrfachauswahl, Datumsauswahl, Optionsfelder, Schalter, Toast (eigene Issues); Musterseite (#15, eigener Thread);
-axe-core in der CI (#14).
+Mehrfachauswahl, Datumsauswahl, Optionsfelder, Schalter, Toast (eigene Issues); Musterseite (#15, eigener Thread).
 
 ## 2. Bausteine
 
@@ -131,7 +130,7 @@ Jedes Element trägt `data-slot` (z. B. `data-slot="button"`), damit Musterseite
   `tests/zustaende-kontrast.test.ts` (Kontrast der Knopf-Zustände hell/dunkel, keine festen Farben in den
   Bausteinen). jsdom kennt `showModal()` nicht; das Verhalten im echten Browser wurde am 22.11.2026 in Chromium
   geprüft (Fokus im Dialog gefangen, Esc, Klick daneben, Fokus zurück, Rückfrage bleibt bei Klick daneben offen,
-  keine waagrechte Scrollleiste bei 320 px). Automatisch mit axe-core folgt mit #14.
+  keine waagrechte Scrollleiste bei 320 px). Zusätzlich prüft axe-core jede Seite der Testseite (`tests/barrierefreiheit.test.tsx`, #14, DS7).
 
 ## 4. Entscheide
 
@@ -148,7 +147,7 @@ Jedes Element trägt `data-slot` (z. B. `data-slot="button"`), damit Musterseite
 | --- | --- | --- |
 | #27 | Grundbausteine Button, Formularfelder, Tabelle, Dialog, Meldungen | `_3 Beta-Test` (PR #34) |
 | #11 | Token für Schrift auf Fehlerfläche | `_3 Beta-Test` (B4, PR #34) |
-| #14 | axe-core in der CI | offen |
+| #14 | axe-core in der CI | umgesetzt (DS7) |
 | #15 | Musterseite der Bausteine | eigener Thread |
 
 ## 6. Verlauf
