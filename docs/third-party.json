@@ -36,6 +36,14 @@
       "url": "https://react.dev"
     },
     {
+      "id": "lucide-pfade",
+      "group": "laufzeit",
+      "name": "Lucide (kopierte Symbolpfade)",
+      "use": "10 Bediensymbole der Bausteine (Schliessen, Pfeile, Hinweis, Erfolg, Warnung, Fehler, Laden) in src/components/symbols.tsx, ohne Paket",
+      "license": "ISC",
+      "url": "https://lucide.dev"
+    },
+    {
       "id": "typescript",
       "group": "entwicklung",
       "name": "TypeScript",
