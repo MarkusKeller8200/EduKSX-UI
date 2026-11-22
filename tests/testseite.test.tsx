@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { ENTRIES, GROUPS } from '../site/src/registry';
 import { App } from '../site/src/app';
 
@@ -30,5 +31,25 @@ describe('Testseite', () => {
         for (const name of ['Hell', 'Dunkel', 'Wie System', 'Handy', 'Tablet', 'Darstellungsoptimiert', 'Breit', 'Voll']) {
             expect(screen.getByRole('button', { name })).toBeInTheDocument();
         }
+    });
+
+    it('zeigt Baustein-Seiten als GUI-Tester mit vier Reitern, per Pfeiltaste bedienbar (#44)', async () => {
+        const user = userEvent.setup();
+        window.location.hash = '/button';
+        render(<App />);
+        const tabs = screen.getAllByRole('tab').map((t) => t.textContent);
+        expect(tabs).toEqual(['Beispiele', 'Versionen & Status', 'Überarbeitung', 'Wünsche']);
+        screen.getByRole('tab', { name: 'Beispiele' }).focus();
+        await user.keyboard('{ArrowRight}');
+        expect(screen.getByRole('tab', { name: 'Versionen & Status' })).toHaveAttribute('aria-selected', 'true');
+        expect(screen.getByRole('tabpanel')).toHaveTextContent('v1.0.0');
+        await user.keyboard('{End}');
+        expect(screen.getByRole('link', { name: 'Wunsch erfassen' })).toHaveAttribute('href', expect.stringContaining('template=idee.yml'));
+    });
+
+    it('zeigt in der Übersicht Freigaben und Status aller Bausteine (#44)', () => {
+        window.location.hash = '';
+        render(<App />);
+        expect(screen.getByRole('table', { name: 'Freigaben und Status der Bausteine' })).toBeInTheDocument();
     });
 });

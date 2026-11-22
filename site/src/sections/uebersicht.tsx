@@ -1,5 +1,7 @@
 import { ENTRIES, GROUPS } from '../registry';
 import { Block, Code, docUrl, IssueLinks, StatusBadge, Table } from '../ui';
+import { stand, VERSION_STATUS_LABELS } from '../versionen';
+import { wuenscheUrl } from './bausteine/vorlage';
 
 export function Uebersicht() {
     return (
@@ -44,12 +46,35 @@ export function Uebersicht() {
                     </Table>
                 </Block>
             ))}
+            <Block title="Freigaben & Status" note="GUI-Tester (DS13): verbindliche und offene Version, offene Überarbeitungen und Wünsche je Baustein.">
+                <Table head={['Baustein', 'Verbindlich', 'In Arbeit', 'Überarbeitung', 'Wünsche']} caption="Freigaben und Status der Bausteine">
+                    {ENTRIES.filter((e) => e.group === 'Bausteine').map((e) => {
+                        const s = stand(e.id);
+                        const offen = s.ueberarbeiten.filter((u) => !u.erledigt).length;
+                        return (
+                            <tr key={e.id}>
+                                <td className="whitespace-nowrap">
+                                    <a href={`#/${e.id}`} className="font-medium text-link underline-offset-2 hover:underline">
+                                        {e.title}
+                                    </a>
+                                </td>
+                                <td className="whitespace-nowrap">{s.verbindlich ? `v${s.verbindlich.version}` : '–'}</td>
+                                <td className="whitespace-nowrap">{s.offen ? `v${s.offen.version} · ${VERSION_STATUS_LABELS[s.offen.status]}` : '–'}</td>
+                                <td>{offen > 0 ? `${offen} offen` : 'keine'}</td>
+                                <td>
+                                    <a href={wuenscheUrl(e.title)} className="text-link underline-offset-2 hover:underline">
+                                        anzeigen<span className="sr-only"> (Wünsche zu {e.title})</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        );
+                    })}
+                </Table>
+            </Block>
             <Block title="Später">
                 <p className="max-w-prose">
-                    Grundbausteine wie Button, Formularfelder, Tabelle, Dialog und Meldungen (#27) kommen als eigene Seiten unter
-                    «Bausteine» dazu. Ausbau zum GUI-Tester mit Versionen, Überarbeitung und Wünschen je Baustein und Themes: Idee
-                    #21, Regeln in <a href={docUrl('docs/UEBERNAHME-INTRANET-GUI.md')} className="text-link underline-offset-2 hover:underline"><Code>UEBERNAHME-INTRANET-GUI.md</Code></a>.
-                    Barrierefreiheitsprüfung mit axe-core auf dieser Seite: #14.
+                    Weitere Teile des GUI-Testers (Erscheinungsbild der Instanz, Sprachwahl und Prüfseite der Übersetzungen): #44,
+                    Regeln in <a href={docUrl('docs/UEBERNAHME-INTRANET-GUI.md')} className="text-link underline-offset-2 hover:underline"><Code>UEBERNAHME-INTRANET-GUI.md</Code></a>.
                 </p>
             </Block>
         </div>

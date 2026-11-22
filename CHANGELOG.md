@@ -18,6 +18,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **GUI-Tester auf der Testseite (#44, DS13):** Baustein-Seiten mit Reitern Beispiele, Versionen & Status,
+  Überarbeitung und Wünsche; Übersicht «Freigaben & Status». Versionen, Verlauf und Überarbeitungen in
+  `site/src/versionen.ts` (Regeln aus dem INTRANET: Status Entwicklung → Prüfung → Freigegeben, SemVer je Baustein),
+  Wünsche als GitHub-Ideen je Baustein. Alle Bausteine starten mit v1.0.0 in Prüfung.
 - **GUI-Guideline (#28, #43):** `docs/GUIDELINE.md` – wann welche Farbe, welcher Baustein, Seitenaufbau und Abstände,
   GUI-Profile nach Modulart und Ansicht (DS12), Texte und Tonalität (de-CH), Prüfen vor dem Merge. Testseite: Seite
   «Guideline» mit Beispielen «So» und «Nicht so».

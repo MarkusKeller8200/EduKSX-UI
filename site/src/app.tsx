@@ -24,6 +24,7 @@ import { EMBEDDED, setSetting, useApplyScheme, useRoute, useSettings, type Ansic
 import { BUILTIN_THEMES } from '../../src/generated/tokens';
 import { docUrl, IssueLinks, REPO, StatusBadge } from './ui';
 import { Uebersicht } from './sections/uebersicht';
+import { EntryContext } from './entry-context';
 
 const START = 'uebersicht';
 
@@ -272,7 +273,9 @@ function Content() {
                     {entry ? (
                         <>
                             <PageHead entry={entry} />
-                            <entry.Page />
+                            <EntryContext.Provider value={entry}>
+                                <entry.Page />
+                            </EntryContext.Provider>
                         </>
                     ) : (
                         <Uebersicht />

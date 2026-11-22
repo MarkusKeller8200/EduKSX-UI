@@ -74,6 +74,21 @@ Neue Grundlagen (Tokens) oder Prüfseiten genauso; statische HTML-Prüfseiten zu
 keine Farben, dafür gibt es die Kontrastprüfung) und eingebettete Iframes (Prüfseiten, im Browser prüfen). Neue
 Bausteine sind automatisch dabei, sobald ihre Seite in `site/src/registry.ts` steht.
 
+## 5b. GUI-Tester (DS13, #44)
+
+Jede Baustein-Seite hat die Reiter **Beispiele** (mit Verwendung und Prüfliste), **Versionen & Status**,
+**Überarbeitung** und **Wünsche** (Gerüst `BausteinSeite`, `site/src/sections/bausteine/vorlage.tsx`). Die Übersicht
+zeigt «Freigaben & Status» aller Bausteine.
+
+- **Pflege im Code:** `site/src/versionen.ts` je Baustein: Versionen (SemVer je Baustein), Status Entwicklung →
+  Prüfung → Freigegeben (ältere «abgelöst»), Verlauf mit Datum, Person, Bemerkung, Issues; nach einer Freigabe die
+  Liste «zu überarbeiten» (Modul, Seite, erledigt). Höchstens eine offene Version; bis zu ihrer Freigabe bleibt die
+  zuletzt freigegebene verbindlich. Änderungen kommen per Pull Request – das ist der Nachweis, wer wann was freigab.
+- **Wünsche** sind GitHub-Issues mit der Ideen-Vorlage (Label `idee`, Titel «Idee: Wunsch <Baustein> – …»); der Reiter
+  verlinkt Erfassen und Liste. Sie werden beim Anlegen der nächsten Version übernommen («in v1.1.0»).
+- Freigeben darf Projektverantwortliche:r; Status `freigegeben` im Inhaltsverzeichnis erst nach der Freigabe einer
+  Version.
+
 ## 6. Später
 
 - Ausbau zum GUI-Tester (#21): je Baustein Reiter Beispiele, Versionen & Status, Überarbeitung, Wünsche (#44).
