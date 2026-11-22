@@ -38,8 +38,8 @@ nachführen.
 - Icons (22.11.2026, #31): EduKSX-UI ist Quelle des Icon-Sets (`icons/`, `EduksxIcon`); in markussxch bleibt eine
   Kopie mit Vermerk «Quelle EduKSX-UI», nichts gelöscht. Offen: Flow-Icon (#30). M6 entschieden: Inter + JetBrains Mono, keine plattformabhängigen Schriften. Idee #20 ist mit
   KONZEPT-MARKE 6.2 inhaltlich erledigt; Überführung nach Ideen-Ablauf (DS-Entscheid in Architektur) noch offen.
-- Grundbausteine (#27): `docs/KONZEPT-BAUSTEINE.md`, PR offen (Merge nach Freigabe). B1–B4 als Entscheidungskarten
-  gestellt (Empfehlung umgesetzt: HTML-Basis ohne Abhängigkeit, shadcn-Namen, Toast später, Token
+- Grundbausteine (#27, #11 im Beta-Test): `docs/KONZEPT-BAUSTEINE.md`, PR #34 gemergt 22.11.2026. B1–B4 BESCHLOSSEN
+  (HTML-Basis ohne Abhängigkeit, shadcn-Namen, Toast später, Token
   `destructive-contrast` löst #11). Musterseite (#15) baut ein anderer Thread; Bausteine tragen `data-slot`.
 - Typografie- und Basis-Tokens (#25, #26): `docs/KONZEPT-TOKENS.md`, T1–T3 entschieden 22.11.2026, PR offen
   (Merge nach Freigabe). Glossary H3 17 → 18 px beim Umstieg angleichen (#16).
