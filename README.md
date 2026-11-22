@@ -41,8 +41,9 @@ npm install github:MarkusKeller8200/EduKSX-UI#v0.1.0
   Das Modul setzt die Klasse selbst, etwa über einen Umschalter System/Hell/Dunkel.
 - **Plugins (`eduksx.css`):** `--eduksx-*` verweist auf die Variablen aus `tokens.css`; fehlt diese, gelten die
   hellen Standardwerte.
-- **Schrift:** Das Paket liefert keine Schriftdatei. Module hosten Inter selbst (kein Abruf bei Google Fonts);
-  `--font-sans` ist gesetzt, ohne Inter greift `system-ui`.
+- **Schrift:** Das Paket liefert keine Schriftdatei. Module hosten Inter und für Code/IDs JetBrains Mono selbst (kein
+  Abruf bei Google Fonts); `--font-sans` und `--font-mono` sind gesetzt, Rückfall nur `system-ui` bzw. `ui-monospace`.
+  Keine plattformabhängigen Schriften (KONZEPT-MARKE 3.4, M6).
 
 ## Entwickeln
 

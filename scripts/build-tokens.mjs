@@ -18,14 +18,16 @@ const colors = Object.entries(tokens.color).map(([name, t]) => {
     return { name, light, dark, description: t.$description ?? '' };
 });
 const sizes = Object.entries(tokens.size ?? {}).map(([name, t]) => ({ name, value: t.$value }));
-const fontSans = tokens.font.sans.$value.map((f) => (/\s/.test(f) ? `"${f}"` : f)).join(', ');
+const fontStack = (font) => font.$value.map((f) => (/\s/.test(f) ? `"${f}"` : f)).join(', ');
+const fontSans = fontStack(tokens.font.sans);
+const fontMono = fontStack(tokens.font.mono);
 
 const header = '/* Erzeugt aus tokens/tokens.json – nicht von Hand ändern (npm run tokens). */\n';
 const decl = (mode) => colors.map((c) => `    --${c.name}: ${c[mode]};`).join('\n');
 
 const tokensCss =
     header +
-    `:root {\n${decl('light')}\n${sizes.map((s) => `    --${s.name}: ${s.value};`).join('\n')}\n    --font-sans: ${fontSans};\n}\n\n` +
+    `:root {\n${decl('light')}\n${sizes.map((s) => `    --${s.name}: ${s.value};`).join('\n')}\n    --font-sans: ${fontSans};\n    --font-mono: ${fontMono};\n}\n\n` +
     `.dark {\n${decl('dark')}\n}\n`;
 
 // Tailwind 4: Farben und Radius als Theme, damit bg-primary, text-muted-foreground usw. die Tokens nutzen.
@@ -33,7 +35,7 @@ const themeCss =
     header +
     '@theme inline {\n' +
     colors.map((c) => `    --color-${c.name}: var(--${c.name});`).join('\n') +
-    '\n    --font-sans: var(--font-sans);\n    --radius-lg: var(--radius);\n    --radius-md: calc(var(--radius) - 2px);\n    --radius-sm: calc(var(--radius) - 4px);\n}\n';
+    '\n    --font-sans: var(--font-sans);\n    --font-mono: var(--font-mono);\n    --radius-lg: var(--radius);\n    --radius-md: calc(var(--radius) - 2px);\n    --radius-sm: calc(var(--radius) - 4px);\n}\n';
 
 // Web-Komponenten der Plugins (Plugins P5): gleiche Werte mit Präfix --eduksx-*.
 const eduksxCss =

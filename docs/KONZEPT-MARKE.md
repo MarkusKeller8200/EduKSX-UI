@@ -93,16 +93,20 @@ MarKusSXCH                Entwicklermarke (Dachmarke), Markus Keller
 - **Responsive:** Desktop, Tablet und Smartphone prüfen; keine überlaufenden Wortmarken und keine abgeschnittenen
   Endungen (`-Glossary`, `SXCH`). Reicht der Platz nicht, Icon plus Klartext statt verkleinerter Wortmarke (CI §9).
 
-### 3.4 Schrift (BESCHLOSSEN, CI v1.0 §6; Aptos ZU PRÜFEN)
+### 3.4 Schrift (BESCHLOSSEN, CI v1.0 §6; M6 BESCHLOSSEN 22.11.2026)
 
 - Eine sachliche, zeitgemässe Sans Serif für **alle** Module und die Wortmarken. Keine eigene Schrift je Modul;
   Eigenständigkeit entsteht über Name, Icon und Inhalt, nicht über die Schrift.
 - Schrift **Inter**, selbst gehostet (kein Abruf bei Google Fonts); Rückfall `system-ui, sans-serif`
   (`tokens.json` › `font.sans`).
 - Gewichte: Markennamen 600–700, Fliesstext 400–500; klare Hierarchie, keine verspielten Schnitte.
-- Das CI nennt als Rückfall zusätzlich **Aptos** (`Inter, Aptos, system-ui, sans-serif`). Ob Aptos in den
-  Schriftstapel kommt, ist **ZU PRÜFEN** (M6): Aptos ist eine Microsoft-Schrift und nur auf Windows/Office-Geräten
-  vorhanden; ohne Aufnahme fällt die Schrift dort auf Segoe UI (`system-ui`) zurück.
+- **Keine plattformabhängigen Schriften** (M6): nur frei lizenzierte Schriften, die das Modul selbst ausliefert;
+  als Rückfall nur generische System-Stacks (`system-ui`, `ui-monospace`, `sans-serif`, `monospace`), keine
+  benannten Betriebssystem- oder Office-Schriften. Darum entfällt **Aptos** aus dem CI-Vorschlag
+  (`Inter, Aptos, system-ui, sans-serif`): Microsoft-Schrift, nicht frei fürs Web, nur auf Geräten mit Office.
+- **Code und IDs** (Codeblock, technische Schlüssel, Prüfsummen): **JetBrains Mono** (SIL OFL 1.1), selbst gehostet;
+  Rückfall `ui-monospace, monospace` (`tokens.json` › `font.mono`, CSS `--font-mono`, Tailwind `font-mono`).
+  Gewicht 400, für Hervorhebung 600.
 
 ## 4. Produkt- und Modulnamen
 
@@ -343,7 +347,7 @@ EduKSX-Architektur #89 (A10, A12, A13, DS4 nach M3), EduKSX-Prototyp #72 (A11 na
 | M3 | Marke links oben in einer Instanz | EduKSX + Logo zusätzlich (DS4) / EduKSX oder eigenes Logo / EduKSX, MarKusSXCH oder eigenes Logo | EduKSX-Wortmarke oder eigenes Logo der Instanz (White-Label) in allen Modulen; MarKusSXCH nicht als Produktmarke, nur in der Signatur. DS4 in KONZEPT-DESIGN ist anzupassen | BESCHLOSSEN 22.11.2026 |
 | M4 | Signatur «Developed by MarKusSXCH» | abschaltbar (Vorgabe ein) / immer sichtbar | abschaltbar durch Admin der Instanz, Vorgabe eingeschaltet | BESCHLOSSEN 22.11.2026 |
 | M5 | GitHub-Vorschaubilder | CI-Farben im Blueprint / bleibt neutral | CI-Farben: `[social_preview]` mit `farbe = "#151b24"`, `akzent = "#ff8a00"` in jedem EduKSX-Repo; Vorschlag als Vorgabe im Blueprint | BESCHLOSSEN 22.11.2026 |
-| M6 | Aptos im Schriftstapel (3.4) | `Inter, Aptos, system-ui, sans-serif` wie CI / `Inter, system-ui, sans-serif` wie heute | – | ZU PRÜFEN |
+| M6 | Schriften (3.4) | Aptos als Rückfall wie CI / nur freie, selbst gehostete Schriften | keine plattformabhängigen Schriften; Inter für Oberfläche, JetBrains Mono für Code und IDs, Rückfall nur generische System-Stacks; kein Aptos | BESCHLOSSEN 22.11.2026 |
 
 Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architektur); M1/M2 das Modulregister.
 Änderungen in anderen Repos als EduKSX-UI erst nach Rückfrage.
@@ -375,6 +379,7 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
 - [ ] Farbsegmente richtig: EduKSX **E violett, K orange, SX blau**; MarKusSXCH **M violett, K orange, SXCH blau**.
 - [ ] Wortmarke über `BrandWordmark`, Icons über `EduksxIcon` bzw. `icons/`; keine eigenen Kopien, keine Hexwerte in
       Seiten.
+- [ ] Nur Inter und JetBrains Mono, selbst gehostet, keine plattformabhängigen Schriften (3.4).
 - [ ] Hell und dunkel, Schriftgrössen, Desktop/Tablet/Smartphone und WCAG-Kontrast (axe-core, `checkTheme()`) geprüft.
 - [ ] Zustände der Bedienelemente vollständig (5.4); Symbol-Knöpfe mit `aria-label` und Tooltip (6.2).
 - [ ] Technische Bezeichner, Repos, APIs und Links nicht durch Gestaltungsarbeit umbenannt.
@@ -393,6 +398,7 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
 - 22.11.2026: M4 (Signatur abschaltbar) und M5 (Vorschaubilder in CI-Farben) entschieden; EduKSX-UI umgestellt.
 - 22.11.2026: Nachlese Icons und CI (#31): Icon-Set samt Generator nach `icons/`, Baustein `EduksxIcon`, Token
   `icon-tile`; neu 3.4 Schrift, 5.4 Zustände, 6.1 Dateien, 6.2 Bediensymbole (Idee #20), 10. Ton und Texte, 11. Pflege
-  und Abnahme; Flow-Icon-Vermerk korrigiert; M6 (Aptos) offen. Geprüft zusätzlich: markussxch-tagstudio, edu-shop,
+  und Abnahme; Flow-Icon-Vermerk korrigiert; M6 entschieden: keine plattformabhängigen Schriften, Inter und JetBrains
+  Mono (`font.mono`), kein Aptos. Geprüft zusätzlich: markussxch-tagstudio, edu-shop,
   agent-skills, WebApplicationProgrammingGuide – ohne weitere EduKSX-Inhalte. In markussxch wird nichts gelöscht,
   dort nur «Quelle EduKSX-UI» vermerkt (Entscheid Markus).
