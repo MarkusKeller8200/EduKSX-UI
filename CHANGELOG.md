@@ -22,3 +22,4 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
   `brand`, `brand-accent`, `brand-ink` entfallen – im Glossary nachziehen.
 - README: Dunkelmodus über `.dark`, Rückfall von `eduksx.css` auf helle Werte, Inter selbst hosten.
 - Grundgerüst: GitHub-Blueprint, Lizenz MIT, `npm run check`, Steckbrief bestätigt.
+- **Ideen-Erfassung (#9):** Label `idee` und Issue-Vorlage «Idee festhalten» für lose Ideen ohne Meilenstein.

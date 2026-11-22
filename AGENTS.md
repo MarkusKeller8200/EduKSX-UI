@@ -58,3 +58,16 @@ Aus dem GitHub-Blueprint, Details in `docs/GITHUB-ABLAUF.md`.
 - Nichtziel: kein Branding, keine Texte oder Pfade einzelner Schulen im Paket
 
 <!-- /blueprint:github-ablauf -->
+
+## Ideen-Erfassung
+
+- Lose Ideen sind Issues mit Label `idee` (Vorlage «Idee festhalten»), **ohne Meilenstein**, ohne `triage` und ohne
+  Art-Label (`fehler`, `verbesserung`, `funktion`), damit `issue-milestone.yml` sie nicht einer Sammlung zuordnet.
+  Eine Idee ist kein Entwicklungsauftrag.
+- **Chat-Keyword:** Beginnt eine Nachricht im Chat mit «Idee:», wird daraus ein Ideen-Issue in diesem Repository
+  (Titel «Idee: …», Text nach Vorlage). Keine Rückfrage nötig, ausser die Idee ist unverständlich.
+- **Sichten:** Vor jedem neuen Meilenstein werden die offenen Ideen durchgegangen (Rückfragen mit Antworten zum
+  Anklicken).
+- **Überführen:** Angenommene Idee → DS-Entscheid mit eigener Nummer in `KONZEPT-DESIGN.md` (EduKSX-Architektur)
+  plus normales Issue mit Art-Label und Meilenstein; das Ideen-Issue wird mit Verweis auf beides geschlossen.
+  Abgelehnte Ideen erhalten `wird nicht umgesetzt` und werden geschlossen.

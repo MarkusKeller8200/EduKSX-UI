@@ -1,0 +1,34 @@
+name: Idee festhalten
+description: Eine lose Idee, noch nicht eingeplant. Ein Satz genügt.
+title: "Idee: "
+labels: ["idee"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Ablauf:** Ideen bleiben ohne Meilenstein und sind **kein Entwicklungsauftrag**. Sie werden vor jedem neuen
+        Meilenstein gesichtet. Eine angenommene Idee wird ein DS-Entscheid in `KONZEPT-DESIGN.md`
+        (EduKSX-Architektur) und ein normales Issue mit Meilenstein; dieses Ideen-Issue wird dann mit Verweis geschlossen.
+
+        **Datenschutz:** Keine Zugangsdaten und keine echten Personendaten anhängen.
+  - type: input
+    id: idee
+    attributes:
+      label: Idee in einem Satz
+      placeholder: "z. B. Eine Musterseite mit allen Komponenten im Dunkelmodus"
+    validations:
+      required: true
+  - type: input
+    id: modul
+    attributes:
+      label: Modul / Bereich
+      description: Optional, z. B. Tokens, Komponente, Musterseite, ein bestimmtes Modul
+    validations:
+      required: false
+  - type: textarea
+    id: kontext
+    attributes:
+      label: Kontext
+      description: Optional. Woher kommt die Idee, was wäre der Nutzen, Links oder Skizzen.
+    validations:
+      required: false
