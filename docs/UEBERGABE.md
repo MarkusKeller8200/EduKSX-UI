@@ -36,7 +36,7 @@ nachführen.
 - Marke, Namen, Farben: `docs/KONZEPT-MARKE.md` (22.11.2026). M0, M2–M5 entschieden (M3: DS4 in Architektur anpassen), M1 offen; Abweichungsregister §8.
   Neue Regel: Module folgen dem UI-Konzept, Abweichungen nur mit Begründung im Modul.
 - Icons (22.11.2026, #31): EduKSX-UI ist Quelle des Icon-Sets (`icons/`, `EduksxIcon`); in markussxch bleibt eine
-  Kopie mit Vermerk «Quelle EduKSX-UI», nichts gelöscht. Offen: Flow-Icon (#30). M6 entschieden: Inter + JetBrains Mono, keine plattformabhängigen Schriften. Idee #20 ist mit
+  Kopie mit Vermerk «Quelle EduKSX-UI», nichts gelöscht. Flow-Icon (#30) am 22.11.2026 aus dem Prototyp-Entwurf übernommen. M6 entschieden: Inter + JetBrains Mono, keine plattformabhängigen Schriften. Idee #20 ist mit
   KONZEPT-MARKE 6.2 inhaltlich erledigt; Überführung nach Ideen-Ablauf (DS-Entscheid in Architektur) noch offen.
 - Grundbausteine (#27, #11 im Beta-Test): `docs/KONZEPT-BAUSTEINE.md`, PR #34 gemergt 22.11.2026. B1–B4 BESCHLOSSEN
   (HTML-Basis ohne Abhängigkeit, shadcn-Namen, Toast später, Token

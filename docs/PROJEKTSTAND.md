@@ -23,7 +23,6 @@
 - axe-core in der CI auf der Testseite (#14, DS7 entschieden: serious/critical scheitern, Rest Warnung)
 - ModuleSwitcher bei Fokusverlust (#12); Verlauf für Bildschirmleser (#13)
 - Glossary an geänderte Tokens anpassen (#16)
-- Flow-Icon entwerfen und freigeben (#30)
 - Veröffentlichung auf npmjs.com (Organisation «eduksx» anlegen)
 
 ## Technik

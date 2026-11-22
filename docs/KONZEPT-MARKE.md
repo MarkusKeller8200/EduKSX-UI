@@ -128,7 +128,7 @@ Bezeichnungen sichtbar heissen, ist **OFFEN** (M1); die Spalte «Sichtbarer Name
 | `licence` | EduKSX-Licence | Lizenzen und Zugänge | EduKSX-Licence | Licence | – |
 | `timetable` | EduKSX-Timetable | Stundenplan | Register/Übersicht «Stundenplan»; Icon «Timetable» | Timetable | – |
 | `staffing` | EduKSX-Staffing | Einsatzplanung | Register «EduKSX-Staffing», Übersicht und Prototyp «Einsatzplanung» | Staffing | – |
-| `flow` | EduKSX-Flow | Abläufe und Termine | EduKSX-Flow; Prototyp «Ablaufplanung / Termine und ToDo» | **fehlt** im Icon-Set | EduKSX-Flow (leer) |
+| `flow` | EduKSX-Flow | Abläufe und Termine | EduKSX-Flow; Prototyp «Ablaufplanung / Termine und ToDo» | Flow | EduKSX-Flow (leer) |
 | `time` | EduKSX-Time | Zeiterfassung | EduKSX-Time; Prototyp «Zeiterfassung / Stempeln» | Time | EduKSX-Time (leer) |
 | `shop` | EduKSX-Shop | Bestellungen | EduKSX-Shop | Shop | EduKSX-Shop (leer) |
 | `sign` | EduKSX-Sign | Unterschriften | EduKSX-Sign; Prototyp «Signatur / Persönliche Ablage» | Sign | – |
@@ -203,22 +203,23 @@ Instanz** (Logo hell, optional dunkel, quadratisches Signet; SVG ohne Skripte, P
 Wortmarke ersetzt. Ohne eigenes Logo gilt EduKSX. MarKusSXCH ist keine wählbare Produktmarke; sie erscheint nur in der
 Signatur.
 
-## 6. Icons und Signets (BESCHLOSSEN, Icon-Set EduKSX, freigegeben 09.11. und 13.11.2026)
+## 6. Icons und Signets (BESCHLOSSEN, Icon-Set EduKSX, freigegeben 09.11., 13.11. und 22.11.2026)
 
-- 16 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
-  Intranet, Timetable, Staffing, Ops. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
+- 17 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
+  Intranet, Timetable, Staffing, Ops, Flow. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
   Sechseck mit Kern (Core), Ausweis (Ident), Tasche mit Häkchen (Shop), Schlüssel (Licence), Torbogen mit Pfeil
   (Portal), drei verbundene Knoten (Connect), Zahnrad (Services), Feder mit Unterschrift (Sign), Uhr (Time), Haus mit
   vier Bausteinen (Intranet), Raster mit Kalenderkopf (Timetable), Person mit Kalender (Staffing), Bildschirm mit Puls
-  (Ops).
+  (Ops), Flussdiagramm mit Entscheidungs-Raute (Flow).
 - Gestaltung: 24er-Raster, Strich 1,75, runde Enden und Ecken; Orange = Hauptakzent, Blau und Violett für Details,
   Neutral `#222222` / `#F2F5F8`; Kachel 48 × 48, Eckenradius 11, Kachelfläche hell `#F2F5F8` mit feinem Rand,
   dunkel `#222222` (Token `icon-tile`; bewusst nicht die Seitenfläche `#151B24`, so wie freigegeben).
 - Varianten: einfarbig (`currentColor`) für die Oberfläche, farbig für helle Flächen, Kachel hell/dunkel als App-Icon
   (PNG 512, 192, 64, 32).
-- Neue Motive oder Farben brauchen eine eigene Freigabe durch Markus. **EduKSX-Flow hat noch kein Icon** – in keinem
-  Repo gibt es einen Entwurf, auch nicht im Prototyp; das INTRANET nutzt behelfsmässig das Lucide-Symbol «Workflow».
-  Entwurf neu anfertigen und freigeben lassen (OFFEN, #30); bis dahin «Workflow» aus Lucide als Platzhalter.
+- Neue Motive oder Farben brauchen eine eigene Freigabe durch Markus. Das Flow-Icon (#30) stammt aus dem vorläufigen
+  Entwurf in EduKSX-Prototyp (`tools/seite_bauen.py`, Prototyp «Ablaufplanung») und ist am 22.11.2026 freigegeben:
+  oranger Startkasten, violette Entscheidungs-Raute, zwei Ziel-Kästen, blauer Punkt. Das INTRANET ersetzt das
+  behelfsmässige Lucide-Symbol «Workflow» durch `flow`.
 - Für EduKSX gibt es kein separates Signet; das Icon «EduKSX» bzw. das Modul-Icon dient als Favicon und App-Icon.
 - Eine eigene Symbolwahl «Standard-Symbole (Lucide)» statt EduKSX-Icons ist nur für Menüsymbole erlaubt, nie für
   Modul-Icons in Kopfzeile und Modulwechsel (EMPFOHLEN, aus dem Intranet).
@@ -284,7 +285,7 @@ Für Bedienung, Menü und Zustände – nicht für Modul-Icons – gilt:
 | Personen, Konten | `Users` (EduKSX: `ident`) |
 | Stundenplan | `CalendarClock` (EduKSX: `timetable`) |
 | Abwesenheiten, Einsatzplanung | `CalendarOff` (EduKSX: `staffing`) |
-| Abläufe (Flow) | `Workflow` (Platzhalter, EduKSX-Icon OFFEN #30) |
+| Abläufe (Flow) | `Workflow` (EduKSX: `flow`) |
 | Mitteilungen | `Megaphone` |
 | Termine, Datumsauswahl | `CalendarDays` |
 | Dokumente | `FileText` |
@@ -406,3 +407,5 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
   Mono (`font.mono`), kein Aptos. M7: Gewichte 400/500/600/700, keine Zwischengewichte. Geprüft zusätzlich: markussxch-tagstudio, edu-shop,
   agent-skills, WebApplicationProgrammingGuide – ohne weitere EduKSX-Inhalte. In markussxch wird nichts gelöscht,
   dort nur «Quelle EduKSX-UI» vermerkt (Entscheid Markus).
+- 22.11.2026: Flow-Icon (#30) aus dem Prototyp-Entwurf ins Icon-Set übernommen und freigegeben (17 Icons); der
+  frühere Vermerk «auch nicht im Prototyp» war falsch.
