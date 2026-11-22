@@ -15,7 +15,10 @@ erstellen keine eigenen Icons; welches Modul welche Icons nutzt, steht in `src/c
 | `svg/<name>-color.svg` | farbig ohne Kachel, für helle Flächen |
 | `svg/<name>-tile-dark.svg` | App-Icon, dunkle Kachel |
 | `svg/<name>-tile-light.svg` | App-Icon, helle Kachel |
+| `svg/<name>-maskable-light.svg`, `-maskable-dark.svg` | App-Icon für das Web-Manifest (`purpose: maskable`), randlos, Motiv in der sicheren Zone (#55) |
 | `png/<grösse>/<name>-tile-*.png` | App-Icons als PNG in 512, 192, 64 und 32 px |
+| `png/<192\|512>/<name>-maskable-*.png` | Maskable-App-Icons als PNG |
+| `ico/<name>.ico` | Favicon für ältere Browser, 16/32/48/64 px aus der hellen Kachel |
 
 Namen: `eduksx` (Familie) und `eduksx-<schlüssel>` für glossary, codex, core, ident, shop, licence, portal, connect,
 services, sign, time, intranet, timetable, staffing, ops, flow, planner, websnapshot, api, aiconverter, mcp, bill,
@@ -77,7 +80,7 @@ Quelle für alles ist `build.py` (nur Python-Standardbibliothek):
 ```sh
 python3 icons/build.py                                              # SVG neu erzeugen
 python3 icons/build.py --ts src/components/eduksx-icons.data.ts     # Daten für EduksxIcon
-rsvg-convert -w 512 icons/svg/eduksx-tile-dark.svg -o icons/png/512/eduksx-tile-dark.png   # PNG (oder Playwright-Screenshot mit transparentem Hintergrund)
+node icons/raster.mjs        # Maskable-PNG und ico/ (mit --alle auch alle Kachel-PNG); braucht Playwright mit Chromium
 ```
 
 Nach einer Änderung alle drei Schritte ausführen; der Test `tests/eduksx-icon.test.tsx` prüft, dass Dateien und

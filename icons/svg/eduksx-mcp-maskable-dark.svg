@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img">
+  <title>EduKSX-MCP</title>
+  <rect width="48" height="48" fill="#222222"/>
+  <g transform="translate(10.8 10.8) scale(1.1)">
+  <path d="M9 3v4.2M15 3v4.2" fill="none" stroke="#F2F5F8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6.2 7.2h11.6v3a5.8 5.8 0 0 1-11.6 0Z" fill="none" stroke="#F2F5F8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 16v5" fill="none" stroke="#FF8A00" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="12" cy="10.6" r="1.2" fill="#32B8F2"/>
+  </g>
+</svg>

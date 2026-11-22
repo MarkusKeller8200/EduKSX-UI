@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img">
+  <title>EduKSX-Ticket</title>
+  <rect width="48" height="48" fill="#F2F5F8"/>
+  <g transform="translate(10.8 10.8) scale(1.1)">
+  <path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2.5a2.5 2.5 0 0 0 0 5V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2.5a2.5 2.5 0 0 0 0-5Z" fill="none" stroke="#222222" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14.5 7.2v1.3M14.5 11.35v1.3M14.5 15.5v1.3" fill="none" stroke="#FF8A00" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="9" cy="12" r="1.6" fill="#007EBB"/>
+  </g>
+</svg>

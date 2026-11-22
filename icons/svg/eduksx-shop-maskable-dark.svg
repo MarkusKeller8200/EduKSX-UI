@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img">
+  <title>EduKSX-Shop</title>
+  <rect width="48" height="48" fill="#222222"/>
+  <g transform="translate(10.8 10.8) scale(1.1)">
+  <path d="M2.6 3.6h2.1l2.3 11a1.8 1.8 0 0 0 1.8 1.4h8.4a1.8 1.8 0 0 0 1.75-1.4L20.9 7.6H5.6" fill="none" stroke="#F2F5F8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10.2 12.1l1.5 1.5 3-3" fill="none" stroke="#32B8F2" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="9.6" cy="19.6" r="1.6" fill="#FF8A00"/>
+  <circle cx="17.2" cy="19.6" r="1.6" fill="#FF8A00"/>
+  </g>
+</svg>
