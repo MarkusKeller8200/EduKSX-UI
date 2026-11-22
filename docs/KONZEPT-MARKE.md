@@ -98,8 +98,8 @@ Bezeichnungen sichtbar heissen, ist **OFFEN** (M1); die Spalte «Sichtbarer Name
 | Schlüssel | Sichtbarer Name (EMPFOHLEN) | Deutsche Bezeichnung | Bisher in den Repos | Icon | Repo |
 | --- | --- | --- | --- | --- | --- |
 | `core` | EduKSX-Core | Plattform-Bausteine | EduKSX-Core | Core (freigegeben) | EduKSX-Core |
-| `ident` | EduKSX-Ident | Anmeldung | EduKSX-Ident; Register: «Teil von EduKSX-Core» (M2) | Ident | EduKSX-Ident |
-| `ops` | EduKSX-Ops | Leitstand | «EduKSX-Ops (Leitstand)»; Register: «Teil von EduKSX-Core» (M2) | Ops | – |
+| `ident` | EduKSX-Ident (BESCHLOSSEN, M2) | Anmeldung | EduKSX-Ident; Register: «Teil von EduKSX-Core» | Ident | EduKSX-Ident |
+| `ops` | EduKSX-Ops (BESCHLOSSEN, M2) | Leitstand | «EduKSX-Ops (Leitstand)»; Register: «Teil von EduKSX-Core» | Ops | – |
 | `glossary` | EduKSX-Glossary | Begriffe & Abkürzungen | EduKSX-Glossary | Glossary | EduKSX-Glossary |
 | `codex` | EduKSX-Codex | Systematische Rechtssammlungen | EduKSX-Codex; Prototyp «Rechtssammlung» | Codex | EduKSX-Codex |
 | `connect` | EduKSX-Connect | Stammdaten und Abgleich | EduKSX-Connect | Connect | EduKSX-Connect (leer) |
@@ -217,7 +217,7 @@ Abweichungen, die heute in Modulen bestehen. «Prüfen global» = Abschnitt 1 Pu
 | A9 | EduKSX-Glossary | `input` `#CBD5E1` / `#3A4556`; `--brand`, `--brand-accent`, `--brand-ink`; eigene Kopie `BrandWordmark` | Nein (in EduKSX-UI entschieden, PR 8) | anpassen (#16) | OFFEN im Modul |
 | A10 | EduKSX-Architektur `poc/ident-zitadel` | dunkle Fläche `#1B1F24`, Warnung dunkel `#FF6B6B` | Nein | `#151B24` und Status aus `tokens.json` | OFFEN im Modul |
 | A11 | EduKSX-Prototyp | Prototypen mit deutschen Namen | folgt aus M1 | Untertitel-Regel (Abschnitt 4) | OFFEN (M1) |
-| A12 | EduKSX-Architektur | Register: Marketingnamen «Intranet», «Stundenplan», «Teil von EduKSX-Core»; Übersicht «Einsatzplanung»; Schreibweise «MarKusSX» | folgt aus M1, M2 | Register und Übersicht nachführen | OFFEN (M1, M2) |
+| A12 | EduKSX-Architektur | Register: Marketingnamen «Intranet», «Stundenplan», «Teil von EduKSX-Core»; Übersicht «Einsatzplanung»; Schreibweise «MarKusSX» | folgt aus M1; M2 entschieden | Register: ident/ops «EduKSX-Ident», «EduKSX-Ops» (M2); Rest nach M1 | OFFEN (M1) |
 | A13 | alle Repos (Blueprint) | GitHub-Vorschaubild `#0B3D63` / `#F2B705` | **Ja** | Entscheid M5 | OFFEN (M5) |
 
 ## 9. Entscheide
@@ -226,7 +226,7 @@ Abweichungen, die heute in Modulen bestehen. «Prüfen global» = Abschnitt 1 Pu
 | --- | --- | --- | --- | --- |
 | M0 | Verbindlichkeit für Module | – | Module folgen dem UI-Konzept; Abweichung nur nach globaler Prüfung, mit Begründung im Modul, regelmässig überprüft | BESCHLOSSEN 22.11.2026 |
 | M1 | Sichtbare Modulnamen | EduKSX-Englisch + deutscher Untertitel / deutsch für Schulmodule / frei je Modul | – | OFFEN |
-| M2 | Ident und Ops nach aussen | eigene Namen / Teil von EduKSX-Core | – | OFFEN |
+| M2 | Ident und Ops nach aussen | eigene Namen / Teil von EduKSX-Core | eigene sichtbare Namen EduKSX-Ident und EduKSX-Ops | BESCHLOSSEN 22.11.2026 |
 | M3 | Marke links oben in einer Instanz | EduKSX + Logo zusätzlich (DS4) / EduKSX oder eigenes Logo / EduKSX, MarKusSXCH oder eigenes Logo | – | OFFEN |
 | M4 | Signatur «Developed by MarKusSXCH» | abschaltbar (Vorgabe ein) / immer sichtbar | – | OFFEN |
 | M5 | GitHub-Vorschaubilder | CI-Farben im Blueprint / bleibt neutral | – | OFFEN |
@@ -241,3 +241,4 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
   EduKSX-Glossary (`app.css`, `BrandWordmark`, DEC-015), sek-intranet (Erscheinungsbild, eingebaute Themes,
   `app.css`), EduKSX-Prototyp (`eduksx.css`, Prototypen), EduKSX-Core, -Ident, -Codex, -Connectors, -Suite,
   MarKusSX-Operation; EduKSX-Connect, -Flow, -Shop, -Time sind leer. Regel M0 beschlossen.
+- 22.11.2026: M2 entschieden – Ident und Ops mit eigenen sichtbaren Namen.
