@@ -88,8 +88,8 @@ links = []                        # bis 4 eigene Links, z. B. TWINT-/PayPal-Spen
 # Bild für Link-Vorschauen (1280×640): python3 .github/blueprint/social_preview.py, danach von Hand hochladen
 titel = ""                        # leer = projekt.name
 untertitel = ""                   # leer = repository.beschreibung
-farbe = "#0b3d63"                 # Hintergrund
-akzent = "#f2b705"
+farbe = "#151b24"                 # Hintergrund (CI: Fläche dunkel, KONZEPT-MARKE M5)
+akzent = "#ff8a00"                # CI: EduKSX-Orange
 
 [issues]
 # Auswahl «Bereich» in den Vorlagen

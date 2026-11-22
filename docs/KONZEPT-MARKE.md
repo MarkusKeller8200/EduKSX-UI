@@ -87,7 +87,9 @@ MarKusSXCH                Entwicklermarke (Dachmarke), Markus Keller
 - Nicht auf unruhige Hintergründe; Theme-Wechsel darf die Wortmarke nicht zerlegen, umfärben oder umbrechen
   (`whitespace-nowrap`).
 - Unter einer lesbaren Grösse Klartext oder ein freigegebenes Icon (Abschnitt 6) statt Wortmarke.
-- Entwicklersignatur im Fuss bzw. unter dem Logo: **«Developed by MarKusSXCH»** mit Wortmarke `developer`.
+- Entwicklersignatur im Fuss bzw. unter dem Logo: **«Developed by MarKusSXCH»** mit Wortmarke `developer`. Sie ist
+  standardmässig eingeschaltet; der Admin einer Instanz darf sie abschalten (M4, BESCHLOSSEN 22.11.2026). Im Impressum
+  und in rechtlichen Texten steht der Klartext «Markus Keller».
 
 ## 4. Produkt- und Modulnamen
 
@@ -214,14 +216,14 @@ Abweichungen, die heute in Modulen bestehen. «Prüfen global» = Abschnitt 1 Pu
 | A3 | sek-intranet | Markenvariablen `--ci-*` und `--brand` (Blau der Schule) | Nein: Namen sind festgelegt (5.2) | auf `--brand-*` umstellen; Blau der Schule nur im Theme der Instanz | OFFEN im Modul |
 | A4 | sek-intranet | Grundaussehen = Farben der Sekundarschule Bülach, Open Sans | Nein | bleibt als **Theme der Instanz** (DS5, BESCHLOSSEN) | begründet |
 | A5 | sek-intranet | Marke wählbar: EduKSX, MarKusSXCH oder eigenes Logo (ersetzt die Wortmarke) | **Ja** – übernommen als M3 (eigenes Logo für alle Module) | Option «MarKusSXCH» samt Theme «MarKusSXCH» entfernen | OFFEN im Modul |
-| A6 | sek-intranet | Signatur «Developed by MarKusSXCH» abschaltbar | **Ja** | Entscheid M4 | OFFEN (M4) |
+| A6 | sek-intranet | Signatur «Developed by MarKusSXCH» abschaltbar | **Ja** – übernommen als M4 | keine Änderung nötig | obsolet |
 | A7 | sek-intranet | Titel «MarKusSXCH Intranet» (ohne Bindestrich) | Nein (M3) | entfällt mit A5 | OFFEN im Modul |
 | A8 | sek-intranet | eigene Kopie von `BrandWordmark` | Nein | `@eduksx/ui` verwenden | OFFEN im Modul |
 | A9 | EduKSX-Glossary | `input` `#CBD5E1` / `#3A4556`; `--brand`, `--brand-accent`, `--brand-ink`; eigene Kopie `BrandWordmark` | Nein (in EduKSX-UI entschieden, PR 8) | anpassen (#16) | OFFEN im Modul |
 | A10 | EduKSX-Architektur `poc/ident-zitadel` | dunkle Fläche `#1B1F24`, Warnung dunkel `#FF6B6B` | Nein | `#151B24` und Status aus `tokens.json` | OFFEN im Modul |
 | A11 | EduKSX-Prototyp | Prototypen mit deutschen Namen | folgt aus M1 | Untertitel-Regel (Abschnitt 4) | OFFEN (M1) |
 | A12 | EduKSX-Architektur | Register: Marketingnamen «Intranet», «Stundenplan», «Teil von EduKSX-Core»; Übersicht «Einsatzplanung»; Schreibweise «MarKusSX» | folgt aus M1; M2 entschieden | Register: ident/ops «EduKSX-Ident», «EduKSX-Ops» (M2); Rest nach M1 | OFFEN (M1) |
-| A13 | alle Repos (Blueprint) | GitHub-Vorschaubild `#0B3D63` / `#F2B705` | **Ja** | Entscheid M5 | OFFEN (M5) |
+| A13 | alle Repos (Blueprint) | GitHub-Vorschaubild `#0B3D63` / `#F2B705` | **Ja** – M5 | EduKSX-UI umgestellt (22.11.2026); Core, Ident, Codex, Connectors, Suite, Glossary, Architektur nachziehen und Bild neu hochladen; Vorgabe im Blueprint | OFFEN im Modul |
 
 ## 9. Entscheide
 
@@ -231,8 +233,8 @@ Abweichungen, die heute in Modulen bestehen. «Prüfen global» = Abschnitt 1 Pu
 | M1 | Sichtbare Modulnamen | EduKSX-Englisch + deutscher Untertitel / deutsch für Schulmodule / frei je Modul | – | OFFEN |
 | M2 | Ident und Ops nach aussen | eigene Namen / Teil von EduKSX-Core | eigene sichtbare Namen EduKSX-Ident und EduKSX-Ops | BESCHLOSSEN 22.11.2026 |
 | M3 | Marke links oben in einer Instanz | EduKSX + Logo zusätzlich (DS4) / EduKSX oder eigenes Logo / EduKSX, MarKusSXCH oder eigenes Logo | EduKSX-Wortmarke oder eigenes Logo der Instanz (White-Label) in allen Modulen; MarKusSXCH nicht als Produktmarke, nur in der Signatur. DS4 in KONZEPT-DESIGN ist anzupassen | BESCHLOSSEN 22.11.2026 |
-| M4 | Signatur «Developed by MarKusSXCH» | abschaltbar (Vorgabe ein) / immer sichtbar | – | OFFEN |
-| M5 | GitHub-Vorschaubilder | CI-Farben im Blueprint / bleibt neutral | – | OFFEN |
+| M4 | Signatur «Developed by MarKusSXCH» | abschaltbar (Vorgabe ein) / immer sichtbar | abschaltbar durch Admin der Instanz, Vorgabe eingeschaltet | BESCHLOSSEN 22.11.2026 |
+| M5 | GitHub-Vorschaubilder | CI-Farben im Blueprint / bleibt neutral | CI-Farben: `[social_preview]` mit `farbe = "#151b24"`, `akzent = "#ff8a00"` in jedem EduKSX-Repo; Vorschlag als Vorgabe im Blueprint | BESCHLOSSEN 22.11.2026 |
 
 Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architektur); M1/M2 das Modulregister.
 Änderungen in anderen Repos als EduKSX-UI erst nach Rückfrage.
@@ -246,3 +248,4 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
   MarKusSX-Operation; EduKSX-Connect, -Flow, -Shop, -Time sind leer. Regel M0 beschlossen.
 - 22.11.2026: M2 entschieden – Ident und Ops mit eigenen sichtbaren Namen.
 - 22.11.2026: M3 entschieden – EduKSX oder eigenes Logo; MarKusSXCH nur Signatur.
+- 22.11.2026: M4 (Signatur abschaltbar) und M5 (Vorschaubilder in CI-Farben) entschieden; EduKSX-UI umgestellt.
