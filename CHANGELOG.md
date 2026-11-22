@@ -18,6 +18,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **GUI-Guideline (#28, #43):** `docs/GUIDELINE.md` – wann welche Farbe, welcher Baustein, Seitenaufbau und Abstände,
+  GUI-Profile nach Modulart und Ansicht (DS12), Texte und Tonalität (de-CH), Prüfen vor dem Merge. Testseite: Seite
+  «Guideline» mit Beispielen «So» und «Nicht so».
 - **Mitgelieferte Themes Hoher Kontrast und Violett (#42, DS11):** `tokens/themes.json` (nur Abweichungen, Werte aus
   den INTRANET-Vorlagen auf die EduKSX-Tokens angepasst); der Build schreibt sie als `[data-theme="…"]` hell und
   dunkel in `tokens.css`, jeweils mit vollem Farbset, dazu `[data-theme="eduksx"]` für den Standard. `BUILTIN_THEMES`
