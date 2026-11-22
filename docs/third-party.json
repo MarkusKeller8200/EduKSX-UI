@@ -108,6 +108,46 @@
       "url": "https://github.com/DefinitelyTyped/DefinitelyTyped"
     },
     {
+      "id": "tailwindcss",
+      "group": "entwicklung",
+      "name": "Tailwind CSS 4 (tailwindcss, @tailwindcss/vite)",
+      "use": "CSS der Testseite (site/), damit die Bausteine wie in den Modulen aussehen; nicht im Paket",
+      "license": "MIT",
+      "url": "https://tailwindcss.com"
+    },
+    {
+      "id": "lucide-react",
+      "group": "entwicklung",
+      "name": "Lucide (lucide-react)",
+      "use": "Bediensymbole der Testseite (KONZEPT-MARKE 6.2); nicht im Paket",
+      "license": "ISC",
+      "url": "https://lucide.dev"
+    },
+    {
+      "id": "font-inter",
+      "group": "entwicklung",
+      "name": "Inter Variable (über @fontsource-variable/inter 5.3.0)",
+      "use": "Schrift der Testseite, selbst gehostet unter site/public/fonts/ (M6); nicht im Paket",
+      "license": "OFL-1.1",
+      "url": "https://rsms.me/inter/"
+    },
+    {
+      "id": "font-jetbrains-mono",
+      "group": "entwicklung",
+      "name": "JetBrains Mono Variable (über @fontsource-variable/jetbrains-mono 5.3.0)",
+      "use": "Schrift für Code und IDs der Testseite, selbst gehostet unter site/public/fonts/ (M6); nicht im Paket",
+      "license": "OFL-1.1",
+      "url": "https://www.jetbrains.com/lp/mono/"
+    },
+    {
+      "id": "github-pages-actions",
+      "group": "dienst",
+      "name": "GitHub Pages mit actions/configure-pages, upload-pages-artifact, deploy-pages",
+      "use": "Veröffentlichung der Testseite (.github/workflows/testseite.yml)",
+      "license": "MIT",
+      "url": "https://docs.github.com/pages"
+    },
+    {
       "id": "ci-markussxch",
       "group": "vorlage",
       "name": "CI-Manual MarKusSXCH v1.0",

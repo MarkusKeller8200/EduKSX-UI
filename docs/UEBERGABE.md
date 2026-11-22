@@ -47,6 +47,15 @@ nachführen.
 
 ## Sitzungen
 
+### Sitzung 22.11.2026 (15:45) – Testseite auf GitHub Pages (#15, Ideen #17, #19, #21)
+
+- Auftrag Markus: Testseite als Einstieg auf GitHub Pages, alle grafischen/UI-Entscheide visuell prüfbar (Regel in
+  AGENTS.md und `docs/TESTSEITE.md`). TS1 entschieden: eigene Vite-Seite statt Storybook.
+- `site/` mit Vorschau-Leiste (Hell/Dunkel/System, Vergleich, Handy/Tablet hoch/quer, Darstellungsoptimiert/Breit/Voll,
+  Vollbild), Seiten zu Tokens, Marke, Bausteinen und Prüfseite Schriftgewichte; Schriften selbst gehostet.
+- Workflow `testseite.yml`; offen: Merge und Aktivierung von Pages (TS3) nach Freigabe. Neue Bausteine aus #27 nach
+  `docs/TESTSEITE.md` §4 ergänzen.
+
 ### Sitzung 22.11.2026 (15:15) – Typografie- und Basis-Tokens (#25, #26)
 
 - Skalen aus Intranet/Glossary (Tailwind-Standards) als Tokens übernommen, `docs/KONZEPT-TOKENS.md` angelegt.

@@ -47,11 +47,18 @@ npm install github:MarkusKeller8200/EduKSX-UI#v0.1.0
 - **Weniger Bewegung:** Dauern nur über die Tokens (`transition-colors`, `duration-(--duration-normal)`); bei
   `prefers-reduced-motion` setzt `tokens.css` sie auf 0 ms.
 
+## Testseite
+
+Alle grafischen und UI-Entscheide sind auf der Testseite sichtbar und prüfbar – hell, dunkel und in den
+Pflicht-Ansichten Handy, Tablet und Desktop: **https://markuskeller8200.github.io/EduKSX-UI/** (nach Aktivierung von
+GitHub Pages). Lokal: `npm run site`. Aufbau und neue Bausteine ergänzen: [docs/TESTSEITE.md](docs/TESTSEITE.md).
+
 ## Entwickeln
 
 ```bash
 npm ci
-npm run check   # Tokens erzeugen, Typen, Tests, Build
+npm run check   # Tokens erzeugen, Typen, Tests, Build, Testseite
+npm run site    # Testseite lokal mit Neuladen bei Änderungen
 ```
 
 Tokens nur in `tokens/tokens.json` ändern; `dist/` und `src/generated/` entstehen beim Build.

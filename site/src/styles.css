@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+@import '../../dist/tokens.css';
+@import '../../dist/theme.css';
+
+/* Klassen aus den Bausteinen des Pakets und der Testseite einsammeln. */
+@source '../../src';
+@source '.';
+
+/* Dunkelmodus über die Klasse .dark (wie in allen Modulen), nicht über die Systemeinstellung allein. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    html {
+        font-family: var(--font-sans);
+        color-scheme: light;
+    }
+    html.dark {
+        color-scheme: dark;
+    }
+    body {
+        background: var(--background);
+        color: var(--foreground);
+        font-size: var(--text-base);
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+    }
+    code,
+    kbd,
+    pre {
+        font-family: var(--font-mono);
+    }
+    :focus-visible {
+        outline: 2px solid var(--ring);
+        outline-offset: 2px;
+    }
+}
