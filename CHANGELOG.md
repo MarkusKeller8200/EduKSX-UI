@@ -6,6 +6,13 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ## [Unveröffentlicht]
 
+### Barrierefreiheit
+
+- **Modulwechsel schliesst bei Fokusverlust (#12):** Verlässt der Fokus Knopf und Liste mit Tab oder Shift+Tab,
+  schliesst die Liste. Muster bleibt «Disclosure» (kein ARIA-Menü, keine Pfeiltasten).
+- **Verlauf für Bildschirmleser (#13):** alte und neue Werte erhalten unsichtbar «vorher:» und «nachher:», der
+  Pfeil wird nicht vorgelesen; sichtbar bleibt `alt → neu`.
+
 ### Neu
 
 - **Flow-Icon (#30):** EduKSX-Flow erhält sein Icon (Flussdiagramm mit Entscheidungs-Raute) aus dem

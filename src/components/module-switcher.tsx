@@ -11,12 +11,16 @@ export type ModuleSwitcherProps = {
     label?: string;
 };
 
-/** Modulwechsel als Schaltfläche mit Liste; Tastatur: Enter/Leertaste öffnet, Escape schliesst. */
+/**
+ * Modulwechsel als Schaltfläche mit Liste (Muster «Disclosure», kein ARIA-Menü).
+ * Tastatur: Enter/Leertaste öffnet, Escape schliesst; verlässt der Fokus Knopf und Liste (Tab, Shift+Tab), schliesst die Liste.
+ */
 export function ModuleSwitcher({ modules, current, label = 'Module' }: ModuleSwitcherProps) {
     const [open, setOpen] = useState(false);
     const listId = useId();
     const button = useRef<HTMLButtonElement>(null);
     const panel = useRef<HTMLDivElement>(null);
+    const root = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (!open) return;
@@ -41,7 +45,15 @@ export function ModuleSwitcher({ modules, current, label = 'Module' }: ModuleSwi
     if (modules.length === 0) return null;
 
     return (
-        <div className="relative">
+        <div
+            ref={root}
+            className="relative"
+            onBlur={(e) => {
+                // Nur schliessen, wenn der Fokus ein Ziel ausserhalb hat; Klicks ohne Fokusziel regelt «mousedown».
+                const next = e.relatedTarget as Node | null;
+                if (open && next && !root.current?.contains(next)) setOpen(false);
+            }}
+        >
             <button
                 ref={button}
                 type="button"
