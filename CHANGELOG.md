@@ -6,6 +6,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ## [Unveröffentlicht]
 
+## [0.1.0] – 2026-11-22
+
 ### CI
 
 - **Branch nach Merge automatisch löschen (22.11.2026):** neue Action `branch-aufraeumen.yml` löscht nach einem Merge in
