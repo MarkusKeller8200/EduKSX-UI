@@ -115,9 +115,10 @@ MarKusSXCH                Entwicklermarke (Dachmarke), Markus Keller
 
 Modulschlüssel sind intern, englisch und unveränderlich (Modulregister, EduKSX-Architektur). Der sichtbare Name
 folgt der CI-Regel **EduKSX-\<englischer Funktionsbegriff\>** (Produktfamilie 1.0). Wie Module mit deutschen
-Bezeichnungen sichtbar heissen, ist **OFFEN** (M1); die Spalte «Sichtbarer Name» zeigt den Vorschlag.
+Bezeichnungen sichtbar heissen, ist **BESCHLOSSEN** (M1, 22.11.2026): alle Module heissen `EduKSX-<Begriff>`, die
+deutsche Bezeichnung steht als Untertitel – auch Intranet, Stundenplan und Einsatzplanung.
 
-| Schlüssel | Sichtbarer Name (EMPFOHLEN) | Deutsche Bezeichnung | Bisher in den Repos | Icon | Repo |
+| Schlüssel | Sichtbarer Name (BESCHLOSSEN, M1) | Deutsche Bezeichnung | Bisher in den Repos | Icon | Repo |
 | --- | --- | --- | --- | --- | --- |
 | `core` | EduKSX-Core | Plattform-Bausteine | EduKSX-Core | Core (freigegeben) | EduKSX-Core |
 | `ident` | EduKSX-Ident (BESCHLOSSEN, M2) | Anmeldung | EduKSX-Ident; Register: «Teil von EduKSX-Core» | Ident | EduKSX-Ident |
@@ -134,13 +135,14 @@ Bezeichnungen sichtbar heissen, ist **OFFEN** (M1); die Spalte «Sichtbarer Name
 | `sign` | EduKSX-Sign | Unterschriften | EduKSX-Sign; Prototyp «Signatur / Persönliche Ablage» | Sign | – |
 | `portal` | EduKSX-Portal | Portal für Externe | EduKSX-Portal | Portal | – |
 | `intranet` | EduKSX-Intranet | Intranet | Register «Intranet»; Intranet selbst «EduKSX-Intranet» | Intranet | sek-intranet |
+| `planner` | EduKSX-Planner | Jahresplanung | neu (22.11.2026) | **OFFEN** (#49) | – |
 | `services` | EduKSX-Services (reserviert) | – | – | Services | – |
 
 **Ohne Modulschlüssel, keine Produktoberfläche:** EduKSX-Architektur, EduKSX-UI (`@eduksx/ui`), EduKSX-Suite
 (Verteilpaket Selbst-Hosting), EduKSX-Connectors (Anbindungen), EduKSX-Prototyp (Prototypen). Ihr Name folgt der
 Schreibweise, Wortmarke und Icon brauchen sie nicht.
 
-**Regeln (EMPFOHLEN, bis M1 entschieden ist):**
+**Regeln (BESCHLOSSEN, M1):**
 - Kopfzeile: Wortmarke `EduKSX-<Begriff>`; im Modulwechsel Icon, Name und die deutsche Bezeichnung als Untertitel.
 - Fenstertitel: `<Seite> · EduKSX-<Begriff>`; eigener Titel der Instanz ersetzt nur den Produktnamen.
 - Prototypen tragen den Zielnamen (`EduKSX-<Begriff>`), die Funktionsbezeichnung als Untertitel.
@@ -333,8 +335,8 @@ Abweichungen, die heute in Modulen bestehen. «Prüfen global» = Abschnitt 1 Pu
 | A8 | sek-intranet | eigene Kopie von `BrandWordmark` | Nein | `@eduksx/ui` verwenden | OFFEN im Modul |
 | A9 | EduKSX-Glossary | `input` `#CBD5E1` / `#3A4556`; `--brand`, `--brand-accent`, `--brand-ink`; eigene Kopie `BrandWordmark` | Nein (in EduKSX-UI entschieden, PR 8) | anpassen (#16) | OFFEN im Modul |
 | A10 | EduKSX-Architektur `poc/ident-zitadel` | dunkle Fläche `#1B1F24`, Warnung dunkel `#FF6B6B` | Nein | `#151B24` und Status aus `tokens.json` | OFFEN im Modul |
-| A11 | EduKSX-Prototyp | Prototypen mit deutschen Namen | folgt aus M1 | Untertitel-Regel (Abschnitt 4) | OFFEN (M1) |
-| A12 | EduKSX-Architektur | Register: Marketingnamen «Intranet», «Stundenplan», «Teil von EduKSX-Core»; Übersicht «Einsatzplanung»; Schreibweise «MarKusSX» | folgt aus M1; M2 entschieden | Register: ident/ops «EduKSX-Ident», «EduKSX-Ops» (M2); Rest nach M1 | OFFEN (M1) |
+| A11 | EduKSX-Prototyp | Prototypen mit deutschen Namen | folgt aus M1 | Untertitel-Regel (Abschnitt 4) | OFFEN im Modul (M1 entschieden) |
+| A12 | EduKSX-Architektur | Register: Marketingnamen «Intranet», «Stundenplan», «Teil von EduKSX-Core»; Übersicht «Einsatzplanung»; Schreibweise «MarKusSX» | folgt aus M1; M2 entschieden | Register und Übersicht auf `EduKSX-<Begriff>` (M1, M2) | in Arbeit (Architektur-PR) |
 | A13 | alle Repos (Blueprint) | GitHub-Vorschaubild `#0B3D63` / `#F2B705` | **Ja** – M5 | EduKSX-UI umgestellt (22.11.2026); Core, Ident, Codex, Connectors, Suite, Glossary, Architektur nachziehen und Bild neu hochladen; Vorgabe im Blueprint | OFFEN im Modul |
 
 **Issues in den Modulen (22.11.2026):** sek-intranet #222 (A1–A8), EduKSX-Glossary #498 (A9, A13),
@@ -346,7 +348,7 @@ EduKSX-Architektur #89 (A10, A12, A13, DS4 nach M3), EduKSX-Prototyp #72 (A11 na
 | Nr. | Frage | Optionen | Entscheid | Status |
 | --- | --- | --- | --- | --- |
 | M0 | Verbindlichkeit für Module | – | Module folgen dem UI-Konzept; Abweichung nur nach globaler Prüfung, mit Begründung im Modul, regelmässig überprüft | BESCHLOSSEN 22.11.2026 |
-| M1 | Sichtbare Modulnamen | EduKSX-Englisch + deutscher Untertitel / deutsch für Schulmodule / frei je Modul | – | OFFEN |
+| M1 | Sichtbare Modulnamen | EduKSX-Englisch + deutscher Untertitel / deutsch für Schulmodule / frei je Modul | EduKSX-Englisch + deutscher Untertitel für alle Module, auch Intranet, Stundenplan und Einsatzplanung | BESCHLOSSEN 22.11.2026 |
 | M2 | Ident und Ops nach aussen | eigene Namen / Teil von EduKSX-Core | eigene sichtbare Namen EduKSX-Ident und EduKSX-Ops | BESCHLOSSEN 22.11.2026 |
 | M3 | Marke links oben in einer Instanz | EduKSX + Logo zusätzlich (DS4) / EduKSX oder eigenes Logo / EduKSX, MarKusSXCH oder eigenes Logo | EduKSX-Wortmarke oder eigenes Logo der Instanz (White-Label) in allen Modulen; MarKusSXCH nicht als Produktmarke, nur in der Signatur. DS4 in KONZEPT-DESIGN ist anzupassen | BESCHLOSSEN 22.11.2026 |
 | M4 | Signatur «Developed by MarKusSXCH» | abschaltbar (Vorgabe ein) / immer sichtbar | abschaltbar durch Admin der Instanz, Vorgabe eingeschaltet | BESCHLOSSEN 22.11.2026 |
@@ -409,3 +411,5 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
   dort nur «Quelle EduKSX-UI» vermerkt (Entscheid Markus).
 - 22.11.2026: Flow-Icon (#30) aus dem Prototyp-Entwurf ins Icon-Set übernommen und freigegeben (17 Icons); der
   frühere Vermerk «auch nicht im Prototyp» war falsch.
+- 22.11.2026: M1 entschieden – alle Module `EduKSX-<Begriff>` mit deutschem Untertitel. Neues Modul `planner`
+  EduKSX-Planner «Jahresplanung» (Icon und Abgrenzung zu `flow` offen).
