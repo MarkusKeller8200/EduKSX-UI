@@ -178,6 +178,17 @@ export const eduksxIcons = {
       { tag: "circle", role: "sx", fill: true, attrs: {"cx": 18.5, "cy": 19, "r": 1} },
     ],
   },
+  "planner": {
+    name: "EduKSX-Planner",
+    meaning: "Zeitbalken auf einer Achse: Jahresplanung mit Vorhaben und Zeiträumen",
+    elements: [
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M4 3.5v16.5h16.5"} },
+      { tag: "rect", role: "k", fill: true, attrs: {"x": 6.5, "y": 5.5, "width": 7, "height": 2.8, "rx": 1.2} },
+      { tag: "rect", role: "sx", fill: true, attrs: {"x": 10, "y": 10.2, "width": 8.5, "height": 2.8, "rx": 1.2} },
+      { tag: "rect", role: "e", fill: true, attrs: {"x": 8, "y": 14.9, "width": 6, "height": 2.8, "rx": 1.2} },
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M16 5.2v3.4"} },
+    ],
+  },
 } satisfies Record<string, EduksxIconDef>;
 
 export type EduksxIconName = keyof typeof eduksxIcons;

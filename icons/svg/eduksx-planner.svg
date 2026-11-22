@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img">
+  <title>EduKSX-Planner</title>
+  <path d="M4 3.5v16.5h16.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="6.5" y="5.5" width="7" height="2.8" rx="1.2" fill="currentColor"/>
+  <rect x="10" y="10.2" width="8.5" height="2.8" rx="1.2" fill="currentColor"/>
+  <rect x="8" y="14.9" width="6" height="2.8" rx="1.2" fill="currentColor"/>
+  <path d="M16 5.2v3.4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

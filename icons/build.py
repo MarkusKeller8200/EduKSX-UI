@@ -1,4 +1,4 @@
-"""EduKSX Icon-Set – Generator (Icons freigegeben 09.11., 13.11. und 22.11.2026 durch Markus Keller).
+"""EduKSX Icon-Set – Generator (Icons freigegeben 09.11., 13.11. und 22.11.2026 durch Markus Keller; Planner 22.11.2026).
 
 Übernommen aus dem Repo markussxch (docs/brand/icons/eduksx); massgebliche Quelle ist seit 22.11.2026
 EduKSX-UI (icons/). Motive und Farben nur nach neuer Freigabe ändern.
@@ -226,8 +226,25 @@ EXTRA_FLOW = {
 }
 
 
+# Ergänzung, freigegeben 22.11.2026 durch Markus Keller (#49, Entwurf A «Zeitbalken»)
+EXTRA_PLANNER = {
+    "eduksx-planner": {
+        "name": "EduKSX-Planner",
+        "meaning": "Zeitbalken auf einer Achse: Jahresplanung mit Vorhaben und Zeiträumen",
+        "els": [
+            ("path", "base", dict(d="M4 3.5v16.5h16.5"), "s"),
+            ("rect", "k", dict(x=6.5, y=5.5, width=7, height=2.8, rx=1.2), "f"),
+            ("rect", "sx", dict(x=10, y=10.2, width=8.5, height=2.8, rx=1.2), "f"),
+            ("rect", "e", dict(x=8, y=14.9, width=6, height=2.8, rx=1.2), "f"),
+            ("path", "base", dict(d="M16 5.2v3.4"), "s"),
+        ],
+    },
+}
+
+
 ICONS.update(EXTRA)
 ICONS.update(EXTRA_FLOW)
+ICONS.update(EXTRA_PLANNER)
 DRAFTS = {}  # neue Entwürfe hier eintragen; erscheinen nicht in EduksxIcon
 
 

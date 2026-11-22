@@ -1,7 +1,7 @@
 # EduKSX-Icon-Set
 
-17 Icons der Produktfamilie EduKSX in den Farben des CI MarKusSXCH (CI-Manual v1.0, Markenfortschreibung v1.1).
-**Status: freigegeben** am 09.11.2026 (12 Icons) und 13.11.2026 (Intranet, Timetable, Staffing, Ops) und 22.11.2026 (Flow) durch Markus
+18 Icons der Produktfamilie EduKSX in den Farben des CI MarKusSXCH (CI-Manual v1.0, Markenfortschreibung v1.1).
+**Status: freigegeben** am 09.11.2026 (12 Icons) und 13.11.2026 (Intranet, Timetable, Staffing, Ops) und 22.11.2026 (Flow, Planner) durch Markus
 Keller. Änderungen an Motiven oder Farben brauchen eine neue Freigabe.
 
 Übernommen aus dem Repo markussxch am 22.11.2026 (#31). **Massgeblich ist diese Kopie**; markussxch behält eine Kopie
@@ -18,7 +18,7 @@ für die Website. Regeln: `docs/KONZEPT-MARKE.md` Abschnitt 6.
 | `png/<grösse>/<name>-tile-*.png` | App-Icons als PNG in 512, 192, 64 und 32 px |
 
 Namen: `eduksx` (Familie) und `eduksx-<schlüssel>` für glossary, codex, core, ident, shop, licence, portal, connect,
-services, sign, time, intranet, timetable, staffing, ops, flow.
+services, sign, time, intranet, timetable, staffing, ops, flow, planner.
 
 ## Gestaltung
 
@@ -46,6 +46,7 @@ services, sign, time, intranet, timetable, staffing, ops, flow.
 | Staffing (Einsatzplanung) | Person mit Kalender |
 | Ops (Leitstand) | Bildschirm mit Puls |
 | Flow (Abläufe) | Flussdiagramm: Startkasten, Entscheidungs-Raute, zwei Ziele |
+| Planner (Jahresplanung) | Zeitbalken: drei versetzte Balken auf einer Zeitachse |
 
 ## Im Code
 

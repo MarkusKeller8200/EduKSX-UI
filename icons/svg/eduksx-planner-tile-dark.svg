@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img">
+  <title>EduKSX-Planner</title>
+  <rect width="48" height="48" rx="11" fill="#222222"/>
+  <g transform="translate(9.0 9.0) scale(1.25)">
+  <path d="M4 3.5v16.5h16.5" fill="none" stroke="#F2F5F8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="6.5" y="5.5" width="7" height="2.8" rx="1.2" fill="#FF8A00"/>
+  <rect x="10" y="10.2" width="8.5" height="2.8" rx="1.2" fill="#32B8F2"/>
+  <rect x="8" y="14.9" width="6" height="2.8" rx="1.2" fill="#B59AFF"/>
+  <path d="M16 5.2v3.4" fill="none" stroke="#F2F5F8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
