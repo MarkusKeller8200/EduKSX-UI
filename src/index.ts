@@ -15,3 +15,16 @@ export { HistoryList, ACTION_LABELS } from './components/history-list';
 export type { HistoryEntry, HistoryListProps } from './components/history-list';
 export { formatDateTime } from './lib/format';
 export { cn } from './lib/cn';
+// Grundbausteine (#27, docs/KONZEPT-BAUSTEINE.md)
+export { Button, IconButton, buttonClasses, BUTTON_VARIANTS, BUTTON_SIZES } from './components/button';
+export type { ButtonProps, IconButtonProps, ButtonVariant, ButtonSize } from './components/button';
+export { Tooltip } from './components/tooltip';
+export type { TooltipProps } from './components/tooltip';
+export { Field, Label, FieldHint, FieldError, Input, Textarea, NativeSelect, Checkbox, FIELD_CONTROL_CLASSES } from './components/field';
+export type { FieldProps, LabelProps, InputProps, TextareaProps, NativeSelectProps, CheckboxProps } from './components/field';
+export { Table, TableCaption, TableHeader, TableBody, TableFooter, TableRow, TableHead, TableCell, TableEmpty } from './components/table';
+export type { TableProps, TableRowProps, TableHeadProps, TableCellProps, SortDirection } from './components/table';
+export { Dialog, AlertDialog } from './components/dialog';
+export type { DialogProps, AlertDialogProps } from './components/dialog';
+export { Alert, ALERT_LABELS } from './components/alert';
+export type { AlertProps, AlertVariant } from './components/alert';

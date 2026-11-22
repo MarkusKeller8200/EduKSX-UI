@@ -6,7 +6,7 @@ export default defineConfig({
     build: {
         lib: { entry: 'src/index.ts', formats: ['es'], fileName: () => 'index.js' },
         emptyOutDir: false,
-        rollupOptions: { external: ['react', 'react-dom', 'react/jsx-runtime'] },
+        rollupOptions: { external: ['react', 'react-dom', 'react/jsx-runtime'], output: { comments: { legal: true } } },
     },
     test: { environment: 'jsdom', globals: true, include: ['tests/**/*.test.{ts,tsx}'], setupFiles: ['tests/setup.ts'] },
 });
