@@ -99,7 +99,10 @@ MarKusSXCH                Entwicklermarke (Dachmarke), Markus Keller
   Eigenständigkeit entsteht über Name, Icon und Inhalt, nicht über die Schrift.
 - Schrift **Inter**, selbst gehostet (kein Abruf bei Google Fonts); Rückfall `system-ui, sans-serif`
   (`tokens.json` › `font.sans`).
-- Gewichte: Markennamen 600–700, Fliesstext 400–500; klare Hierarchie, keine verspielten Schnitte.
+- Gewichte (M7): **Fliesstext 400**, Labels und Zwischentitel **500**, Titel und Wortmarke **600**, starke
+  Hervorhebung **700** (Wortmarke darf 700). Nur diese vier Stufen, keine Zwischengewichte wie 450 oder 550: sie
+  gehen nur mit Inter Variable und sähen im Rückfall anders aus. Inter Variable ist erlaubt, aber keine Pflicht.
+  Klare Hierarchie, keine verspielten Schnitte. Die Tokens dazu folgen mit den Typografie-Tokens (#25).
 - **Keine plattformabhängigen Schriften** (M6): nur frei lizenzierte Schriften, die das Modul selbst ausliefert;
   als Rückfall nur generische System-Stacks (`system-ui`, `ui-monospace`, `sans-serif`, `monospace`), keine
   benannten Betriebssystem- oder Office-Schriften. Darum entfällt **Aptos** aus dem CI-Vorschlag
@@ -348,6 +351,7 @@ EduKSX-Architektur #89 (A10, A12, A13, DS4 nach M3), EduKSX-Prototyp #72 (A11 na
 | M4 | Signatur «Developed by MarKusSXCH» | abschaltbar (Vorgabe ein) / immer sichtbar | abschaltbar durch Admin der Instanz, Vorgabe eingeschaltet | BESCHLOSSEN 22.11.2026 |
 | M5 | GitHub-Vorschaubilder | CI-Farben im Blueprint / bleibt neutral | CI-Farben: `[social_preview]` mit `farbe = "#151b24"`, `akzent = "#ff8a00"` in jedem EduKSX-Repo; Vorschlag als Vorgabe im Blueprint | BESCHLOSSEN 22.11.2026 |
 | M6 | Schriften (3.4) | Aptos als Rückfall wie CI / nur freie, selbst gehostete Schriften | keine plattformabhängigen Schriften; Inter für Oberfläche, JetBrains Mono für Code und IDs, Rückfall nur generische System-Stacks; kein Aptos | BESCHLOSSEN 22.11.2026 |
+| M7 | Schriftgewichte (3.4) | 450/550 mit Inter Variable / 400/500/600/700 statisch | statisch 400, 500, 600, 700; keine Zwischengewichte, Inter Variable nicht Pflicht (Vergleichsseite geprüft) | BESCHLOSSEN 22.11.2026 |
 
 Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architektur); M1/M2 das Modulregister.
 Änderungen in anderen Repos als EduKSX-UI erst nach Rückfrage.
@@ -399,6 +403,6 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
 - 22.11.2026: Nachlese Icons und CI (#31): Icon-Set samt Generator nach `icons/`, Baustein `EduksxIcon`, Token
   `icon-tile`; neu 3.4 Schrift, 5.4 Zustände, 6.1 Dateien, 6.2 Bediensymbole (Idee #20), 10. Ton und Texte, 11. Pflege
   und Abnahme; Flow-Icon-Vermerk korrigiert; M6 entschieden: keine plattformabhängigen Schriften, Inter und JetBrains
-  Mono (`font.mono`), kein Aptos. Geprüft zusätzlich: markussxch-tagstudio, edu-shop,
+  Mono (`font.mono`), kein Aptos. M7: Gewichte 400/500/600/700, keine Zwischengewichte. Geprüft zusätzlich: markussxch-tagstudio, edu-shop,
   agent-skills, WebApplicationProgrammingGuide – ohne weitere EduKSX-Inhalte. In markussxch wird nichts gelöscht,
   dort nur «Quelle EduKSX-UI» vermerkt (Entscheid Markus).
