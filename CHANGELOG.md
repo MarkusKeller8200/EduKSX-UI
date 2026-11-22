@@ -8,6 +8,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **GUI-Tester auf der Testseite (#44, DS13):** Baustein-Seiten mit Reitern Beispiele, Versionen & Status,
+  Überarbeitung und Wünsche; Übersicht «Freigaben & Status». Versionen, Verlauf und Überarbeitungen in
+  `site/src/versionen.ts` (Regeln aus dem INTRANET: Status Entwicklung → Prüfung → Freigegeben, SemVer je Baustein),
+  Wünsche als GitHub-Ideen je Baustein. Alle Bausteine starten mit v1.0.0 in Prüfung.
 - **Flow-Icon (#30):** EduKSX-Flow erhält sein Icon (Flussdiagramm mit Entscheidungs-Raute) aus dem
   Prototyp-Entwurf, freigegeben 22.11.2026; alle Varianten als SVG und PNG, Baustein `EduksxIcon name="flow"`.
 - **Grundbausteine auf der Testseite (#27, #15):** eigene Seiten für Button, Tooltip, Formularfelder, Tabelle,

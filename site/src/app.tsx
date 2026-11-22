@@ -23,6 +23,7 @@ import { ENTRIES, GROUPS, type Entry } from './registry';
 import { EMBEDDED, setSetting, useApplyScheme, useRoute, useSettings, type Ansicht, type Ausrichtung, type Schema } from './settings';
 import { docUrl, IssueLinks, REPO, StatusBadge } from './ui';
 import { Uebersicht } from './sections/uebersicht';
+import { EntryContext } from './entry-context';
 
 const START = 'uebersicht';
 
@@ -256,7 +257,9 @@ function Content() {
                     {entry ? (
                         <>
                             <PageHead entry={entry} />
-                            <entry.Page />
+                            <EntryContext.Provider value={entry}>
+                                <entry.Page />
+                            </EntryContext.Provider>
                         </>
                     ) : (
                         <Uebersicht />
