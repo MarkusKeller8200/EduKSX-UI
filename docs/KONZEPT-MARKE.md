@@ -90,6 +90,19 @@ MarKusSXCH                Entwicklermarke (Dachmarke), Markus Keller
 - Entwicklersignatur im Fuss bzw. unter dem Logo: **«Developed by MarKusSXCH»** mit Wortmarke `developer`. Sie ist
   standardmässig eingeschaltet; der Admin einer Instanz darf sie abschalten (M4, BESCHLOSSEN 22.11.2026). Im Impressum
   und in rechtlichen Texten steht der Klartext «Markus Keller».
+- **Responsive:** Desktop, Tablet und Smartphone prüfen; keine überlaufenden Wortmarken und keine abgeschnittenen
+  Endungen (`-Glossary`, `SXCH`). Reicht der Platz nicht, Icon plus Klartext statt verkleinerter Wortmarke (CI §9).
+
+### 3.4 Schrift (BESCHLOSSEN, CI v1.0 §6; Aptos ZU PRÜFEN)
+
+- Eine sachliche, zeitgemässe Sans Serif für **alle** Module und die Wortmarken. Keine eigene Schrift je Modul;
+  Eigenständigkeit entsteht über Name, Icon und Inhalt, nicht über die Schrift.
+- Schrift **Inter**, selbst gehostet (kein Abruf bei Google Fonts); Rückfall `system-ui, sans-serif`
+  (`tokens.json` › `font.sans`).
+- Gewichte: Markennamen 600–700, Fliesstext 400–500; klare Hierarchie, keine verspielten Schnitte.
+- Das CI nennt als Rückfall zusätzlich **Aptos** (`Inter, Aptos, system-ui, sans-serif`). Ob Aptos in den
+  Schriftstapel kommt, ist **ZU PRÜFEN** (M6): Aptos ist eine Microsoft-Schrift und nur auf Windows/Office-Geräten
+  vorhanden; ohne Aufnahme fällt die Schrift dort auf Segoe UI (`system-ui`) zurück.
 
 ## 4. Produkt- und Modulnamen
 
@@ -162,6 +175,18 @@ markenrelevanten:
   Kurzformen `--brand`, `--brand-accent`, `--brand-ink` sowie eigene Präfixe (z. B. `--ci-*`) entfallen.
 - Aktive Navigation, Links und Fokus sind auch ohne Farbe erkennbar (Form, Unterstreichung, Position).
 
+### 5.4 Bedienelemente und Zustände (BESCHLOSSEN, CI v1.0 §9)
+
+- Für jedes Bedienelement sind die Zustände **Normal, Hover, Fokus, Gedrückt (Pressed) und Deaktiviert**
+  systematisch festgelegt – über Tokens, nicht je Seite. Fehlt ein Zustand im Baustein, wird er hier ergänzt, nicht
+  im Modul.
+- Orange ist **nie der einzige Hinweis** auf einen Zustand (z. B. aktiv, ausgewählt, Fehler); dazu kommen Form,
+  Rahmen, Unterstreichung, Symbol oder Text.
+- Links bleiben **ohne Farbe** als interaktiv erkennbar (Unterstreichung oder eindeutige Form).
+- Produktkarten nutzen den Akzent sparsam; Statusfarben (Erfolg, Warnung, Fehler) werden nie durch Markenfarben
+  ersetzt (5.2).
+- Prüfen: Kontrast, Name für Bildschirmleser, Tastaturbedienung, sichtbarer Fokusrahmen, Zoom bis 200 %.
+
 ### 5.3 Themes
 
 Standard «EduKSX» nur aus `tokens.json`; «Hoher Kontrast» als Vorlage; Theme der Organisation mit allen bekannten
@@ -180,14 +205,93 @@ Signatur.
   vier Bausteinen (Intranet), Raster mit Kalenderkopf (Timetable), Person mit Kalender (Staffing), Bildschirm mit Puls
   (Ops).
 - Gestaltung: 24er-Raster, Strich 1,75, runde Enden und Ecken; Orange = Hauptakzent, Blau und Violett für Details,
-  Neutral `#222222` / `#F2F5F8`; Kachel 48 × 48, Eckenradius 11.
+  Neutral `#222222` / `#F2F5F8`; Kachel 48 × 48, Eckenradius 11, Kachelfläche hell `#F2F5F8` mit feinem Rand,
+  dunkel `#222222` (Token `icon-tile`; bewusst nicht die Seitenfläche `#151B24`, so wie freigegeben).
 - Varianten: einfarbig (`currentColor`) für die Oberfläche, farbig für helle Flächen, Kachel hell/dunkel als App-Icon
   (PNG 512, 192, 64, 32).
-- Neue Motive oder Farben brauchen eine eigene Freigabe durch Markus. **EduKSX-Flow hat noch kein freigegebenes Icon**
-  (ZU PRÜFEN: Entwurf aus dem Prototyp vorlegen).
+- Neue Motive oder Farben brauchen eine eigene Freigabe durch Markus. **EduKSX-Flow hat noch kein Icon** – in keinem
+  Repo gibt es einen Entwurf, auch nicht im Prototyp; das INTRANET nutzt behelfsmässig das Lucide-Symbol «Workflow».
+  Entwurf neu anfertigen und freigeben lassen (OFFEN, #30); bis dahin «Workflow» aus Lucide als Platzhalter.
 - Für EduKSX gibt es kein separates Signet; das Icon «EduKSX» bzw. das Modul-Icon dient als Favicon und App-Icon.
 - Eine eigene Symbolwahl «Standard-Symbole (Lucide)» statt EduKSX-Icons ist nur für Menüsymbole erlaubt, nie für
   Modul-Icons in Kopfzeile und Modulwechsel (EMPFOHLEN, aus dem Intranet).
+
+### 6.1 Dateien und Baustein (BESCHLOSSEN 22.11.2026)
+
+EduKSX-UI ist seit 22.11.2026 die **massgebliche Quelle** des Icon-Sets (übernommen aus markussxch; dort bleibt eine
+Kopie für die Website mit Vermerk «Quelle EduKSX-UI»). Module beziehen die Icons aus `@eduksx/ui`, nicht aus eigenen
+Kopien.
+
+| Datei | Verwendung |
+| --- | --- |
+| `icons/svg/<name>.svg` | einfarbig (`currentColor`), 24 × 24 – Oberfläche, übernimmt die Textfarbe |
+| `icons/svg/<name>-color.svg` | farbig ohne Kachel, für helle Flächen (Doku, Übersichten) |
+| `icons/svg/<name>-tile-dark.svg`, `-tile-light.svg` | App-Icon, Kachel dunkel bzw. hell |
+| `icons/png/<512\|192\|64\|32>/<name>-tile-*.png` | App-Icon, Favicon, Manifest |
+| `icons/build.py` | Generator (nur Python-Standardbibliothek); einzige Stelle, an der Motive stehen |
+
+Dateinamen: `eduksx` für die Familie, sonst `eduksx-<schlüssel>` (z. B. `eduksx-glossary`). Im Paket unter
+`@eduksx/ui/icons/svg/…` und `@eduksx/ui/icons/png/…`.
+
+Baustein **`EduksxIcon`** zeichnet dieselben Icons im Code, Farben nur über `--brand-*` und `--icon-tile`, wechselt
+mit hell/dunkel:
+
+```tsx
+<EduksxIcon name="glossary" />                         // farbig, 24 px, dekorativ
+<EduksxIcon name="codex" variant="mono" />             // einfarbig in Textfarbe (Menü, Knopf)
+<EduksxIcon name="eduksx" variant="tile" size={64} />  // App-Kachel
+<EduksxIcon name="ident" title="EduKSX-Ident" />       // beschriftet für Bildschirmleser
+```
+
+Ändern: Motiv in `icons/build.py`, dann `python3 icons/build.py` (SVG), `python3 icons/build.py --ts
+src/components/eduksx-icons.data.ts` (Baustein) und die PNG neu rendern (`rsvg-convert -w 512 icons/svg/… -o
+icons/png/512/…`). Ein Test prüft, dass Dateien und Baustein übereinstimmen. Jede Änderung braucht eine neue Freigabe.
+
+### 6.2 Bediensymbole (BESCHLOSSEN 22.11.2026; aus Glossary und INTRANET, Idee #20)
+
+Für Bedienung, Menü und Zustände – nicht für Modul-Icons – gilt:
+
+- **Bibliothek: Lucide** (`lucide-react`, Lizenz ISC; Copyright- und Erlaubnishinweis mitliefern). Keine zweite
+  Symbolbibliothek daneben. Strich und Raster passen zum EduKSX-Set (24er-Raster, runde Enden). Lucide ist eine
+  Abhängigkeit des Moduls, nicht von `@eduksx/ui`.
+- **Grösse:** in Knöpfen und Menüs 16 px (`h-4 w-4`), in Kopfzeile und Modulwechsel die EduKSX-Icons mit 20–24 px.
+- **Symbol-Knöpfe** (nur Symbol, ohne sichtbaren Text) haben immer: `aria-label` mit der Aktion, einen **Tooltip** mit
+  demselben Text, bei Umschaltern `aria-pressed` bzw. in Gruppen `role="group"` mit Gruppenname. Das Symbol selbst
+  ist `aria-hidden`.
+- **Jede Option eines Umschalters hat ein eigenes Symbol** – kein Symbol doppelt in derselben Gruppe und keines aus
+  einer anderen Gruppe wiederverwendet (Glossary #142).
+- **Warnungen, Fehler und Erfolg immer mit Symbol und Text**, nie nur mit Farbe oder nur mit Symbol.
+- **Modul-Einträge** im Menü: EduKSX-Icon des Moduls (Variante `mono`); bei der Symbolwahl «Standard-Symbole» das
+  Lucide-Symbol aus der Tabelle unten. Ein Menüpunkt ohne Zuordnung bekommt keinen leeren Platzhalter-Kreis, sondern
+  wird hier nachgetragen.
+
+**Feste Zuordnungen** (übernommen, damit gleiche Funktionen in allen Modulen gleich aussehen):
+
+| Zweck | Lucide-Symbol |
+| --- | --- |
+| Farbschema hell / dunkel / wie System | `Sun` / `Moon` / `SunMoon` |
+| Ansicht Mobil / Darstellungsoptimiert / Breit / Voll | `Smartphone` / `Laptop` / `MoveHorizontal` / `Maximize2` |
+| Startseite (Modul Intranet) | `LayoutGrid` (EduKSX: `intranet`) |
+| Portal | `AppWindow` (EduKSX: `portal`) |
+| Glossar, Begriff | `BookA` (EduKSX: `glossary`) |
+| Personen, Konten | `Users` (EduKSX: `ident`) |
+| Stundenplan | `CalendarClock` (EduKSX: `timetable`) |
+| Abwesenheiten, Einsatzplanung | `CalendarOff` (EduKSX: `staffing`) |
+| Abläufe (Flow) | `Workflow` (Platzhalter, EduKSX-Icon OFFEN #30) |
+| Mitteilungen | `Megaphone` |
+| Termine, Datumsauswahl | `CalendarDays` |
+| Dokumente | `FileText` |
+| Einstellungen | `Settings` |
+| Verlauf, Zeitleiste | `History` |
+
+Symbole der **GUI-Bausteine** (Prüfseite und Dokumentation, Gruppen aus `UEBERNAHME-INTRANET-GUI.md`):
+
+| Gruppe | Bausteine → Lucide-Symbol |
+| --- | --- |
+| Navigation & Aufbau (`Compass`) | Menü `Menu`, Seitenpanel `PanelRight`, Reiter `Folders`, Seitenweise Anzeige `ListOrdered`, Schrittanzeige `Footprints`, Befehlspalette `Command`, Umschalter & Aufklappen `ToggleRight`, Kontextmenü `SquareMousePointer`, Geteilte Ansicht `Columns2` |
+| Eingabe (`TextCursorInput`) | Button `MousePointerClick`, Knopfgruppe `Group`, Formularfelder `TextCursorInput`, Eingabegruppe `RectangleEllipsis`, Dropdown `ChevronsUpDown`, Optionsfelder `CircleDot`, Schalter `ToggleLeft`, Auswahl mit Suche `SearchCheck`, Mehrfachauswahl `ListChecks`, Datumsauswahl `CalendarDays`, Datei hochladen `FileUp`, Schieberegler `SlidersHorizontal`, Drag & Drop `Move`, Fragebogen `ClipboardList` |
+| Daten anzeigen (`Table2`) | Tabellen `Table2`, Typografie `Type`, Eintrag `Rows3`, Karten & Seitenkopf `PanelsTopLeft`, Badges & Status `Tag`, Akkordeon `ListCollapse`, Fortschritt `Gauge`, Diagramme `ChartColumn`, Zeitleiste `History`, Scrollbereich `ScrollText`, Codeblock `Code`, Begriff `BookA` |
+| Rückmeldung (`MessageSquareWarning`) | Meldungen & Dialoge `MessageSquareWarning`, Rückfrage `ShieldAlert`, Popover `MessageSquareMore`, Vorschaukarte `IdCard`, Banner `Flag`, Ladezustände `Loader` |
 
 ## 7. Gegenüberstellung je Repo (Stand 22.11.2026)
 
@@ -239,11 +343,45 @@ EduKSX-Architektur #89 (A10, A12, A13, DS4 nach M3), EduKSX-Prototyp #72 (A11 na
 | M3 | Marke links oben in einer Instanz | EduKSX + Logo zusätzlich (DS4) / EduKSX oder eigenes Logo / EduKSX, MarKusSXCH oder eigenes Logo | EduKSX-Wortmarke oder eigenes Logo der Instanz (White-Label) in allen Modulen; MarKusSXCH nicht als Produktmarke, nur in der Signatur. DS4 in KONZEPT-DESIGN ist anzupassen | BESCHLOSSEN 22.11.2026 |
 | M4 | Signatur «Developed by MarKusSXCH» | abschaltbar (Vorgabe ein) / immer sichtbar | abschaltbar durch Admin der Instanz, Vorgabe eingeschaltet | BESCHLOSSEN 22.11.2026 |
 | M5 | GitHub-Vorschaubilder | CI-Farben im Blueprint / bleibt neutral | CI-Farben: `[social_preview]` mit `farbe = "#151b24"`, `akzent = "#ff8a00"` in jedem EduKSX-Repo; Vorschlag als Vorgabe im Blueprint | BESCHLOSSEN 22.11.2026 |
+| M6 | Aptos im Schriftstapel (3.4) | `Inter, Aptos, system-ui, sans-serif` wie CI / `Inter, system-ui, sans-serif` wie heute | – | ZU PRÜFEN |
 
 Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architektur); M1/M2 das Modulregister.
 Änderungen in anderen Repos als EduKSX-UI erst nach Rückfrage.
 
-## 10. Verlauf
+## 10. Ton, Texte und Statusangaben (BESCHLOSSEN, Markenkonzept v1.0 §7, Produktfamilie 1.0)
+
+- **Grundton:** sachlich, persönlich, zugänglich und kompetent; nicht belehrend und nicht übertrieben werblich.
+  Fachbegriffe dort, wo sie den Nutzenden helfen, sonst Alltagssprache (unklare Begriffe über den Baustein «Begriff»
+  erklären).
+- **Schweizer Rechtschreibung** (`ss` statt `ß`), Datum TT.MM.JJJJ; Details im Sprachteil von
+  `UEBERNAHME-INTRANET-GUI.md`.
+- **Statusangaben** eines Moduls nur wie freigegeben: «In Entwicklung» oder «Öffentliche Beta» (mit Datum der
+  Freigabe). Solange ein Modul 0.x ist, zeigt es den Hinweis «In Entwicklung» bzw. «Beta». Keine erfundenen Releases,
+  Termine, Demo-Links oder Funktionsversprechen; geplante Funktionen als Ziel bezeichnen, nicht als vorhanden.
+- Claims nur, wenn sie zutreffen («Open Source for Education» nur bei passender Lizenz, 2.).
+- Der Arbeitgeber des Entwicklers wird im öffentlichen Auftritt nicht genannt.
+
+## 11. Pflege und Abnahme (BESCHLOSSEN, CI v1.0 §12–13)
+
+- **Änderungssperre:** Farben der Marke, Farbsegmente, Schreibweisen und Icon-Motive ändern sich nur nach
+  ausdrücklicher Freigabe durch Markus; jede Änderung bekommt einen Eintrag im Verlauf (12.) und im CHANGELOG.
+- **Freiraum:** Grafiken, Fotos, Illustrationen und Oberflächen dürfen eigene Akzente nutzen, solange Wortmarken,
+  Icons und Markenfarben unverändert bleiben.
+- Rein gestalterische Arbeit benennt keine technischen Namen um (Repos, Pakete, APIs, URLs, Datenmodelle).
+
+**Abnahme-Checkliste für KI-Werkzeuge und Reviews** (bei jeder Änderung an Oberfläche oder Marke abhaken):
+
+- [ ] EduKSX, EduKSX-\<Begriff\>, MarKusSXCH, MarKusSX.CH und Markus Keller exakt geschrieben (3.1).
+- [ ] Farbsegmente richtig: EduKSX **E violett, K orange, SX blau**; MarKusSXCH **M violett, K orange, SXCH blau**.
+- [ ] Wortmarke über `BrandWordmark`, Icons über `EduksxIcon` bzw. `icons/`; keine eigenen Kopien, keine Hexwerte in
+      Seiten.
+- [ ] Hell und dunkel, Schriftgrössen, Desktop/Tablet/Smartphone und WCAG-Kontrast (axe-core, `checkTheme()`) geprüft.
+- [ ] Zustände der Bedienelemente vollständig (5.4); Symbol-Knöpfe mit `aria-label` und Tooltip (6.2).
+- [ ] Technische Bezeichner, Repos, APIs und Links nicht durch Gestaltungsarbeit umbenannt.
+- [ ] Keine unbestätigte Marken- oder Domainverfügbarkeit und keine erfundenen Releases behauptet (10.).
+- [ ] Abweichungen im Modul vermerkt und im Abweichungsregister (8.) eingetragen.
+
+## 12. Verlauf
 
 - 22.11.2026: Angelegt. Quellen zusammengetragen aus markussxch (CI-Manual v1.0, Markenfortschreibungen v1.1 und v1.2,
   Produktfamilie 1.0, Icon-Set), EduKSX-Architektur (KONZEPT-DESIGN, Modulregister, Modulübersicht, PoC Zitadel),
@@ -253,3 +391,8 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
 - 22.11.2026: M2 entschieden – Ident und Ops mit eigenen sichtbaren Namen.
 - 22.11.2026: M3 entschieden – EduKSX oder eigenes Logo; MarKusSXCH nur Signatur.
 - 22.11.2026: M4 (Signatur abschaltbar) und M5 (Vorschaubilder in CI-Farben) entschieden; EduKSX-UI umgestellt.
+- 22.11.2026: Nachlese Icons und CI (#31): Icon-Set samt Generator nach `icons/`, Baustein `EduksxIcon`, Token
+  `icon-tile`; neu 3.4 Schrift, 5.4 Zustände, 6.1 Dateien, 6.2 Bediensymbole (Idee #20), 10. Ton und Texte, 11. Pflege
+  und Abnahme; Flow-Icon-Vermerk korrigiert; M6 (Aptos) offen. Geprüft zusätzlich: markussxch-tagstudio, edu-shop,
+  agent-skills, WebApplicationProgrammingGuide – ohne weitere EduKSX-Inhalte. In markussxch wird nichts gelöscht,
+  dort nur «Quelle EduKSX-UI» vermerkt (Entscheid Markus).

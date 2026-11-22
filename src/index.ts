@@ -3,6 +3,10 @@ export { luminance, contrastRatio, checkTheme, defaultColors, KNOWN_TOKENS } fro
 export type { Mode, ThemeColors, ContrastFinding } from './contrast';
 export { BrandWordmark } from './components/brand-wordmark';
 export type { BrandKey, BrandWordmarkProps } from './components/brand-wordmark';
+export { EduksxIcon, EDUKSX_ICON_NAMES } from './components/eduksx-icon';
+export type { EduksxIconProps, EduksxIconVariant } from './components/eduksx-icon';
+export { eduksxIcons } from './components/eduksx-icons.data';
+export type { EduksxIconName } from './components/eduksx-icons.data';
 export { ModuleSwitcher } from './components/module-switcher';
 export type { ModuleLink, ModuleSwitcherProps } from './components/module-switcher';
 export { AppHeader } from './components/app-header';

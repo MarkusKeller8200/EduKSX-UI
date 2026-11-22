@@ -8,6 +8,12 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **EduKSX-Icons (#31):** freigegebenes Icon-Set (16 Icons, SVG einfarbig/farbig/Kachel, PNG 512–32) und Generator
+  `icons/build.py` aus markussxch übernommen – EduKSX-UI ist jetzt die Quelle; Baustein `EduksxIcon` (`color`, `mono`,
+  `tile`), Token `icon-tile`, im Paket unter `icons/`.
+- **KONZEPT-MARKE ergänzt (#31):** Schrift (3.4, Aptos ZU PRÜFEN als M6), Zustände der Bedienelemente (5.4), Dateien
+  und Baustein (6.1), Bediensymbole mit Lucide-Zuordnungen (6.2, Idee #20), Ton und Statusangaben (10.), Pflege und
+  Abnahme-Checkliste (11.); Flow-Icon-Vermerk korrigiert. `UEBERNAHME-INTRANET-GUI.md` §1 an M3 angepasst.
 - **Marke, Namen und Farben (`docs/KONZEPT-MARKE.md`):** Regeln aus CI MarKusSXCH, Produktfamilie, Icon-Set und allen
   EduKSX-Repos zusammengeführt; Gegenüberstellung je Repo, Abweichungsregister, offene Entscheide M1–M5; Regel
   «Module folgen dem UI-Konzept, Abweichungen nur mit Begründung» (auch in AGENTS.md).

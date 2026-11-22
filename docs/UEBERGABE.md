@@ -35,6 +35,9 @@ nachführen.
 - Glossary an `input` und Markentokens anpassen (#16).
 - Marke, Namen, Farben: `docs/KONZEPT-MARKE.md` (22.11.2026). M0, M2–M5 entschieden (M3: DS4 in Architektur anpassen), M1 offen; Abweichungsregister §8.
   Neue Regel: Module folgen dem UI-Konzept, Abweichungen nur mit Begründung im Modul.
+- Icons (22.11.2026, #31): EduKSX-UI ist Quelle des Icon-Sets (`icons/`, `EduksxIcon`); in markussxch bleibt eine
+  Kopie mit Vermerk «Quelle EduKSX-UI», nichts gelöscht. Offen: Flow-Icon (#30), M6 Aptos. Idee #20 ist mit
+  KONZEPT-MARKE 6.2 inhaltlich erledigt; Überführung nach Ideen-Ablauf (DS-Entscheid in Architektur) noch offen.
 
 **Arbeitsregeln** (siehe AGENTS.md)
 - Jedes Thema aus dem Chat → Issue mit Testliste; Status `_1 bereit` → `_2 in Arbeit` → `_3 Beta-Test`.

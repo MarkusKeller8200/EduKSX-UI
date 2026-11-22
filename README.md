@@ -17,6 +17,7 @@ vor (WCAG 2.1 AA, eCH-0059).
 | Variablen für Plugins | `@eduksx/ui/eduksx.css` (`--eduksx-*`) |
 | Kontrastprüfung | `contrastRatio()`, `checkTheme()`, `KNOWN_TOKENS` – auch für die Aktivierung von Themes |
 | Wortmarke | `<BrandWordmark suffix="Glossary" />` nach CI-Komponentenkontrakt |
+| Icons | `<EduksxIcon name="glossary" variant="color\|mono\|tile" />`; Dateien (SVG, PNG) unter `@eduksx/ui/icons/…`, siehe `icons/README.md` |
 | Kopfzeile mit Modulwechsel | `<AppHeader product="Glossary" modules={…} currentModule="glossary" />` (Plattform S7) |
 | Verlauf | `<HistoryList entries={…} fieldLabels={…} />` für `data_changes` (DB-Standard A7) |
 

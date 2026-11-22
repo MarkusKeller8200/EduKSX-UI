@@ -14,7 +14,9 @@
   ],
   "files": [
     "dist",
-    "tokens"
+    "tokens",
+    "icons/svg",
+    "icons/png"
   ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -26,7 +28,8 @@
     "./tokens.css": "./dist/tokens.css",
     "./theme.css": "./dist/theme.css",
     "./eduksx.css": "./dist/eduksx.css",
-    "./tokens.json": "./tokens/tokens.json"
+    "./tokens.json": "./tokens/tokens.json",
+    "./icons/*": "./icons/*"
   },
   "scripts": {
     "tokens": "node scripts/build-tokens.mjs",
