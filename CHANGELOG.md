@@ -18,6 +18,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **favicon.ico und Maskable-App-Icons (#55):** je Icon `svg/<name>-maskable-light|dark.svg`, PNG 192 und 512 sowie
+  `ico/<name>.ico` (16–64 px). Erzeugt mit `node icons/raster.mjs`; Testseite › Icons zeigt sie. Das Intranet bezieht
+  damit auch Favicon und Maskable-Icons aus `@eduksx/ui`.
 - **Icon-Bundles je Modul (#54):** Module erstellen keine eigenen Icons mehr; alle kommen aus EduKSX-UI.
   `EDUKSX_ICON_BUNDLES` listet je Modul (sowie Website und Prototypen), welche Icons es benutzt, `EDUKSX_ICON_VORRAT`
   die noch nicht zugeordneten. Test und Testseite «Bundles je Modul»; Regel in `docs/KONZEPT-MARKE.md` §6.3.

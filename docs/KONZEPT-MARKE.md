@@ -246,10 +246,13 @@ anderen Repos gibt es keine Kopien mehr, §6.3). Module beziehen die Icons aus `
 | `icons/svg/<name>-color.svg` | farbig ohne Kachel, für helle Flächen (Doku, Übersichten) |
 | `icons/svg/<name>-tile-dark.svg`, `-tile-light.svg` | App-Icon, Kachel dunkel bzw. hell |
 | `icons/png/<512\|192\|64\|32>/<name>-tile-*.png` | App-Icon, Favicon, Manifest |
+| `icons/svg/<name>-maskable-*.svg`, `icons/png/<192\|512>/<name>-maskable-*.png` | Manifest `purpose: maskable` (randlos, Motiv in der sicheren Zone von 80 %) |
+| `icons/ico/<name>.ico` | `favicon.ico` (16, 32, 48, 64 px aus der hellen Kachel) |
 | `icons/build.py` | Generator (nur Python-Standardbibliothek); einzige Stelle, an der Motive stehen |
 
 Dateinamen: `eduksx` für die Familie, sonst `eduksx-<schlüssel>` (z. B. `eduksx-glossary`). Im Paket unter
-`@eduksx/ui/icons/svg/…` und `@eduksx/ui/icons/png/…`.
+`@eduksx/ui/icons/svg/…`, `@eduksx/ui/icons/png/…` und `@eduksx/ui/icons/ico/…`. Rasterdateien erzeugt
+`node icons/raster.mjs` aus den SVG.
 
 Baustein **`EduksxIcon`** zeichnet dieselben Icons im Code, Farben nur über `--brand-*` und `--icon-tile`, wechselt
 mit hell/dunkel:
@@ -262,8 +265,8 @@ mit hell/dunkel:
 ```
 
 Ändern: Motiv in `icons/build.py`, dann `python3 icons/build.py` (SVG), `python3 icons/build.py --ts
-src/components/eduksx-icons.data.ts` (Baustein) und die PNG neu rendern (`rsvg-convert -w 512 icons/svg/… -o
-icons/png/512/…`). Ein Test prüft, dass Dateien und Baustein übereinstimmen. Jede Änderung braucht eine neue Freigabe.
+src/components/eduksx-icons.data.ts` (Baustein) und die Rasterdateien neu erzeugen
+(`node icons/raster.mjs --alle`). Ein Test prüft, dass Dateien und Baustein übereinstimmen. Jede Änderung braucht eine neue Freigabe.
 
 ### 6.2 Bediensymbole (BESCHLOSSEN 22.11.2026; aus Glossary und INTRANET, Idee #20)
 

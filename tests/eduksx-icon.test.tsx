@@ -6,6 +6,7 @@ import { EDUKSX_ICON_BUNDLES, EDUKSX_ICON_NAMES, EDUKSX_ICON_VORRAT, EduksxIcon,
 // Dateien über Vite einlesen (ohne @types/node)
 const svgFiles = import.meta.glob('../icons/svg/*.svg', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
 const pngFiles = Object.keys(import.meta.glob('../icons/png/*/*.png', { query: '?url', eager: true }));
+const icoFiles = Object.keys(import.meta.glob('../icons/ico/*.ico', { query: '?url', eager: true }));
 const svgFile = (file: string) => svgFiles[`../icons/svg/${file}`];
 const fileSlug = (n: EduksxIconName) => (n === 'eduksx' ? 'eduksx' : `eduksx-${n}`);
 
@@ -40,6 +41,20 @@ describe('EduKSX-Icon-Set', () => {
                 expect(pngFiles).toContain(`../icons/png/${size}/${fileSlug(n)}-tile-dark.png`);
                 expect(pngFiles).toContain(`../icons/png/${size}/${fileSlug(n)}-tile-light.png`);
             }
+        }
+    });
+
+    it('hat je Icon Maskable-Varianten (SVG, PNG 192 und 512) und ein favicon.ico (#55)', () => {
+        for (const n of EDUKSX_ICON_NAMES) {
+            for (const v of ['dark', 'light']) {
+                const svg = svgFile(`${fileSlug(n)}-maskable-${v}.svg`);
+                expect(svg, `${n} maskable-${v}`).toBeDefined();
+                expect(svg, 'Fläche randlos').toMatch(/<rect width="48" height="48" fill="#[0-9A-F]{6}"\/>/);
+                for (const size of ['512', '192']) {
+                    expect(pngFiles).toContain(`../icons/png/${size}/${fileSlug(n)}-maskable-${v}.png`);
+                }
+            }
+            expect(icoFiles).toContain(`../icons/ico/${fileSlug(n)}.ico`);
         }
     });
 

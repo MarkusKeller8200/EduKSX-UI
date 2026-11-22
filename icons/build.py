@@ -12,6 +12,8 @@ Ausgaben je Icon:
   svg/<slug>-color.svg        farbig ohne Kachel, für helle Flächen
   svg/<slug>-tile-dark.svg    App-Icon-Kachel dunkel
   svg/<slug>-tile-light.svg   App-Icon-Kachel hell
+  svg/<slug>-maskable-*.svg   App-Icon für das Web-Manifest (purpose «maskable»), randlos, hell und dunkel
+PNG und favicon.ico erzeugt danach icons/raster.mjs (node icons/raster.mjs).
 Farben aus CI-Manual v1.0 / Markenfortschreibung v1.1.
 """
 
@@ -379,6 +381,16 @@ def tile(els, colors, title, border=False):
     return svg(f'{rect}\n  <g transform="translate({off} {off}) scale({s})">\n  {g}\n  </g>', "0 0 48 48", title)
 
 
+def maskable(els, colors, title):
+    # Maskable-App-Icon (Web-Manifest «purpose: maskable»): Fläche randlos, Motiv kleiner als bei der Kachel, damit es
+    # in der sicheren Zone (Kreis mit 80 % Durchmesser) liegt – Launcher schneiden Kreis, Tropfen oder Quadrat aus.
+    s = 1.1
+    off = (48 - 24 * s) / 2
+    rect = f'<rect width="48" height="48" fill="{colors["tile"]}"/>'
+    g = glyph(els, colors, sw=SW)
+    return svg(f'{rect}\n  <g transform="translate({off:g} {off:g}) scale({s})">\n  {g}\n  </g>', "0 0 48 48", title)
+
+
 def main(out="dist"):
     os.makedirs(f"{out}/svg", exist_ok=True)
     for slug, ic in {**ICONS, **DRAFTS}.items():
@@ -388,11 +400,13 @@ def main(out="dist"):
             f"{slug}-color.svg": svg(glyph(ic["els"], LIGHT), title=t),
             f"{slug}-tile-dark.svg": tile(ic["els"], DARK, t),
             f"{slug}-tile-light.svg": tile(ic["els"], LIGHT, t, border=True),
+            f"{slug}-maskable-dark.svg": maskable(ic["els"], DARK, t),
+            f"{slug}-maskable-light.svg": maskable(ic["els"], LIGHT, t),
         }
         for fn, content in files.items():
             with open(f"{out}/svg/{fn}", "w") as f:
                 f.write(content)
-    print(f"{len(ICONS)} Icons + {len(DRAFTS)} Entwürfe × 4 Varianten → {out}/svg")
+    print(f"{len(ICONS)} Icons + {len(DRAFTS)} Entwürfe × 6 Varianten → {out}/svg")
 
 
 

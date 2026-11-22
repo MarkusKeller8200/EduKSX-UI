@@ -6,6 +6,7 @@ import { Block, Code, Example } from '../ui';
 // Die ausgelieferten Dateien aus icons/ (nicht nachgezeichnet), damit Datei und Baustein verglichen werden können.
 const FILES = import.meta.glob('../../../icons/svg/*.svg', { eager: true, query: '?url', import: 'default' }) as Record<string, string>;
 const PNG = import.meta.glob('../../../icons/png/192/*.png', { eager: true, query: '?url', import: 'default' }) as Record<string, string>;
+const ICO = import.meta.glob('../../../icons/ico/*.ico', { eager: true, query: '?url', import: 'default' }) as Record<string, string>;
 const file = (glob: Record<string, string>, name: string) => Object.entries(glob).find(([k]) => k.endsWith(`/${name}`))?.[1];
 const base = (n: string) => (n === 'eduksx' ? 'eduksx' : `eduksx-${n}`);
 
@@ -81,6 +82,37 @@ export function Icons() {
                                     <img key={f} src={file(FILES, f)} alt={f} width={40} height={40} />
                                 ))}
                                 <img src={file(PNG, `${base(n)}-tile-light.png`)} alt={`${base(n)}-tile-light.png (192 px)`} width={40} height={40} />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </Block>
+            <Block
+                title="App-Icon (maskable) und Favicon"
+                note={
+                    <>
+                        Für das Web-Manifest (<Code>purpose: maskable</Code>): Fläche randlos, Motiv in der sicheren Zone. Launcher schneiden die Form
+                        selbst aus, hier daneben als Kreis. Rechts <Code>ico/&lt;name&gt;.ico</Code> in 16 und 32 px (#55).
+                    </>
+                }
+            >
+                <div className="overflow-x-auto rounded-lg border border-border bg-card p-4" tabIndex={0} role="region" aria-label="Maskable-Icons und Favicons">
+                    <ul className="grid min-w-max grid-cols-[repeat(6,auto)] items-center gap-x-6 gap-y-3 text-xs">
+                        {EDUKSX_ICON_NAMES.map((n) => (
+                            <li key={n} className="contents">
+                                {(['light', 'dark'] as const).flatMap((v) => [
+                                    <img key={`${v}-q`} src={file(PNG, `${base(n)}-maskable-${v}.png`)} alt={`${base(n)}-maskable-${v}.png`} width={48} height={48} />,
+                                    <img
+                                        key={`${v}-k`}
+                                        src={file(PNG, `${base(n)}-maskable-${v}.png`)}
+                                        alt={`${base(n)}-maskable-${v}.png als Kreis`}
+                                        width={48}
+                                        height={48}
+                                        className="rounded-full"
+                                    />,
+                                ])}
+                                <img src={file(ICO, `${base(n)}.ico`)} alt={`${base(n)}.ico 16 px`} width={16} height={16} />
+                                <img src={file(ICO, `${base(n)}.ico`)} alt={`${base(n)}.ico 32 px`} width={32} height={32} />
                             </li>
                         ))}
                     </ul>
