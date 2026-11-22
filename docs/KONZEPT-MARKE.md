@@ -102,7 +102,7 @@ MarKusSXCH                Entwicklermarke (Dachmarke), Markus Keller
 - Gewichte (M7): **Fliesstext 400**, Labels und Zwischentitel **500**, Titel und Wortmarke **600**, starke
   Hervorhebung **700** (Wortmarke darf 700). Nur diese vier Stufen, keine Zwischengewichte wie 450 oder 550: sie
   gehen nur mit Inter Variable und sähen im Rückfall anders aus. Inter Variable ist erlaubt, aber keine Pflicht.
-  Klare Hierarchie, keine verspielten Schnitte. Die Tokens dazu folgen mit den Typografie-Tokens (#25).
+  Klare Hierarchie, keine verspielten Schnitte. Tokens `font.weight.*`, Grössen und Textrollen: `KONZEPT-TOKENS.md` §2.
 - **Keine plattformabhängigen Schriften** (M6): nur frei lizenzierte Schriften, die das Modul selbst ausliefert;
   als Rückfall nur generische System-Stacks (`system-ui`, `ui-monospace`, `sans-serif`, `monospace`), keine
   benannten Betriebssystem- oder Office-Schriften. Darum entfällt **Aptos** aus dem CI-Vorschlag
