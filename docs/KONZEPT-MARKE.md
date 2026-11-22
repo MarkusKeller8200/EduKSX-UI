@@ -226,8 +226,8 @@ Abweichungen, die heute in Modulen bestehen. «Prüfen global» = Abschnitt 1 Pu
 | A13 | alle Repos (Blueprint) | GitHub-Vorschaubild `#0B3D63` / `#F2B705` | **Ja** – M5 | EduKSX-UI umgestellt (22.11.2026); Core, Ident, Codex, Connectors, Suite, Glossary, Architektur nachziehen und Bild neu hochladen; Vorgabe im Blueprint | OFFEN im Modul |
 
 **Issues in den Modulen (22.11.2026):** sek-intranet #222 (A1–A8), EduKSX-Glossary #498 (A9, A13),
-EduKSX-Architektur #89 (A10, A12, A13, DS4 nach M3), EduKSX-Prototyp #72 (A11 nach M1, A13). Für EduKSX-Core, -Ident,
--Codex, -Connectors und -Suite ist A13 (Vorschaubild) noch ohne Issue.
+EduKSX-Architektur #89 (A10, A12, A13, DS4 nach M3), EduKSX-Prototyp #72 (A11 nach M1, A13). Vorschaubild für alle Repos
+(A13): my-github-blueprint #30 (CI-Farben als Vorgabe, danach `apply.py --aktualisieren` in allen EduKSX-Repos).
 
 ## 9. Entscheide
 
