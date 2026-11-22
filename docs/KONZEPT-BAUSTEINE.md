@@ -1,6 +1,6 @@
 # Konzept: Grundbausteine (#27)
 
-Stand: 2026-11-22 (0.2) · Status: **IN ARBEIT**
+Stand: 2026-11-22 (0.2) · Status: **UMGESETZT** (im Beta-Test)
 
 Gilt für alle EduKSX-Module (Verbindlichkeit: `AGENTS.md`, `KONZEPT-MARKE.md` §1). Vorbild sind die Bausteine aus dem
 INTRANET (`UEBERNAHME-INTRANET-GUI.md` §5, Nummern in Klammern); Farben und Zustände nach `KONZEPT-MARKE.md` 5.2–5.4
@@ -137,20 +137,20 @@ Jedes Element trägt `data-slot` (z. B. `data-slot="button"`), damit Musterseite
 
 | Nr. | Frage | Optionen | Entscheid | Status |
 | --- | --- | --- | --- | --- |
-| B1 | Technische Grundlage | Eigenbau auf HTML-Basis / Radix UI wie INTRANET | Eigenbau auf HTML-Basis, keine neue Abhängigkeit | EMPFOHLEN (Entscheidungskarte 22.11.2026) |
-| B2 | Namen und Varianten im Code | wie shadcn/ui / eigene deutsche Namen | wie shadcn/ui, deutsche Begriffe in der Doku | EMPFOHLEN (Entscheidungskarte 22.11.2026) |
-| B3 | Umfang Meldungen | Hinweisbox, Rückfrage, Tooltip / zusätzlich Toast | Hinweisbox, Rückfrage, Tooltip; Toast als eigenes Issue | EMPFOHLEN (Entscheidungskarte 22.11.2026) |
-| B4 | Token für Schrift auf `destructive` (#11) | `destructive-contrast` / `on-destructive` / vorerst `text-white` | `destructive-contrast` | EMPFOHLEN (Entscheidungskarte 22.11.2026) |
+| B1 | Technische Grundlage | Eigenbau auf HTML-Basis / Radix UI wie INTRANET | Eigenbau auf HTML-Basis, keine neue Abhängigkeit | BESCHLOSSEN 22.11.2026 |
+| B2 | Namen und Varianten im Code | wie shadcn/ui / eigene deutsche Namen | wie shadcn/ui, deutsche Begriffe in der Doku | BESCHLOSSEN 22.11.2026 |
+| B3 | Umfang Meldungen | Hinweisbox, Rückfrage, Tooltip / zusätzlich Toast | Hinweisbox, Rückfrage, Tooltip; Toast als eigenes Issue | BESCHLOSSEN 22.11.2026 |
+| B4 | Token für Schrift auf `destructive` (#11) | `destructive-contrast` / `on-destructive` / vorerst `text-white` | `destructive-contrast` | BESCHLOSSEN 22.11.2026 |
 
 ## 5. Issues
 
 | Issue | Inhalt | Status |
 | --- | --- | --- |
-| #27 | Grundbausteine Button, Formularfelder, Tabelle, Dialog, Meldungen | `_2 in Arbeit` |
-| #11 | Token für Schrift auf Fehlerfläche | mit B4 |
+| #27 | Grundbausteine Button, Formularfelder, Tabelle, Dialog, Meldungen | `_3 Beta-Test` (PR #34) |
+| #11 | Token für Schrift auf Fehlerfläche | `_3 Beta-Test` (B4, PR #34) |
 | #14 | axe-core in der CI | offen |
 | #15 | Musterseite der Bausteine | eigener Thread |
 
 ## 6. Verlauf
 
-- 2026-11-22: Konzept angelegt, Bausteine umgesetzt (PR zu #27).
+- 2026-11-22: Konzept angelegt, Bausteine umgesetzt (PR #34 gemergt); B1–B4 von Markus mit dem Merge bestätigt.

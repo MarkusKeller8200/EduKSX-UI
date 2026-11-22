@@ -1,6 +1,6 @@
 # EduKSX-UI – Projektstand
 
-> Stand 22.11.2026 (16:00): Grundbausteine (#27) im PR, siehe KONZEPT-BAUSTEINE. Vorher (03:50): Grundgerüst `@eduksx/ui` 0.1 im PR – Tokens, Kontrastprüfung, Wortmarke, Kopfzeile mit
+> Stand 22.11.2026 (16:00): Grundbausteine (#27) gemergt (PR #34), siehe KONZEPT-BAUSTEINE. Vorher (03:50): Grundgerüst `@eduksx/ui` 0.1 im PR – Tokens, Kontrastprüfung, Wortmarke, Kopfzeile mit
 > Modulwechsel und Verlauf; Issues #3–#7 im Beta-Test. Als Nächstes: Übernahme in Glossary und Intranet (EduKSX-Architektur #83).
 
 ## Umgesetzt
@@ -14,8 +14,8 @@
 | `HistoryList` | im Beta-Test | 0.1.0 | KONZEPT-DESIGN 4, DB A7 |
 | `EduksxIcon` und Icon-Dateien `icons/` (#31) | im PR | 0.1.0 | KONZEPT-MARKE 6, 6.1 |
 | Typografie- und Basis-Tokens (#25, #26) | im Beta-Test | 0.1.0 | KONZEPT-TOKENS |
-| Testseite `site/` mit Vorschau-Leiste, GitHub-Pages-Workflow (#15) | im PR | 0.1.0 | TESTSEITE |
-| Grundbausteine Button, Felder, Tabelle, Dialog, Rückfrage, Hinweisbox, Tooltip (#27) | im PR | – | KONZEPT-BAUSTEINE |
+| Testseite `site/` mit Vorschau-Leiste, GitHub-Pages-Workflow (#15) | gemergt | 0.1.0 | TESTSEITE |
+| Grundbausteine Button, Felder, Tabelle, Dialog, Rückfrage, Hinweisbox, Tooltip (#27) | im Beta-Test | – | KONZEPT-BAUSTEINE |
 
 ## Offen bzw. geplant
 
