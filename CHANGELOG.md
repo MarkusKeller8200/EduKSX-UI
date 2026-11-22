@@ -18,6 +18,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Modulnamen beschlossen (M1, #29):** alle Module heissen `EduKSX-<Begriff>` mit deutschem Untertitel, auch
+  EduKSX-Intranet, EduKSX-Timetable und EduKSX-Staffing; neues Modul `planner` EduKSX-Planner «Jahresplanung»
+  (`docs/KONZEPT-MARKE.md` §4, §9).
 - **GUI-Tester auf der Testseite (#44, DS13):** Baustein-Seiten mit Reitern Beispiele, Versionen & Status,
   Überarbeitung und Wünsche; Übersicht «Freigaben & Status». Versionen, Verlauf und Überarbeitungen in
   `site/src/versionen.ts` (Regeln aus dem INTRANET: Status Entwicklung → Prüfung → Freigegeben, SemVer je Baustein),
