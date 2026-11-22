@@ -38,12 +38,21 @@ nachführen.
 - Icons (22.11.2026, #31): EduKSX-UI ist Quelle des Icon-Sets (`icons/`, `EduksxIcon`); in markussxch bleibt eine
   Kopie mit Vermerk «Quelle EduKSX-UI», nichts gelöscht. Offen: Flow-Icon (#30). M6 entschieden: Inter + JetBrains Mono, keine plattformabhängigen Schriften. Idee #20 ist mit
   KONZEPT-MARKE 6.2 inhaltlich erledigt; Überführung nach Ideen-Ablauf (DS-Entscheid in Architektur) noch offen.
+- Typografie- und Basis-Tokens (#25, #26): `docs/KONZEPT-TOKENS.md`, T1–T3 entschieden 22.11.2026, PR offen
+  (Merge nach Freigabe). Glossary H3 17 → 18 px beim Umstieg angleichen (#16).
 
 **Arbeitsregeln** (siehe AGENTS.md)
 - Jedes Thema aus dem Chat → Issue mit Testliste; Status `_1 bereit` → `_2 in Arbeit` → `_3 Beta-Test`.
 - Verbesserungen aus dem Test nur als Issue anlegen; umsetzen erst nach Freigabe.
 
 ## Sitzungen
+
+### Sitzung 22.11.2026 (15:15) – Typografie- und Basis-Tokens (#25, #26)
+
+- Skalen aus Intranet/Glossary (Tailwind-Standards) als Tokens übernommen, `docs/KONZEPT-TOKENS.md` angelegt.
+- Entschieden mit Markus: T1 Bedienung 14 px / Fliesstext 16 px, T2 Titel wie Intranet 30/20/18/16, T3 Variante
+  `desk` ins Paket. Offen: T4 dichtere Administration (Idee #23).
+- Build erweitert (`tokens.css`, `theme.css`, `eduksx.css`), Tests `tests/basis-tokens.test.ts`; Merge erst nach Freigabe.
 
 ### Sitzung 22.11.2026 (14:00) – Review PR #8 mit Fragekatalog
 

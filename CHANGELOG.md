@@ -8,6 +8,12 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Typografie- und Basis-Tokens (#25, #26, `docs/KONZEPT-TOKENS.md`):** Schriftgrössen 12–30 px in rem mit
+  Zeilenhöhen, Gewichte 400/500/600/700, Textrollen `typo-h1` … `typo-small` (H1 30/mobil 24, H2 20, H3 18, H4 16;
+  Bedienung 14 px, Fliesstext 16 px – T1, T2), Abstandsraster 4 px, Radien sm–full, Schatten xs–lg hell/dunkel,
+  Breakpoints 640–1536 px mit Variante `desk:` aus dem Glossary (T3), Seitenbreiten der Ansichten, Dauern und Kurven
+  mit `prefers-reduced-motion`. Ausgabe in `tokens.css`, `theme.css` und `eduksx.css`; `radius-lg/md/sm` jetzt
+  feste Stufen statt `calc()`.
 - **EduKSX-Icons (#31):** freigegebenes Icon-Set (16 Icons, SVG einfarbig/farbig/Kachel, PNG 512–32) und Generator
   `icons/build.py` aus markussxch übernommen – EduKSX-UI ist jetzt die Quelle; Baustein `EduksxIcon` (`color`, `mono`,
   `tile`), Token `icon-tile`, im Paket unter `icons/`.

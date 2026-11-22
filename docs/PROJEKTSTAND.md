@@ -13,6 +13,7 @@
 | `AppHeader`, `ModuleSwitcher` | im Beta-Test | 0.1.0 | KONZEPT-DESIGN 4, Plattform S7 |
 | `HistoryList` | im Beta-Test | 0.1.0 | KONZEPT-DESIGN 4, DB A7 |
 | `EduksxIcon` und Icon-Dateien `icons/` (#31) | im PR | 0.1.0 | KONZEPT-MARKE 6, 6.1 |
+| Typografie- und Basis-Tokens (#25, #26) | im PR | 0.1.0 | KONZEPT-TOKENS |
 
 ## Offen bzw. geplant
 

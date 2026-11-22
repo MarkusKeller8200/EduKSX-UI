@@ -11,9 +11,9 @@ vor (WCAG 2.1 AA, eCH-0059).
 
 | Teil | Datei / Export |
 | --- | --- |
-| Design-Tokens «EduKSX» (DTCG) | `tokens/tokens.json` – einzige Quelle für Farben, Radius, Schrift |
+| Design-Tokens «EduKSX» (DTCG) | `tokens/tokens.json` – einzige Quelle für Farben, Schrift (Grössen, Gewichte, Textrollen), Abstände, Radien, Schatten, Breakpoints, Seitenbreiten und Animation (`docs/KONZEPT-TOKENS.md`) |
 | CSS-Variablen hell/dunkel | `@eduksx/ui/tokens.css` (`:root`, `.dark`) |
-| Tailwind-4-Theme | `@eduksx/ui/theme.css` (`bg-primary`, `text-muted-foreground` …) |
+| Tailwind-4-Theme | `@eduksx/ui/theme.css` (`bg-primary`, `text-sm`, `rounded-md`, `shadow-sm`, `max-w-page-optimized`, Variante `desk:`, Textrollen `typo-h1` … `typo-small`) |
 | Variablen für Plugins | `@eduksx/ui/eduksx.css` (`--eduksx-*`) |
 | Kontrastprüfung | `contrastRatio()`, `checkTheme()`, `KNOWN_TOKENS` – auch für die Aktivierung von Themes |
 | Wortmarke | `<BrandWordmark suffix="Glossary" />` nach CI-Komponentenkontrakt |
@@ -44,6 +44,8 @@ npm install github:MarkusKeller8200/EduKSX-UI#v0.1.0
 - **Schrift:** Das Paket liefert keine Schriftdatei. Module hosten Inter und für Code/IDs JetBrains Mono selbst (kein
   Abruf bei Google Fonts); `--font-sans` und `--font-mono` sind gesetzt, Rückfall nur `system-ui` bzw. `ui-monospace`.
   Keine plattformabhängigen Schriften (KONZEPT-MARKE 3.4, M6).
+- **Weniger Bewegung:** Dauern nur über die Tokens (`transition-colors`, `duration-(--duration-normal)`); bei
+  `prefers-reduced-motion` setzt `tokens.css` sie auf 0 ms.
 
 ## Entwickeln
 
