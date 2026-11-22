@@ -164,7 +164,10 @@ markenrelevanten:
 
 Standard «EduKSX» nur aus `tokens.json`; «Hoher Kontrast» als Vorlage; Theme der Organisation mit allen bekannten
 Tokens, aktivierbar erst nach bestandener Kontrastprüfung (DS4). **Wortmarke, Icons und Signets bleiben in jedem
-Theme in den CI-Farben.** Wie weit eine Instanz die Marke ersetzen darf, ist **OFFEN** (M3).
+Theme in den CI-Farben.** **Marke links oben (M3, BESCHLOSSEN 22.11.2026):** entweder die EduKSX-Wortmarke des Moduls oder ein **eigenes Logo der
+Instanz** (Logo hell, optional dunkel, quadratisches Signet; SVG ohne Skripte, PNG, JPEG, WebP, höchstens 1 MB), das die
+Wortmarke ersetzt. Ohne eigenes Logo gilt EduKSX. MarKusSXCH ist keine wählbare Produktmarke; sie erscheint nur in der
+Signatur.
 
 ## 6. Icons und Signets (BESCHLOSSEN, Icon-Set EduKSX, freigegeben 09.11. und 13.11.2026)
 
@@ -210,9 +213,9 @@ Abweichungen, die heute in Modulen bestehen. «Prüfen global» = Abschnitt 1 Pu
 | A2 | sek-intranet | Info `#00699E`, Sekundärtext `#64748B`, Fläche dunkel Karten `#1B2230` statt `#0272AD`, `#5A6678`, `#1B2330` | Nein | anpassen mit A1 | OFFEN im Modul |
 | A3 | sek-intranet | Markenvariablen `--ci-*` und `--brand` (Blau der Schule) | Nein: Namen sind festgelegt (5.2) | auf `--brand-*` umstellen; Blau der Schule nur im Theme der Instanz | OFFEN im Modul |
 | A4 | sek-intranet | Grundaussehen = Farben der Sekundarschule Bülach, Open Sans | Nein | bleibt als **Theme der Instanz** (DS5, BESCHLOSSEN) | begründet |
-| A5 | sek-intranet | Marke wählbar: EduKSX, MarKusSXCH oder eigenes Logo (ersetzt die Wortmarke) | **Ja** – betrifft alle Module | Entscheid M3 | OFFEN (M3) |
+| A5 | sek-intranet | Marke wählbar: EduKSX, MarKusSXCH oder eigenes Logo (ersetzt die Wortmarke) | **Ja** – übernommen als M3 (eigenes Logo für alle Module) | Option «MarKusSXCH» samt Theme «MarKusSXCH» entfernen | OFFEN im Modul |
 | A6 | sek-intranet | Signatur «Developed by MarKusSXCH» abschaltbar | **Ja** | Entscheid M4 | OFFEN (M4) |
-| A7 | sek-intranet | Titel «MarKusSXCH Intranet» (ohne Bindestrich) | Folgt aus M3 | entfällt, falls MarKusSXCH keine Produktmarke ist | OFFEN (M3) |
+| A7 | sek-intranet | Titel «MarKusSXCH Intranet» (ohne Bindestrich) | Nein (M3) | entfällt mit A5 | OFFEN im Modul |
 | A8 | sek-intranet | eigene Kopie von `BrandWordmark` | Nein | `@eduksx/ui` verwenden | OFFEN im Modul |
 | A9 | EduKSX-Glossary | `input` `#CBD5E1` / `#3A4556`; `--brand`, `--brand-accent`, `--brand-ink`; eigene Kopie `BrandWordmark` | Nein (in EduKSX-UI entschieden, PR 8) | anpassen (#16) | OFFEN im Modul |
 | A10 | EduKSX-Architektur `poc/ident-zitadel` | dunkle Fläche `#1B1F24`, Warnung dunkel `#FF6B6B` | Nein | `#151B24` und Status aus `tokens.json` | OFFEN im Modul |
@@ -227,7 +230,7 @@ Abweichungen, die heute in Modulen bestehen. «Prüfen global» = Abschnitt 1 Pu
 | M0 | Verbindlichkeit für Module | – | Module folgen dem UI-Konzept; Abweichung nur nach globaler Prüfung, mit Begründung im Modul, regelmässig überprüft | BESCHLOSSEN 22.11.2026 |
 | M1 | Sichtbare Modulnamen | EduKSX-Englisch + deutscher Untertitel / deutsch für Schulmodule / frei je Modul | – | OFFEN |
 | M2 | Ident und Ops nach aussen | eigene Namen / Teil von EduKSX-Core | eigene sichtbare Namen EduKSX-Ident und EduKSX-Ops | BESCHLOSSEN 22.11.2026 |
-| M3 | Marke links oben in einer Instanz | EduKSX + Logo zusätzlich (DS4) / EduKSX oder eigenes Logo / EduKSX, MarKusSXCH oder eigenes Logo | – | OFFEN |
+| M3 | Marke links oben in einer Instanz | EduKSX + Logo zusätzlich (DS4) / EduKSX oder eigenes Logo / EduKSX, MarKusSXCH oder eigenes Logo | EduKSX-Wortmarke oder eigenes Logo der Instanz (White-Label) in allen Modulen; MarKusSXCH nicht als Produktmarke, nur in der Signatur. DS4 in KONZEPT-DESIGN ist anzupassen | BESCHLOSSEN 22.11.2026 |
 | M4 | Signatur «Developed by MarKusSXCH» | abschaltbar (Vorgabe ein) / immer sichtbar | – | OFFEN |
 | M5 | GitHub-Vorschaubilder | CI-Farben im Blueprint / bleibt neutral | – | OFFEN |
 
@@ -242,3 +245,4 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
   `app.css`), EduKSX-Prototyp (`eduksx.css`, Prototypen), EduKSX-Core, -Ident, -Codex, -Connectors, -Suite,
   MarKusSX-Operation; EduKSX-Connect, -Flow, -Shop, -Time sind leer. Regel M0 beschlossen.
 - 22.11.2026: M2 entschieden – Ident und Ops mit eigenen sichtbaren Namen.
+- 22.11.2026: M3 entschieden – EduKSX oder eigenes Logo; MarKusSXCH nur Signatur.

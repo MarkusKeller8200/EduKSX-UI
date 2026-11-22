@@ -33,7 +33,7 @@ nachführen.
 - DS7 entschieden (22.11.2026): axe-core «serious»/«critical» lassen die CI scheitern, Rest Warnung (#14);
   Musterseite für 0.2 (#15). In KONZEPT-DESIGN (EduKSX-Architektur) noch nachführen.
 - Glossary an `input` und Markentokens anpassen (#16).
-- Marke, Namen, Farben: `docs/KONZEPT-MARKE.md` (22.11.2026). M0 und M2 entschieden, M1, M3–M5 offen; Abweichungsregister §8.
+- Marke, Namen, Farben: `docs/KONZEPT-MARKE.md` (22.11.2026). M0, M2, M3 entschieden (M3: DS4 in Architektur anpassen), M1, M4, M5 offen; Abweichungsregister §8.
   Neue Regel: Module folgen dem UI-Konzept, Abweichungen nur mit Begründung im Modul.
 
 **Arbeitsregeln** (siehe AGENTS.md)
