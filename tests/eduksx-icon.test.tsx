@@ -10,10 +10,10 @@ const svgFile = (file: string) => svgFiles[`../icons/svg/${file}`];
 const fileSlug = (n: EduksxIconName) => (n === 'eduksx' ? 'eduksx' : `eduksx-${n}`);
 
 describe('EduKSX-Icon-Set', () => {
-    it('enthält die sechzehn freigegebenen Icons', () => {
+    it('enthält die siebzehn freigegebenen Icons', () => {
         expect(EDUKSX_ICON_NAMES).toEqual([
             'eduksx', 'glossary', 'codex', 'core', 'ident', 'shop', 'licence', 'portal',
-            'connect', 'services', 'sign', 'time', 'intranet', 'timetable', 'staffing', 'ops',
+            'connect', 'services', 'sign', 'time', 'intranet', 'timetable', 'staffing', 'ops', 'flow',
         ]);
     });
 

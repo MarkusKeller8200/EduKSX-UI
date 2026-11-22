@@ -165,6 +165,19 @@ export const eduksxIcons = {
       { tag: "circle", role: "sx", fill: true, attrs: {"cx": 17.9, "cy": 7, "r": 0.9} },
     ],
   },
+  "flow": {
+    name: "EduKSX-Flow",
+    meaning: "Flussdiagramm: Abläufe mit Entscheidungen planen und verfolgen",
+    elements: [
+      { tag: "rect", role: "k", fill: false, attrs: {"x": 8, "y": 2.5, "width": 8, "height": 5, "rx": 1.5} },
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M12 7.5v2.5"} },
+      { tag: "path", role: "e", fill: false, attrs: {"d": "M12 10l3.2 3.2L12 16.4 8.8 13.2z"} },
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M8.8 13.2H5.5v3.3M15.2 13.2h3.3v3.3"} },
+      { tag: "rect", role: "base", fill: false, attrs: {"x": 2.5, "y": 16.5, "width": 6, "height": 5, "rx": 1.5} },
+      { tag: "rect", role: "base", fill: false, attrs: {"x": 15.5, "y": 16.5, "width": 6, "height": 5, "rx": 1.5} },
+      { tag: "circle", role: "sx", fill: true, attrs: {"cx": 18.5, "cy": 19, "r": 1} },
+    ],
+  },
 } satisfies Record<string, EduksxIconDef>;
 
 export type EduksxIconName = keyof typeof eduksxIcons;

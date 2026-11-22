@@ -1,4 +1,4 @@
-"""EduKSX Icon-Set – Generator (Icons freigegeben 09.11. und 13.11.2026 durch Markus Keller).
+"""EduKSX Icon-Set – Generator (Icons freigegeben 09.11., 13.11. und 22.11.2026 durch Markus Keller).
 
 Übernommen aus dem Repo markussxch (docs/brand/icons/eduksx); massgebliche Quelle ist seit 22.11.2026
 EduKSX-UI (icons/). Motive und Farben nur nach neuer Freigabe ändern.
@@ -208,7 +208,26 @@ EXTRA = {
 }
 
 
+# Ergänzung, freigegeben 22.11.2026 durch Markus Keller (#30; Entwurf aus EduKSX-Prototyp tools/seite_bauen.py)
+EXTRA_FLOW = {
+    "eduksx-flow": {
+        "name": "EduKSX-Flow",
+        "meaning": "Flussdiagramm: Abläufe mit Entscheidungen planen und verfolgen",
+        "els": [
+            ("rect", "k", dict(x=8, y=2.5, width=8, height=5, rx=1.5), "s"),
+            ("path", "base", dict(d="M12 7.5v2.5"), "s"),
+            ("path", "e", dict(d="M12 10l3.2 3.2L12 16.4 8.8 13.2z"), "s"),
+            ("path", "base", dict(d="M8.8 13.2H5.5v3.3M15.2 13.2h3.3v3.3"), "s"),
+            ("rect", "base", dict(x=2.5, y=16.5, width=6, height=5, rx=1.5), "s"),
+            ("rect", "base", dict(x=15.5, y=16.5, width=6, height=5, rx=1.5), "s"),
+            ("circle", "sx", dict(cx=18.5, cy=19, r=1), "f"),
+        ],
+    },
+}
+
+
 ICONS.update(EXTRA)
+ICONS.update(EXTRA_FLOW)
 DRAFTS = {}  # neue Entwürfe hier eintragen; erscheinen nicht in EduksxIcon
 
 

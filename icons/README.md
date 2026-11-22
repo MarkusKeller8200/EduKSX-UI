@@ -1,7 +1,7 @@
 # EduKSX-Icon-Set
 
-16 Icons der Produktfamilie EduKSX in den Farben des CI MarKusSXCH (CI-Manual v1.0, Markenfortschreibung v1.1).
-**Status: freigegeben** am 09.11.2026 (12 Icons) und 13.11.2026 (Intranet, Timetable, Staffing, Ops) durch Markus
+17 Icons der Produktfamilie EduKSX in den Farben des CI MarKusSXCH (CI-Manual v1.0, Markenfortschreibung v1.1).
+**Status: freigegeben** am 09.11.2026 (12 Icons) und 13.11.2026 (Intranet, Timetable, Staffing, Ops) und 22.11.2026 (Flow) durch Markus
 Keller. Änderungen an Motiven oder Farben brauchen eine neue Freigabe.
 
 Übernommen aus dem Repo markussxch am 22.11.2026 (#31). **Massgeblich ist diese Kopie**; markussxch behält eine Kopie
@@ -18,7 +18,7 @@ für die Website. Regeln: `docs/KONZEPT-MARKE.md` Abschnitt 6.
 | `png/<grösse>/<name>-tile-*.png` | App-Icons als PNG in 512, 192, 64 und 32 px |
 
 Namen: `eduksx` (Familie) und `eduksx-<schlüssel>` für glossary, codex, core, ident, shop, licence, portal, connect,
-services, sign, time, intranet, timetable, staffing, ops. **EduKSX-Flow hat noch kein Icon** (#30).
+services, sign, time, intranet, timetable, staffing, ops, flow.
 
 ## Gestaltung
 
@@ -45,6 +45,7 @@ services, sign, time, intranet, timetable, staffing, ops. **EduKSX-Flow hat noch
 | Timetable (Stundenplan) | Raster mit Kalenderkopf, eine Lektion markiert |
 | Staffing (Einsatzplanung) | Person mit Kalender |
 | Ops (Leitstand) | Bildschirm mit Puls |
+| Flow (Abläufe) | Flussdiagramm: Startkasten, Entscheidungs-Raute, zwei Ziele |
 
 ## Im Code
 
@@ -65,7 +66,7 @@ Quelle für alles ist `build.py` (nur Python-Standardbibliothek):
 ```sh
 python3 icons/build.py                                              # SVG neu erzeugen
 python3 icons/build.py --ts src/components/eduksx-icons.data.ts     # Daten für EduksxIcon
-rsvg-convert -w 512 icons/svg/eduksx-tile-dark.svg -o icons/png/512/eduksx-tile-dark.png   # PNG
+rsvg-convert -w 512 icons/svg/eduksx-tile-dark.svg -o icons/png/512/eduksx-tile-dark.png   # PNG (oder Playwright-Screenshot mit transparentem Hintergrund)
 ```
 
 Nach einer Änderung alle drei Schritte ausführen; der Test `tests/eduksx-icon.test.tsx` prüft, dass Dateien und

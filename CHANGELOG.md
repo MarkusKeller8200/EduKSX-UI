@@ -8,6 +8,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Flow-Icon (#30):** EduKSX-Flow erhält sein Icon (Flussdiagramm mit Entscheidungs-Raute) aus dem
+  Prototyp-Entwurf, freigegeben 22.11.2026; alle Varianten als SVG und PNG, Baustein `EduksxIcon name="flow"`.
 - **Grundbausteine auf der Testseite (#27, #15):** eigene Seiten für Button, Tooltip, Formularfelder, Tabelle,
   Dialog und Rückfrage sowie Hinweisbox, mit allen Varianten und Zuständen, hell und dunkel und in allen Ansichten.
 - **Testseite auf GitHub Pages (#15, Ideen #17, #19, #21):** eigene Vite-Seite unter `site/` (Entscheid 22.11.2026:

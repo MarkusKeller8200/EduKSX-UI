@@ -12,8 +12,8 @@ export function Icons() {
     return (
         <div className="space-y-8">
             <p className="max-w-prose">
-                16 freigegebene Icons, 24er-Raster, Strich 1,75. Orange ist der Hauptakzent, Blau und Violett für Details.
-                Neue Motive oder Farben brauchen eine eigene Freigabe. <strong className="font-semibold">EduKSX-Flow hat noch kein Icon</strong> (#30).
+                17 freigegebene Icons, 24er-Raster, Strich 1,75. Orange ist der Hauptakzent, Blau und Violett für Details.
+                Neue Motive oder Farben brauchen eine eigene Freigabe. Neu seit 22.11.2026: EduKSX-Flow (#30).
             </p>
             <Block title="Baustein EduksxIcon" note="Farbig, einfarbig (Textfarbe) und als Kachel. Wechselt mit hell und dunkel.">
                 <Example label="Icons">
