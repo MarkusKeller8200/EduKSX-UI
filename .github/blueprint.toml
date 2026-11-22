@@ -111,10 +111,7 @@ uebersetzung_ablage = ""          # z. B. "lang/*.json" oder "web/i18n/"
 # GitHub-Standard-Labels (bug, enhancement, …) entfernen
 standard_labels_entfernen = true
 # Eigene zusätzliche Labels: { name = "…", farbe = "rrggbb", beschreibung = "…" }
-zusatzlabels = [
-  { name = "barrierefreiheit", farbe = "5319e7", beschreibung = "Zugänglichkeit nach WCAG 2.1 AA (eCH-0059)" },
-  { name = "idee", farbe = "c5def5", beschreibung = "Lose Idee, noch nicht eingeplant" },
-]
+zusatzlabels = [{ name = "barrierefreiheit", farbe = "5319e7", beschreibung = "Zugänglichkeit nach WCAG 2.1 AA (eCH-0059)" }]
 
 [meilensteine]
 # Sammlungen Fehler / Verbesserungen / Funktionen anlegen und neue Issues danach zuordnen
