@@ -8,6 +8,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Grundbausteine auf der Testseite (#27, #15):** eigene Seiten für Button, Tooltip, Formularfelder, Tabelle,
+  Dialog und Rückfrage sowie Hinweisbox, mit allen Varianten und Zuständen, hell und dunkel und in allen Ansichten.
 - **Testseite auf GitHub Pages (#15, Ideen #17, #19, #21):** eigene Vite-Seite unter `site/` (Entscheid 22.11.2026:
   keine Storybook-Abhängigkeit) als Einstieg zum visuellen Prüfen aller Entscheide: Farben mit Werten hell/dunkel,
   Kontrast nachgerechnet, Typografie, Abstände/Radien/Schatten, Breakpoints und Ansichten, Animation, Wortmarken, Icons,

@@ -13,6 +13,12 @@ import { EduksxIconSeite } from './sections/bausteine/eduksx-icon';
 import { AppHeaderSeite } from './sections/bausteine/app-header';
 import { ModuleSwitcherSeite } from './sections/bausteine/module-switcher';
 import { HistoryListSeite } from './sections/bausteine/history-list';
+import { ButtonSeite } from './sections/bausteine/button';
+import { TooltipSeite } from './sections/bausteine/tooltip';
+import { FieldSeite } from './sections/bausteine/field';
+import { TableSeite } from './sections/bausteine/table';
+import { DialogSeite } from './sections/bausteine/dialog';
+import { AlertSeite } from './sections/bausteine/alert';
 import { Schriftgewichte } from './sections/pruefseiten';
 
 export type Group = 'Grundlagen' | 'Marke' | 'Bausteine' | 'Prüfseiten';
@@ -50,5 +56,11 @@ export const ENTRIES: Entry[] = [
     { id: 'app-header', title: 'AppHeader', group: 'Bausteine', status: 'beta', summary: 'Gemeinsame Kopfzeile aller Module mit Wortmarke und Modulwechsel.', concept: { path: 'https://github.com/MarkusKeller8200/EduKSX-Architektur/blob/main/docs/KONZEPT-DESIGN.md', label: 'KONZEPT-DESIGN 6, Plattform S7' }, issues: [6], Page: AppHeaderSeite },
     { id: 'module-switcher', title: 'ModuleSwitcher', group: 'Bausteine', status: 'beta', summary: 'Modulwechsel als Knopf mit Liste, per Tastatur bedienbar.', concept: { path: 'https://github.com/MarkusKeller8200/EduKSX-Architektur/blob/main/docs/KONZEPT-DESIGN.md', label: 'KONZEPT-DESIGN 6, Plattform S7' }, issues: [6, 12], Page: ModuleSwitcherSeite },
     { id: 'history-list', title: 'HistoryList', group: 'Bausteine', status: 'beta', summary: 'Ansicht «Verlauf», gleich in allen Modulen (DB A7).', concept: { path: 'https://github.com/MarkusKeller8200/EduKSX-Architektur/blob/main/docs/KONZEPT-DESIGN.md', label: 'KONZEPT-DESIGN 4, DB A7' }, issues: [7, 13], Page: HistoryListSeite },
+    { id: 'button', title: 'Button', group: 'Bausteine', status: 'beta', summary: 'Haupt-, Neben-, Umriss-, Text-, Gefahr-Knopf und Link, Symbol-Knöpfe mit Tooltip.', concept: { path: 'docs/KONZEPT-BAUSTEINE.md', label: 'KONZEPT-BAUSTEINE §2.1' }, issues: [27], Page: ButtonSeite },
+    { id: 'tooltip', title: 'Tooltip', group: 'Bausteine', status: 'beta', summary: 'Zusatzinfo beim Darüberfahren und beim Fokus (WCAG 1.4.13).', concept: { path: 'docs/KONZEPT-BAUSTEINE.md', label: 'KONZEPT-BAUSTEINE §2.2' }, issues: [27], Page: TooltipSeite },
+    { id: 'formularfelder', title: 'Formularfelder', group: 'Bausteine', status: 'beta', summary: 'Field mit Beschriftung, Hinweis und Fehler; Input, Textarea, NativeSelect, Checkbox.', concept: { path: 'docs/KONZEPT-BAUSTEINE.md', label: 'KONZEPT-BAUSTEINE §2.3' }, issues: [27], Page: FieldSeite },
+    { id: 'tabelle', title: 'Tabelle', group: 'Bausteine', status: 'beta', summary: 'Einfache Tabelle mit Sortierknopf, Auswahl, Zahlenspalten und leerem Zustand.', concept: { path: 'docs/KONZEPT-BAUSTEINE.md', label: 'KONZEPT-BAUSTEINE §2.4' }, issues: [27], Page: TableSeite },
+    { id: 'dialog', title: 'Dialog und Rückfrage', group: 'Bausteine', status: 'beta', summary: 'Dialog und Rückfrage (AlertDialog) auf dem nativen <dialog>.', concept: { path: 'docs/KONZEPT-BAUSTEINE.md', label: 'KONZEPT-BAUSTEINE §2.5' }, issues: [27], Page: DialogSeite },
+    { id: 'hinweisbox', title: 'Hinweisbox', group: 'Bausteine', status: 'beta', summary: 'Info, Erfolg, Warnung und Fehler, immer mit Symbol und Text.', concept: { path: 'docs/KONZEPT-BAUSTEINE.md', label: 'KONZEPT-BAUSTEINE §2.7' }, issues: [27, 11], Page: AlertSeite },
     { id: 'schriftgewichte', title: 'Schriftgewichte (M7)', group: 'Prüfseiten', status: 'freigegeben', summary: 'Vergleich der Inter-Gewichte, Grundlage von Entscheid M7.', concept: { path: 'docs/KONZEPT-MARKE.md', label: 'KONZEPT-MARKE §3.4' }, issues: [], Page: Schriftgewichte },
 ];
