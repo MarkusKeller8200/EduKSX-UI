@@ -8,6 +8,15 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Testseite auf GitHub Pages (#15, Ideen #17, #19, #21):** eigene Vite-Seite unter `site/` (Entscheid 22.11.2026:
+  keine Storybook-Abhängigkeit) als Einstieg zum visuellen Prüfen aller Entscheide: Farben mit Werten hell/dunkel,
+  Kontrast nachgerechnet, Typografie, Abstände/Radien/Schatten, Breakpoints und Ansichten, Animation, Wortmarken, Icons,
+  die Bausteine `BrandWordmark`, `EduksxIcon`, `AppHeader`, `ModuleSwitcher`, `HistoryList` und die Prüfseite
+  Schriftgewichte. Vorschau-Leiste mit Farbschema Hell/Dunkel/System, Vergleich hell und dunkel nebeneinander und den
+  Pflicht-Ansichten Handy und Tablet (hoch/quer, in Gerätegrösse), Darstellungsoptimiert, Breit, Voll und Vollbild.
+  Schriften selbst gehostet (`site/public/fonts/`, auch für `docs/pruefseiten/schriftgewichte.html`, kein Google
+  Fonts mehr). `npm run site` (lokal), `npm run site:build` (prüft auch auf fremde Schriftabrufe), Workflow
+  `testseite.yml` baut bei PRs und rollt `main` auf GitHub Pages aus. Neue Bausteine ergänzen: `docs/TESTSEITE.md`.
 - **Grundbausteine (#27, `docs/KONZEPT-BAUSTEINE.md`):** `Button` (Haupt-, Neben-, Umriss-, Text-, Gefahr-Knopf,
   Link; Grössen, mit Symbol, lädt, gesperrt), `IconButton` mit `aria-label` und Tooltip, `Tooltip` (WCAG 1.4.13),
   Formularfelder `Field`, `Input`, `Textarea`, `NativeSelect`, `Checkbox` mit Hinweis und Fehler, einfache `Table`
