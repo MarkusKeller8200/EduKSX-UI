@@ -225,6 +225,10 @@ Abweichungen, die heute in Modulen bestehen. «Prüfen global» = Abschnitt 1 Pu
 | A12 | EduKSX-Architektur | Register: Marketingnamen «Intranet», «Stundenplan», «Teil von EduKSX-Core»; Übersicht «Einsatzplanung»; Schreibweise «MarKusSX» | folgt aus M1; M2 entschieden | Register: ident/ops «EduKSX-Ident», «EduKSX-Ops» (M2); Rest nach M1 | OFFEN (M1) |
 | A13 | alle Repos (Blueprint) | GitHub-Vorschaubild `#0B3D63` / `#F2B705` | **Ja** – M5 | EduKSX-UI umgestellt (22.11.2026); Core, Ident, Codex, Connectors, Suite, Glossary, Architektur nachziehen und Bild neu hochladen; Vorgabe im Blueprint | OFFEN im Modul |
 
+**Issues in den Modulen (22.11.2026):** sek-intranet #222 (A1–A8), EduKSX-Glossary #498 (A9, A13),
+EduKSX-Architektur #89 (A10, A12, A13, DS4 nach M3), EduKSX-Prototyp #72 (A11 nach M1, A13). Für EduKSX-Core, -Ident,
+-Codex, -Connectors und -Suite ist A13 (Vorschaubild) noch ohne Issue.
+
 ## 9. Entscheide
 
 | Nr. | Frage | Optionen | Entscheid | Status |
