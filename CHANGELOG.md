@@ -8,6 +8,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **GUI-Guideline (#28, #43):** `docs/GUIDELINE.md` – wann welche Farbe, welcher Baustein, Seitenaufbau und Abstände,
+  GUI-Profile nach Modulart und Ansicht (DS12), Texte und Tonalität (de-CH), Prüfen vor dem Merge. Testseite: Seite
+  «Guideline» mit Beispielen «So» und «Nicht so».
 - **Flow-Icon (#30):** EduKSX-Flow erhält sein Icon (Flussdiagramm mit Entscheidungs-Raute) aus dem
   Prototyp-Entwurf, freigegeben 22.11.2026; alle Varianten als SVG und PNG, Baustein `EduksxIcon name="flow"`.
 - **Grundbausteine auf der Testseite (#27, #15):** eigene Seiten für Button, Tooltip, Formularfelder, Tabelle,

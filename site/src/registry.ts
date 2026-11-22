@@ -2,6 +2,7 @@ import type { ComponentType } from 'react';
 import type { Status } from './ui';
 import { Farben } from './sections/farben';
 import { Kontrast } from './sections/kontrast';
+import { Guideline } from './sections/guideline';
 import { Typografie } from './sections/typografie';
 import { Abstaende } from './sections/abstaende';
 import { Ansichten } from './sections/ansichten';
@@ -43,6 +44,7 @@ export type Entry = {
 };
 
 export const ENTRIES: Entry[] = [
+    { id: 'guideline', title: 'Guideline', group: 'Grundlagen', status: 'beta', summary: 'Wann was eingesetzt wird: Farben, Bausteine, Seitenaufbau, GUI-Profile und Texte, mit Beispielen.', concept: { path: 'docs/GUIDELINE.md', label: 'GUIDELINE' }, issues: [28, 43], Page: Guideline },
     { id: 'farben', title: 'Farben', group: 'Grundlagen', status: 'freigegeben', summary: 'Alle Farb-Tokens hell und dunkel mit Wert und Verwendung.', concept: { path: 'docs/KONZEPT-MARKE.md', label: 'KONZEPT-MARKE §5' }, issues: [3], Page: Farben },
     { id: 'kontrast', title: 'Kontrast', group: 'Grundlagen', status: 'freigegeben', summary: 'Prüfpaare Schrift/Fläche 4,5 : 1 und Linien/Fokus 3 : 1, hell und dunkel nachgerechnet.', concept: { path: 'docs/KONZEPT-MARKE.md', label: 'KONZEPT-MARKE §5.2' }, issues: [4, 11], Page: Kontrast },
     { id: 'typografie', title: 'Typografie', group: 'Grundlagen', status: 'freigegeben', summary: 'Schriften Inter und JetBrains Mono (M6), Gewichte (M7), Grössen und Textrollen (T1, T2).', concept: { path: 'docs/KONZEPT-TOKENS.md', label: 'KONZEPT-TOKENS §2' }, issues: [25], Page: Typografie },
