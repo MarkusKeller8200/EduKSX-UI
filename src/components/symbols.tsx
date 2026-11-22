@@ -129,3 +129,56 @@ export const SunMoonSymbol = make(
         <path d="M20 12h2" />
     </>,
 );
+
+export const SmartphoneSymbol = make(
+    <>
+        <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+        <path d="M12 18h.01" />
+    </>,
+);
+
+export const LaptopSymbol = make(
+    <>
+        <path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z" />
+        <path d="M20.054 15.987H3.946" />
+    </>,
+);
+
+export const MoveHorizontalSymbol = make(
+    <>
+        <path d="m18 8 4 4-4 4" />
+        <path d="M2 12h20" />
+        <path d="m6 8-4 4 4 4" />
+    </>,
+);
+
+export const Maximize2Symbol = make(
+    <>
+        <path d="M15 3h6v6" />
+        <path d="m21 3-7 7" />
+        <path d="m3 21 7-7" />
+        <path d="M9 21H3v-6" />
+    </>,
+);
+
+export const ExpandSymbol = make(
+    <>
+        <path d="m15 15 6 6" />
+        <path d="m15 9 6-6" />
+        <path d="M21 16v5h-5" />
+        <path d="M21 8V3h-5" />
+        <path d="M3 16v5h5" />
+        <path d="m3 21 6-6" />
+        <path d="M3 8V3h5" />
+        <path d="M9 9 3 3" />
+    </>,
+);
+
+export const ShrinkSymbol = make(
+    <>
+        <path d="m15 15 6 6m-6-6v4.8m0-4.8h4.8" />
+        <path d="M9 19.8V15m0 0H4.2M9 15l-6 6" />
+        <path d="M15 4.2V9m0 0h4.8M15 9l6-6" />
+        <path d="M9 4.2V9m0 0H4.2M9 9 3 3" />
+    </>,
+);

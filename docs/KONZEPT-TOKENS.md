@@ -114,6 +114,10 @@ Desktop-Bedienung (Navigation, Seitenleiste) `desk:` statt `sm:` verwenden; `sm:
 Darstellungsoptimierte Seiten (Detailseite, Konto, Anmeldung, Formulare) bleiben auch bei «Breit» und «Voll» auf
 1152 px und zentriert.
 
+**Baustein (#19):** `ViewWidthToggle` mit `useViewWidth()` (gespeichert als `eduksx:ansicht`, Vorgabe
+Darstellungsoptimiert) und `VIEW_WIDTH_CLASSES` für die Breite des Seitenbereichs; dazu `FullscreenButton`. In der
+Kopfzeile rechts, auf dem Handy ausgeblendet (`desk:`). Testseite: «ViewWidthToggle».
+
 ## 5. Animation (#26, BESCHLOSSEN 22.11.2026)
 
 | Token | Wert | Verwendung |
