@@ -8,6 +8,11 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Farbschema-Umschalter `ColorSchemeToggle` (#17):** Hell / Dunkel / Wie System mit den Symbolen Sonne, Mond und
+  Sonne-Mond (Pfade aus Lucide, ISC), `aria-pressed`, `aria-label` und Tooltip; Hook `useColorScheme()` speichert die
+  Wahl je Browser (`eduksx:farbschema`), setzt `.dark` und folgt bei «Wie System» dem Betriebssystem. Pflicht in der
+  Kopfzeile aller Module. Testseite: Seite «ColorSchemeToggle».
+- **`AppHeader` bricht auf schmalen Bildschirmen um** statt seitlich überzulaufen.
 - **Flow-Icon (#30):** EduKSX-Flow erhält sein Icon (Flussdiagramm mit Entscheidungs-Raute) aus dem
   Prototyp-Entwurf, freigegeben 22.11.2026; alle Varianten als SVG und PNG, Baustein `EduksxIcon name="flow"`.
 - **Grundbausteine auf der Testseite (#27, #15):** eigene Seiten für Button, Tooltip, Formularfelder, Tabelle,

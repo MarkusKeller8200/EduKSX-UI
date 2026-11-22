@@ -28,3 +28,5 @@ export { Dialog, AlertDialog } from './components/dialog';
 export type { DialogProps, AlertDialogProps } from './components/dialog';
 export { Alert, ALERT_LABELS } from './components/alert';
 export type { AlertProps, AlertVariant } from './components/alert';
+export { ColorSchemeToggle, useColorScheme, resolveDark, COLOR_SCHEMES, COLOR_SCHEME_LABELS, COLOR_SCHEME_STORAGE_KEY } from './components/color-scheme-toggle';
+export type { ColorScheme, ColorSchemeToggleProps } from './components/color-scheme-toggle';
