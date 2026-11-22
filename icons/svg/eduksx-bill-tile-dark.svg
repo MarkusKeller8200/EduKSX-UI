@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img">
+  <title>EduKSX-Bill</title>
+  <rect width="48" height="48" rx="11" fill="#222222"/>
+  <g transform="translate(9.0 9.0) scale(1.25)">
+  <path d="M5.5 3h13v17.5l-2.15-1.4-2.2 1.4-2.15-1.4-2.15 1.4-2.2-1.4-2.15 1.4Z" fill="none" stroke="#F2F5F8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8.8 7.6h6.4M8.8 11h6.4" fill="none" stroke="#32B8F2" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="8.8" y="13.8" width="4.4" height="2.6" rx="0.8" fill="#FF8A00"/>
+  </g>
+</svg>

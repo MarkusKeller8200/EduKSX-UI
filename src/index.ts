@@ -7,6 +7,8 @@ export { EduksxIcon, EDUKSX_ICON_NAMES } from './components/eduksx-icon';
 export type { EduksxIconProps, EduksxIconVariant } from './components/eduksx-icon';
 export { eduksxIcons } from './components/eduksx-icons.data';
 export type { EduksxIconName } from './components/eduksx-icons.data';
+export { EDUKSX_ICON_BUNDLES, EDUKSX_ICON_VORRAT, bundlesOfIcon } from './components/eduksx-icon-bundles';
+export type { EduksxIconBundle, EduksxIconBundleName } from './components/eduksx-icon-bundles';
 export { ModuleSwitcher } from './components/module-switcher';
 export type { ModuleLink, ModuleSwitcherProps } from './components/module-switcher';
 export { AppHeader } from './components/app-header';

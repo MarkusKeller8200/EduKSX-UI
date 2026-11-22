@@ -207,13 +207,21 @@ Signatur.
 
 ## 6. Icons und Signets (BESCHLOSSEN, Icon-Set EduKSX, freigegeben 09.11., 13.11. und 22.11.2026)
 
-- 18 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
-  Intranet, Timetable, Staffing, Ops, Flow, Planner. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
-  Sechseck mit Kern (Core), Ausweis (Ident), Tasche mit Häkchen (Shop), Schlüssel (Licence), Torbogen mit Pfeil
-  (Portal), drei verbundene Knoten (Connect), Zahnrad (Services), Feder mit Unterschrift (Sign), Uhr (Time), Haus mit
+- 27 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
+  Intranet, Timetable, Staffing, Ops, Flow, Planner, WebSnapshot, API, AIConverter, MCP, Bill, Ticket, Booking,
+  Checklist, Absence. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
+  Sechseck mit Kern (Core), Ausweis (Ident), Einkaufswagen mit Häkchen (Shop), Schlüssel (Licence), Elternteil und
+  Kind (Portal = Elternportal), drei verbundene Knoten (Connect), Zahnrad (Services), Feder mit Unterschrift (Sign), Uhr (Time), Haus mit
   vier Bausteinen (Intranet), Raster mit Kalenderkopf (Timetable), Person mit Kalender (Staffing), Bildschirm mit Puls
   (Ops), Flussdiagramm mit Entscheidungs-Raute (Flow),
   Zeitbalken auf einer Achse (Planner, freigegeben 22.11.2026, #49).
+- 22.11.2026 (#52): Shop zeigt den Einkaufswagen statt der Tasche, Portal (Elternportal) Elternteil und Kind statt des
+  Torbogens. Neu, im UI-Stil nach den Motiven des Entwurfs «Icon-Set v2 (Umriss-Stil)»: Browserfenster mit Objektiv
+  (WebSnapshot), Klammern mit Datenpunkten (API), gegenläufige Pfeile mit Funken (AIConverter), Stecker (MCP), Beleg
+  (Bill), Ticket mit Abriss (Ticket), Kalender mit Häkchen (Booking), Liste mit Häkchen (Checklist), Person mit Minus
+  (Absence). Der Entwurf «Workflow» ist nicht übernommen, weil er `flow` entspricht. Alle Icons folgen **einem** Stil:
+  dem des freigegebenen Sets (Umriss 1,75 mit gefüllten Akzenten), nicht dem reinen Umriss-Stil des Entwurfs. Die
+  neun neuen Schlüssel sind Icons, noch keine Einträge im Modulregister (Abschnitt 3).
 - Gestaltung: 24er-Raster, Strich 1,75, runde Enden und Ecken; Orange = Hauptakzent, Blau und Violett für Details,
   Neutral `#222222` / `#F2F5F8`; Kachel 48 × 48, Eckenradius 11, Kachelfläche hell `#F2F5F8` mit feinem Rand,
   dunkel `#222222` (Token `icon-tile`; bewusst nicht die Seitenfläche `#151B24`, so wie freigegeben).
@@ -229,9 +237,8 @@ Signatur.
 
 ### 6.1 Dateien und Baustein (BESCHLOSSEN 22.11.2026)
 
-EduKSX-UI ist seit 22.11.2026 die **massgebliche Quelle** des Icon-Sets (übernommen aus markussxch; dort bleibt eine
-Kopie für die Website mit Vermerk «Quelle EduKSX-UI»). Module beziehen die Icons aus `@eduksx/ui`, nicht aus eigenen
-Kopien.
+EduKSX-UI ist seit 22.11.2026 die **einzige Quelle** des Icon-Sets (übernommen aus markussxch; dort und in allen
+anderen Repos gibt es keine Kopien mehr, §6.3). Module beziehen die Icons aus `@eduksx/ui`.
 
 | Datei | Verwendung |
 | --- | --- |
@@ -303,6 +310,22 @@ Symbole der **GUI-Bausteine** (Prüfseite und Dokumentation, Gruppen aus `UEBERN
 | Eingabe (`TextCursorInput`) | Button `MousePointerClick`, Knopfgruppe `Group`, Formularfelder `TextCursorInput`, Eingabegruppe `RectangleEllipsis`, Dropdown `ChevronsUpDown`, Optionsfelder `CircleDot`, Schalter `ToggleLeft`, Auswahl mit Suche `SearchCheck`, Mehrfachauswahl `ListChecks`, Datumsauswahl `CalendarDays`, Datei hochladen `FileUp`, Schieberegler `SlidersHorizontal`, Drag & Drop `Move`, Fragebogen `ClipboardList` |
 | Daten anzeigen (`Table2`) | Tabellen `Table2`, Typografie `Type`, Eintrag `Rows3`, Karten & Seitenkopf `PanelsTopLeft`, Badges & Status `Tag`, Akkordeon `ListCollapse`, Fortschritt `Gauge`, Diagramme `ChartColumn`, Zeitleiste `History`, Scrollbereich `ScrollText`, Codeblock `Code`, Begriff `BookA` |
 | Rückmeldung (`MessageSquareWarning`) | Meldungen & Dialoge `MessageSquareWarning`, Rückfrage `ShieldAlert`, Popover `MessageSquareMore`, Vorschaukarte `IdCard`, Banner `Flag`, Ladezustände `Loader` |
+
+### 6.3 Nur Icons aus EduKSX-UI, Bundles je Modul (BESCHLOSSEN 22.11.2026, Markus)
+
+- **Module erstellen keine eigenen Icons** – auch nicht für Zwecke, die nur ein Modul braucht. Jedes Icon entsteht in
+  EduKSX-UI (`icons/build.py`, mit Freigabe) und wird über `@eduksx/ui` bezogen (Baustein `EduksxIcon`, Dateien unter
+  `@eduksx/ui/icons/…`). Kopien in anderen Repos sind nicht erlaubt; Dateien, die als fester Pfad gebraucht werden
+  (Favicon, App-Icons), erzeugt das Modul beim Bauen aus dem Paket. Dokumentation verweist direkt auf
+  `EduKSX-UI/icons/svg` (öffentliches Repo).
+- **Bundle je Modul:** `src/components/eduksx-icon-bundles.ts` (`EDUKSX_ICON_BUNDLES`) listet je Modul, welche Icons es
+  benutzt; dazu Website (markussxch) und Prototypen als weitere Nutzer. Jedes Icon liegt nur einmal im Set
+  (Zuordnung, keine Ordner je Modul). **Gemeinsam genutzte Icons sind vorzuziehen** und stehen in mehreren Bundles.
+- Freigegebene Icons ohne Modul stehen im **Vorrat** (`EDUKSX_ICON_VORRAT`). Ein Test prüft, dass jedes Icon in einem
+  Bundle oder im Vorrat steht und Bundles nur bestehende Icons nennen. Die Testseite zeigt die Bundles.
+- Lucide-Bediensymbole nach §6.2 sind keine eigenen Icons und bleiben im Modul erlaubt.
+- Umgesetzt 22.11.2026: Kopien entfernt in markussxch (#23), EduKSX-Architektur (#92), EduKSX-Glossary (#500),
+  sek-intranet (#223), EduKSX-Prototyp (#73). Offen: Varianten für `favicon.ico` und Maskable-App-Icons (Intranet).
 
 ## 7. Gegenüberstellung je Repo (Stand 22.11.2026)
 

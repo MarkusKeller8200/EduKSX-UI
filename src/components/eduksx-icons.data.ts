@@ -62,11 +62,12 @@ export const eduksxIcons = {
   },
   "shop": {
     name: "EduKSX-Shop",
-    meaning: "Tasche: Lehrmittel bestellen",
+    meaning: "Einkaufswagen mit Häkchen: Lehrmittel bestellen (seit 22.11.2026, vorher Tasche)",
     elements: [
-      { tag: "path", role: "base", fill: false, attrs: {"d": "M4.6 8.4h14.8l-1.1 11.1a1.6 1.6 0 0 1-1.6 1.5H7.3a1.6 1.6 0 0 1-1.6-1.5Z"} },
-      { tag: "path", role: "k", fill: false, attrs: {"d": "M8.8 8.4V7a3.2 3.2 0 0 1 6.4 0v1.4"} },
-      { tag: "path", role: "sx", fill: false, attrs: {"d": "M9.2 13.6l1.9 1.9 3.7-3.8"} },
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M2.6 3.6h2.1l2.3 11a1.8 1.8 0 0 0 1.8 1.4h8.4a1.8 1.8 0 0 0 1.75-1.4L20.9 7.6H5.6"} },
+      { tag: "path", role: "sx", fill: false, attrs: {"d": "M10.2 12.1l1.5 1.5 3-3"} },
+      { tag: "circle", role: "k", fill: true, attrs: {"cx": 9.6, "cy": 19.6, "r": 1.6} },
+      { tag: "circle", role: "k", fill: true, attrs: {"cx": 17.2, "cy": 19.6, "r": 1.6} },
     ],
   },
   "licence": {
@@ -80,10 +81,13 @@ export const eduksxIcons = {
   },
   "portal": {
     name: "EduKSX-Portal",
-    meaning: "Torbogen: zentraler Einstieg",
+    meaning: "Elternteil und Kind: Elternportal (seit 22.11.2026, vorher Torbogen)",
     elements: [
-      { tag: "path", role: "base", fill: false, attrs: {"d": "M6 20V10.2a6 6 0 0 1 12 0V20M3.5 20h17"} },
-      { tag: "path", role: "k", fill: false, attrs: {"d": "M8.6 15.2h6.2M12.4 12.8l2.4 2.4-2.4 2.4"} },
+      { tag: "circle", role: "base", fill: false, attrs: {"cx": 8, "cy": 6.6, "r": 2.9} },
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M3.5 20.5v-2a4.5 4.5 0 0 1 9 0v2"} },
+      { tag: "circle", role: "k", fill: false, attrs: {"cx": 17.8, "cy": 11.4, "r": 2} },
+      { tag: "path", role: "k", fill: false, attrs: {"d": "M15 20.5v-1a2.8 2.8 0 0 1 5.6 0v1"} },
+      { tag: "circle", role: "sx", fill: true, attrs: {"cx": 17.8, "cy": 4.6, "r": 1.1} },
     ],
   },
   "connect": {
@@ -187,6 +191,95 @@ export const eduksxIcons = {
       { tag: "rect", role: "sx", fill: true, attrs: {"x": 10, "y": 10.2, "width": 8.5, "height": 2.8, "rx": 1.2} },
       { tag: "rect", role: "e", fill: true, attrs: {"x": 8, "y": 14.9, "width": 6, "height": 2.8, "rx": 1.2} },
       { tag: "path", role: "base", fill: false, attrs: {"d": "M16 5.2v3.4"} },
+    ],
+  },
+  "websnapshot": {
+    name: "EduKSX-WebSnapshot",
+    meaning: "Browserfenster mit Objektiv: Webseiten sichern",
+    elements: [
+      { tag: "rect", role: "base", fill: false, attrs: {"x": 2.75, "y": 4, "width": 18.5, "height": 16, "rx": 2.5} },
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M2.75 8.6h18.5"} },
+      { tag: "circle", role: "base", fill: true, attrs: {"cx": 5.6, "cy": 6.3, "r": 0.8} },
+      { tag: "circle", role: "base", fill: true, attrs: {"cx": 8.2, "cy": 6.3, "r": 0.8} },
+      { tag: "circle", role: "k", fill: false, attrs: {"cx": 12, "cy": 14.3, "r": 3.4} },
+      { tag: "circle", role: "sx", fill: true, attrs: {"cx": 12, "cy": 14.3, "r": 1.2} },
+    ],
+  },
+  "api": {
+    name: "EduKSX-API",
+    meaning: "Klammern mit Daten: Programmierschnittstelle",
+    elements: [
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M8 4.5h-.8a2 2 0 0 0-2 2V10l-2 2 2 2v3.5a2 2 0 0 0 2 2H8M16 4.5h.8a2 2 0 0 1 2 2V10l2 2-2 2v3.5a2 2 0 0 1-2 2H16"} },
+      { tag: "circle", role: "k", fill: true, attrs: {"cx": 9, "cy": 12, "r": 1.15} },
+      { tag: "circle", role: "sx", fill: true, attrs: {"cx": 12, "cy": 12, "r": 1.15} },
+      { tag: "circle", role: "e", fill: true, attrs: {"cx": 15, "cy": 12, "r": 1.15} },
+    ],
+  },
+  "aiconverter": {
+    name: "EduKSX-AIConverter",
+    meaning: "Gegenläufige Pfeile mit Funken: Inhalte mit KI umwandeln",
+    elements: [
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M3.5 7.5h10M10.8 4.6l2.9 2.9-2.9 2.9"} },
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M20.5 16.5h-10M13.2 13.6l-2.9 2.9 2.9 2.9"} },
+      { tag: "path", role: "k", fill: true, attrs: {"d": "M18.6 3.6c.3 1.7 1 2.4 2.7 2.7-1.7.3-2.4 1-2.7 2.7-.3-1.7-1-2.4-2.7-2.7 1.7-.3 2.4-1 2.7-2.7Z"} },
+      { tag: "circle", role: "sx", fill: true, attrs: {"cx": 5.2, "cy": 16.5, "r": 1.2} },
+    ],
+  },
+  "mcp": {
+    name: "EduKSX-MCP",
+    meaning: "Stecker: KI-Werkzeuge anbinden (Model Context Protocol)",
+    elements: [
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M9 3v4.2M15 3v4.2"} },
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M6.2 7.2h11.6v3a5.8 5.8 0 0 1-11.6 0Z"} },
+      { tag: "path", role: "k", fill: false, attrs: {"d": "M12 16v5"} },
+      { tag: "circle", role: "sx", fill: true, attrs: {"cx": 12, "cy": 10.6, "r": 1.2} },
+    ],
+  },
+  "bill": {
+    name: "EduKSX-Bill",
+    meaning: "Beleg mit Summe: Rechnungen stellen und verbuchen",
+    elements: [
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M5.5 3h13v17.5l-2.15-1.4-2.2 1.4-2.15-1.4-2.15 1.4-2.2-1.4-2.15 1.4Z"} },
+      { tag: "path", role: "sx", fill: false, attrs: {"d": "M8.8 7.6h6.4M8.8 11h6.4"} },
+      { tag: "rect", role: "k", fill: true, attrs: {"x": 8.8, "y": 13.8, "width": 4.4, "height": 2.6, "rx": 0.8} },
+    ],
+  },
+  "ticket": {
+    name: "EduKSX-Ticket",
+    meaning: "Ticket mit Abriss: Anliegen und Supportfälle",
+    elements: [
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2.5a2.5 2.5 0 0 0 0 5V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2.5a2.5 2.5 0 0 0 0-5Z"} },
+      { tag: "path", role: "k", fill: false, attrs: {"d": "M14.5 7.2v1.3M14.5 11.35v1.3M14.5 15.5v1.3"} },
+      { tag: "circle", role: "sx", fill: true, attrs: {"cx": 9, "cy": 12, "r": 1.6} },
+    ],
+  },
+  "booking": {
+    name: "EduKSX-Booking",
+    meaning: "Kalender mit Häkchen: Räume und Geräte reservieren",
+    elements: [
+      { tag: "rect", role: "base", fill: false, attrs: {"x": 3.5, "y": 5, "width": 17, "height": 15.5, "rx": 2.5} },
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M8 3.2v3.4M16 3.2v3.4"} },
+      { tag: "path", role: "sx", fill: false, attrs: {"d": "M4.4 9.5h15.2"} },
+      { tag: "path", role: "k", fill: false, attrs: {"d": "M8.8 14.6l2.2 2.2 4.2-4.2"} },
+    ],
+  },
+  "checklist": {
+    name: "EduKSX-Checklist",
+    meaning: "Liste mit Häkchen: Aufgaben abhaken",
+    elements: [
+      { tag: "path", role: "k", fill: false, attrs: {"d": "M3.4 6.4l1.6 1.6 3-3M3.4 12.4l1.6 1.6 3-3"} },
+      { tag: "rect", role: "sx", fill: false, attrs: {"x": 3.6, "y": 16.8, "width": 3.8, "height": 3.8, "rx": 1} },
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M11 6.6h9.5M11 12.6h9.5M11 18.7h9.5"} },
+    ],
+  },
+  "absence": {
+    name: "EduKSX-Absence",
+    meaning: "Person mit Minus: Abwesenheiten erfassen",
+    elements: [
+      { tag: "circle", role: "base", fill: false, attrs: {"cx": 9, "cy": 7.8, "r": 3.6} },
+      { tag: "path", role: "base", fill: false, attrs: {"d": "M3 20.5c.4-3.8 2.8-6 6-6s5.6 2.2 6 6"} },
+      { tag: "path", role: "k", fill: false, attrs: {"d": "M16.2 10.2h5"} },
+      { tag: "circle", role: "sx", fill: true, attrs: {"cx": 18.7, "cy": 15.6, "r": 1.1} },
     ],
   },
 } satisfies Record<string, EduksxIconDef>;

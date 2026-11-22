@@ -1,5 +1,6 @@
 import { EduksxIcon, EDUKSX_ICON_NAMES } from '../../../src/components/eduksx-icon';
-import { eduksxIcons } from '../../../src/components/eduksx-icons.data';
+import { eduksxIcons, type EduksxIconName } from '../../../src/components/eduksx-icons.data';
+import { EDUKSX_ICON_BUNDLES, EDUKSX_ICON_VORRAT, bundlesOfIcon } from '../../../src/components/eduksx-icon-bundles';
 import { Block, Code, Example } from '../ui';
 
 // Die ausgelieferten Dateien aus icons/ (nicht nachgezeichnet), damit Datei und Baustein verglichen werden können.
@@ -12,8 +13,9 @@ export function Icons() {
     return (
         <div className="space-y-8">
             <p className="max-w-prose">
-                17 freigegebene Icons, 24er-Raster, Strich 1,75. Orange ist der Hauptakzent, Blau und Violett für Details.
-                Neue Motive oder Farben brauchen eine eigene Freigabe. Neu seit 22.11.2026: EduKSX-Flow (#30).
+                {EDUKSX_ICON_NAMES.length} freigegebene Icons, 24er-Raster, Strich 1,75. Orange ist der Hauptakzent, Blau und
+                Violett für Details. Neue Motive oder Farben brauchen eine eigene Freigabe. Module erstellen keine eigenen
+                Icons: alles kommt aus diesem Set, je Modul als Bundle (KONZEPT-MARKE §6.3).
             </p>
             <Block title="Baustein EduksxIcon" note="Farbig, einfarbig (Textfarbe) und als Kachel. Wechselt mit hell und dunkel.">
                 <Example label="Icons">
@@ -31,6 +33,44 @@ export function Icons() {
                         ))}
                     </ul>
                 </Example>
+            </Block>
+            <Block
+                title="Bundles je Modul"
+                note={<>Welches Modul welche Icons benutzt. Jedes Icon liegt nur einmal im Set; gemeinsam genutzte (Rahmen) stehen in mehreren Bundles. Daten: <Code>EDUKSX_ICON_BUNDLES</Code>.</>}
+            >
+                <ul className="space-y-3">
+                    {Object.entries(EDUKSX_ICON_BUNDLES).map(([key, b]) => (
+                        <li key={key} className="rounded-md border border-border p-3">
+                            <p className="text-sm font-medium">
+                                {b.title} <span className="text-xs font-normal text-muted-foreground">· {'repo' in b && b.repo ? b.repo : 'noch ohne Repo'} · {b.icons.length} Icon{b.icons.length === 1 ? '' : 's'}</span>
+                            </p>
+                            <ul className="mt-2 flex flex-wrap gap-2">
+                                {(b.icons as readonly EduksxIconName[]).map((n) => {
+                                    const geteilt = bundlesOfIcon(n).length > 1;
+                                    return (
+                                        <li key={n} className={`flex items-center gap-1.5 rounded-md px-2 py-1 text-xs ${geteilt ? 'border border-border' : ''}`}>
+                                            <EduksxIcon name={n} size={20} />
+                                            {n}
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </li>
+                    ))}
+                    <li className="rounded-md border border-dashed border-border p-3">
+                        <p className="text-sm font-medium">
+                            Vorrat <span className="text-xs font-normal text-muted-foreground">· freigegeben, noch keinem Modul zugeordnet</span>
+                        </p>
+                        <ul className="mt-2 flex flex-wrap gap-2">
+                            {EDUKSX_ICON_VORRAT.map((n) => (
+                                <li key={n} className="flex items-center gap-1.5 px-2 py-1 text-xs">
+                                    <EduksxIcon name={n} size={20} />
+                                    {n}
+                                </li>
+                            ))}
+                        </ul>
+                    </li>
+                </ul>
             </Block>
             <Block title="Dateien im Paket" note={<>Wie ausgeliefert unter <Code>@eduksx/ui/icons/</Code>: farbig, Kachel hell, Kachel dunkel (SVG) und PNG 192.</>}>
                 <div className="overflow-x-auto rounded-lg border border-border bg-card p-4" tabIndex={0} role="region" aria-label="Icon-Dateien">
