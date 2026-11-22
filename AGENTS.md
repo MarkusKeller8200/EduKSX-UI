@@ -59,6 +59,15 @@ Aus dem GitHub-Blueprint, Details in `docs/GITHUB-ABLAUF.md`.
 
 <!-- /blueprint:github-ablauf -->
 
+## Verbindlichkeit für Module
+
+- Alle EduKSX-Module folgen dem UI-Konzept (`docs/KONZEPT-MARKE.md`, `tokens/tokens.json`, `@eduksx/ui`).
+- Vor einer Abweichung in einem Modul zuerst prüfen, ob die Regel besser hier für alle Module definiert wird.
+- Bleibt die Abweichung, wird sie im Modul mit Begründung vermerkt (Tabelle in `KONZEPT-MARKE.md` §1) und im
+  Abweichungsregister (§8) nachgetragen.
+- Vor jedem neuen Meilenstein werden die Abweichungen gesichtet; übernommene Regeln machen die Abweichung im Modul
+  obsolet.
+
 ## Ideen-Erfassung
 
 - Lose Ideen sind Issues mit Label `idee` (Vorlage «Idee festhalten»), **ohne Meilenstein**, ohne `triage` und ohne

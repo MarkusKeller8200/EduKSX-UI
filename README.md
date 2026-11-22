@@ -3,6 +3,7 @@
 Design-System der EduKSX-Plattform: Design-Tokens (tokens.json, DTCG), Kontrastprüfung und React-Bausteine als npm-Paket @eduksx/ui für alle EduKSX-Module.
 
 Grundlage: [KONZEPT-DESIGN.md](https://github.com/MarkusKeller8200/EduKSX-Architektur/blob/main/docs/KONZEPT-DESIGN.md)
+Marke, Namen und Farben aller Module: [docs/KONZEPT-MARKE.md](docs/KONZEPT-MARKE.md) – verbindlich für alle EduKSX-Module.
 in EduKSX-Architektur. Das CI von MarKusSXCH bestimmt das Aussehen, dieses Paket die Bausteine; Barrierefreiheit geht
 vor (WCAG 2.1 AA, eCH-0059).
 

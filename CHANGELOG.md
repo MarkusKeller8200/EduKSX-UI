@@ -8,6 +8,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Marke, Namen und Farben (`docs/KONZEPT-MARKE.md`):** Regeln aus CI MarKusSXCH, Produktfamilie, Icon-Set und allen
+  EduKSX-Repos zusammengeführt; Gegenüberstellung je Repo, Abweichungsregister, offene Entscheide M1–M5; Regel
+  «Module folgen dem UI-Konzept, Abweichungen nur mit Begründung» (auch in AGENTS.md).
 - **Design-Tokens (#3):** `tokens/tokens.json` (DTCG) mit den Standardwerten «EduKSX» aus dem Glossary; Build erzeugt
   `tokens.css` (hell/dunkel), `theme.css` (Tailwind 4) und `eduksx.css` (`--eduksx-*` für Plugins).
 - **Kontrastprüfung (#4):** `contrastRatio()`, `checkTheme()` mit den Paaren des Glossary (Text 4,5 : 1, Linien und
