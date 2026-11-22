@@ -11,6 +11,117 @@
     "vorlage": "Vorlagen, Formatbeschreibungen und Texte"
   },
   "items": [
-    {"id": "app", "group": "app", "name": "EduKSX-UI", "use": "Dieses Projekt", "license": "MIT", "url": "https://github.com/MarkusKeller8200/EduKSX-UI"}
+    {
+      "id": "app",
+      "group": "app",
+      "name": "EduKSX-UI",
+      "use": "Dieses Projekt",
+      "license": "MIT",
+      "url": "https://github.com/MarkusKeller8200/EduKSX-UI"
+    },
+    {
+      "id": "react",
+      "group": "laufzeit",
+      "name": "React",
+      "use": "Grundlage der Bausteine (peerDependency, vom Modul installiert)",
+      "license": "MIT",
+      "url": "https://react.dev"
+    },
+    {
+      "id": "react-dom",
+      "group": "laufzeit",
+      "name": "React DOM",
+      "use": "Darstellung im Browser (peerDependency)",
+      "license": "MIT",
+      "url": "https://react.dev"
+    },
+    {
+      "id": "typescript",
+      "group": "entwicklung",
+      "name": "TypeScript",
+      "use": "Typen und Deklarationen",
+      "license": "Apache-2.0",
+      "url": "https://www.typescriptlang.org"
+    },
+    {
+      "id": "vite",
+      "group": "entwicklung",
+      "name": "Vite",
+      "use": "Build der Bibliothek",
+      "license": "MIT",
+      "url": "https://vite.dev"
+    },
+    {
+      "id": "vitejs-plugin-react",
+      "group": "entwicklung",
+      "name": "@vitejs/plugin-react",
+      "use": "JSX im Build und in den Tests",
+      "license": "MIT",
+      "url": "https://github.com/vitejs/vite-plugin-react"
+    },
+    {
+      "id": "vitest",
+      "group": "entwicklung",
+      "name": "Vitest",
+      "use": "Tests",
+      "license": "MIT",
+      "url": "https://vitest.dev"
+    },
+    {
+      "id": "jsdom",
+      "group": "entwicklung",
+      "name": "jsdom",
+      "use": "Browser-Umgebung für Tests",
+      "license": "MIT",
+      "url": "https://github.com/jsdom/jsdom"
+    },
+    {
+      "id": "testing-library-react",
+      "group": "entwicklung",
+      "name": "@testing-library/react",
+      "use": "Tests der Bausteine",
+      "license": "MIT",
+      "url": "https://testing-library.com"
+    },
+    {
+      "id": "testing-library-user-event",
+      "group": "entwicklung",
+      "name": "@testing-library/user-event",
+      "use": "Tastatur und Maus in Tests",
+      "license": "MIT",
+      "url": "https://testing-library.com"
+    },
+    {
+      "id": "testing-library-jest-dom",
+      "group": "entwicklung",
+      "name": "@testing-library/jest-dom",
+      "use": "Prüfungen im DOM",
+      "license": "MIT",
+      "url": "https://testing-library.com"
+    },
+    {
+      "id": "types-react",
+      "group": "entwicklung",
+      "name": "@types/react, @types/react-dom",
+      "use": "Typen für React",
+      "license": "MIT",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+      "id": "ci-markussxch",
+      "group": "vorlage",
+      "name": "CI-Manual MarKusSXCH v1.0",
+      "use": "Wortmarke, Markenfarben, Komponentenkontrakt",
+      "license": "Eigentum Markus Keller",
+      "url": "https://github.com/MarkusKeller8200/markussxch"
+    },
+    {
+      "id": "dtcg",
+      "group": "vorlage",
+      "name": "Design Tokens Format (W3C DTCG)",
+      "use": "Format von tokens/tokens.json",
+      "license": "W3C Community Group",
+      "url": "https://www.designtokens.org"
+    }
   ]
 }
