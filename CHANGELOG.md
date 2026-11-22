@@ -23,3 +23,5 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 - README: Dunkelmodus über `.dark`, Rückfall von `eduksx.css` auf helle Werte, Inter selbst hosten.
 - Grundgerüst: GitHub-Blueprint, Lizenz MIT, `npm run check`, Steckbrief bestätigt.
 - **Ideen-Erfassung (#9):** Label `idee` und Issue-Vorlage «Idee festhalten» für lose Ideen ohne Meilenstein.
+- **Übernahme aus dem INTRANET (#21):** `docs/UEBERNAHME-INTRANET-GUI.md` hält Erscheinungsbild, Themes,
+  GUI-Prototypen mit allen 41 Bausteinen und den GUI-Teil des Sprachkonzepts fest (Entwurf, ohne Links ins INTRANET).
