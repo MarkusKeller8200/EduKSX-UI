@@ -7,13 +7,16 @@ import { useCallback, useEffect, useSyncExternalStore } from 'react';
 export type Schema = 'hell' | 'dunkel' | 'system';
 export type Ansicht = 'handy' | 'tablet' | 'optimiert' | 'breit' | 'voll';
 export type Ausrichtung = 'hoch' | 'quer';
+/** Theme der Vorschau (DS11): Standard EduKSX oder ein mitgeliefertes Theme. */
+export type Theme = 'eduksx' | 'hoher-kontrast' | 'violett';
 
-type Settings = { schema: Schema; vergleich: boolean; ansicht: Ansicht; ausrichtung: Ausrichtung };
+type Settings = { schema: Schema; theme: Theme; vergleich: boolean; ansicht: Ansicht; ausrichtung: Ausrichtung };
 
 const PREFIX = 'eduksx-testseite:';
-const DEFAULTS: Settings = { schema: 'system', vergleich: false, ansicht: 'optimiert', ausrichtung: 'hoch' };
+const DEFAULTS: Settings = { schema: 'system', theme: 'eduksx', vergleich: false, ansicht: 'optimiert', ausrichtung: 'hoch' };
 const ALLOWED = {
     schema: ['hell', 'dunkel', 'system'],
+    theme: ['eduksx', 'hoher-kontrast', 'violett'],
     ansicht: ['handy', 'tablet', 'optimiert', 'breit', 'voll'],
     ausrichtung: ['hoch', 'quer'],
 } as const;
@@ -36,7 +39,7 @@ function read<K extends keyof Settings>(key: K): Settings[K] {
 const listeners = new Set<() => void>();
 let cache: Settings | null = null;
 function snapshot(): Settings {
-    if (!cache) cache = { schema: read('schema'), vergleich: read('vergleich'), ansicht: read('ansicht'), ausrichtung: read('ausrichtung') };
+    if (!cache) cache = { schema: read('schema'), theme: read('theme'), vergleich: read('vergleich'), ansicht: read('ansicht'), ausrichtung: read('ausrichtung') };
     return cache;
 }
 function emit() {
@@ -78,7 +81,11 @@ function prefersDark(): boolean {
 
 /** Setzt `.dark` am Wurzelelement. Im Vergleich «Hell und Dunkel» bleibt die Seite hell, die Beispiele zeigen beides. */
 export function useApplyScheme() {
-    const { schema, vergleich } = useSettings();
+    const { schema, vergleich, theme } = useSettings();
+    useEffect(() => {
+        if (theme === 'eduksx') document.documentElement.removeAttribute('data-theme');
+        else document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
     useEffect(() => {
         const apply = () => {
             const dark = !vergleich && (schema === 'dunkel' || (schema === 'system' && prefersDark()));
