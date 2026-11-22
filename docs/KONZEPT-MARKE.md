@@ -207,13 +207,21 @@ Signatur.
 
 ## 6. Icons und Signets (BESCHLOSSEN, Icon-Set EduKSX, freigegeben 09.11., 13.11. und 22.11.2026)
 
-- 18 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
-  Intranet, Timetable, Staffing, Ops, Flow, Planner. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
-  Sechseck mit Kern (Core), Ausweis (Ident), Tasche mit Häkchen (Shop), Schlüssel (Licence), Torbogen mit Pfeil
-  (Portal), drei verbundene Knoten (Connect), Zahnrad (Services), Feder mit Unterschrift (Sign), Uhr (Time), Haus mit
+- 27 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
+  Intranet, Timetable, Staffing, Ops, Flow, Planner, WebSnapshot, API, AIConverter, MCP, Bill, Ticket, Booking,
+  Checklist, Absence. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
+  Sechseck mit Kern (Core), Ausweis (Ident), Einkaufswagen mit Häkchen (Shop), Schlüssel (Licence), Elternteil und
+  Kind (Portal = Elternportal), drei verbundene Knoten (Connect), Zahnrad (Services), Feder mit Unterschrift (Sign), Uhr (Time), Haus mit
   vier Bausteinen (Intranet), Raster mit Kalenderkopf (Timetable), Person mit Kalender (Staffing), Bildschirm mit Puls
   (Ops), Flussdiagramm mit Entscheidungs-Raute (Flow),
   Zeitbalken auf einer Achse (Planner, freigegeben 22.11.2026, #49).
+- 22.11.2026 (#52): Shop zeigt den Einkaufswagen statt der Tasche, Portal (Elternportal) Elternteil und Kind statt des
+  Torbogens. Neu, im UI-Stil nach den Motiven des Entwurfs «Icon-Set v2 (Umriss-Stil)»: Browserfenster mit Objektiv
+  (WebSnapshot), Klammern mit Datenpunkten (API), gegenläufige Pfeile mit Funken (AIConverter), Stecker (MCP), Beleg
+  (Bill), Ticket mit Abriss (Ticket), Kalender mit Häkchen (Booking), Liste mit Häkchen (Checklist), Person mit Minus
+  (Absence). Der Entwurf «Workflow» ist nicht übernommen, weil er `flow` entspricht. Alle Icons folgen **einem** Stil:
+  dem des freigegebenen Sets (Umriss 1,75 mit gefüllten Akzenten), nicht dem reinen Umriss-Stil des Entwurfs. Die
+  neun neuen Schlüssel sind Icons, noch keine Einträge im Modulregister (Abschnitt 3).
 - Gestaltung: 24er-Raster, Strich 1,75, runde Enden und Ecken; Orange = Hauptakzent, Blau und Violett für Details,
   Neutral `#222222` / `#F2F5F8`; Kachel 48 × 48, Eckenradius 11, Kachelfläche hell `#F2F5F8` mit feinem Rand,
   dunkel `#222222` (Token `icon-tile`; bewusst nicht die Seitenfläche `#151B24`, so wie freigegeben).

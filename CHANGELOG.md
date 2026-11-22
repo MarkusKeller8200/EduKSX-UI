@@ -18,6 +18,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Icon-Set auf 27 Icons (#52):** neu WebSnapshot, API, AIConverter, MCP, Bill, Ticket, Booking, Checklist, Absence
+  (Motive aus dem Entwurf «Icon-Set v2», im Stil des freigegebenen Sets neu gezeichnet); Shop zeigt den Einkaufswagen
+  statt der Tasche, Portal (Elternportal) Elternteil und Kind statt des Torbogens. Alle Varianten als SVG und PNG,
+  Baustein `EduksxIcon`.
 - **Planner-Icon (#49):** EduKSX-Planner erhält sein Icon (Zeitbalken auf einer Zeitachse), freigegeben 22.11.2026;
   alle Varianten als SVG und PNG, Baustein `EduksxIcon name="planner"`.
 - **Modulnamen beschlossen (M1, #29):** alle Module heissen `EduKSX-<Begriff>` mit deutschem Untertitel, auch

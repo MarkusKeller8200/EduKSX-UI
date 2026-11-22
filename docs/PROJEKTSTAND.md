@@ -1,5 +1,8 @@
 # EduKSX-UI – Projektstand
 
+> Stand 22.11.2026 (22:30): Icon-Set auf 27 Icons erweitert (#52, PR offen): neun neue Icons, Shop als Einkaufswagen,
+> Portal als Elternteil und Kind. Danach: Icon-Kopien in den anderen Repos durch Verweise auf `@eduksx/ui` ersetzen.
+>
 > Stand 22.11.2026 (16:00): Grundbausteine (#27) gemergt (PR #34), siehe KONZEPT-BAUSTEINE. Vorher (03:50): Grundgerüst `@eduksx/ui` 0.1 im PR – Tokens, Kontrastprüfung, Wortmarke, Kopfzeile mit
 > Modulwechsel und Verlauf; Issues #3–#7 im Beta-Test. Als Nächstes: Übernahme in Glossary und Intranet (EduKSX-Architektur #83).
 

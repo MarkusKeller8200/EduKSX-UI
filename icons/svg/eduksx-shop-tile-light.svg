@@ -3,8 +3,9 @@
   <rect width="48" height="48" rx="11" fill="#F2F5F8"/>
   <rect x="0.25" y="0.25" width="47.5" height="47.5" rx="10.75" fill="none" stroke="#222222" stroke-opacity=".1" stroke-width=".5"/>
   <g transform="translate(9.0 9.0) scale(1.25)">
-  <path d="M4.6 8.4h14.8l-1.1 11.1a1.6 1.6 0 0 1-1.6 1.5H7.3a1.6 1.6 0 0 1-1.6-1.5Z" fill="none" stroke="#222222" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M8.8 8.4V7a3.2 3.2 0 0 1 6.4 0v1.4" fill="none" stroke="#FF8A00" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M9.2 13.6l1.9 1.9 3.7-3.8" fill="none" stroke="#007EBB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M2.6 3.6h2.1l2.3 11a1.8 1.8 0 0 0 1.8 1.4h8.4a1.8 1.8 0 0 0 1.75-1.4L20.9 7.6H5.6" fill="none" stroke="#222222" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10.2 12.1l1.5 1.5 3-3" fill="none" stroke="#007EBB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="9.6" cy="19.6" r="1.6" fill="#FF8A00"/>
+  <circle cx="17.2" cy="19.6" r="1.6" fill="#FF8A00"/>
   </g>
 </svg>

@@ -1,7 +1,7 @@
 # EduKSX-Icon-Set
 
-18 Icons der Produktfamilie EduKSX in den Farben des CI MarKusSXCH (CI-Manual v1.0, Markenfortschreibung v1.1).
-**Status: freigegeben** am 09.11.2026 (12 Icons) und 13.11.2026 (Intranet, Timetable, Staffing, Ops) und 22.11.2026 (Flow, Planner) durch Markus
+27 Icons der Produktfamilie EduKSX in den Farben des CI MarKusSXCH (CI-Manual v1.0, Markenfortschreibung v1.1).
+**Status: freigegeben** am 09.11.2026 (12 Icons) und 13.11.2026 (Intranet, Timetable, Staffing, Ops) und 22.11.2026 (Flow, Planner; Shop als Einkaufswagen, Portal als Elternteil und Kind, neun neue Icons, #52) durch Markus
 Keller. Änderungen an Motiven oder Farben brauchen eine neue Freigabe.
 
 Übernommen aus dem Repo markussxch am 22.11.2026 (#31). **Massgeblich ist diese Kopie**; markussxch behält eine Kopie
@@ -18,7 +18,8 @@ für die Website. Regeln: `docs/KONZEPT-MARKE.md` Abschnitt 6.
 | `png/<grösse>/<name>-tile-*.png` | App-Icons als PNG in 512, 192, 64 und 32 px |
 
 Namen: `eduksx` (Familie) und `eduksx-<schlüssel>` für glossary, codex, core, ident, shop, licence, portal, connect,
-services, sign, time, intranet, timetable, staffing, ops, flow, planner.
+services, sign, time, intranet, timetable, staffing, ops, flow, planner, websnapshot, api, aiconverter, mcp, bill,
+ticket, booking, checklist, absence.
 
 ## Gestaltung
 
@@ -34,9 +35,9 @@ services, sign, time, intranet, timetable, staffing, ops, flow, planner.
 | Codex | Waage |
 | Core | Sechseck mit Kern |
 | Ident | Ausweis |
-| Shop | Tasche mit Häkchen |
+| Shop | Einkaufswagen mit Häkchen (bis 22.11.2026 Tasche) |
 | Licence | Schlüssel |
-| Portal | Torbogen mit Pfeil |
+| Portal (Elternportal) | Elternteil und Kind (bis 22.11.2026 Torbogen) |
 | Connect | Drei verbundene Knoten |
 | Services | Zahnrad |
 | Sign | Feder mit Unterschrift |
@@ -47,6 +48,15 @@ services, sign, time, intranet, timetable, staffing, ops, flow, planner.
 | Ops (Leitstand) | Bildschirm mit Puls |
 | Flow (Abläufe) | Flussdiagramm: Startkasten, Entscheidungs-Raute, zwei Ziele |
 | Planner (Jahresplanung) | Zeitbalken: drei versetzte Balken auf einer Zeitachse |
+| WebSnapshot | Browserfenster mit Objektiv |
+| API | geschweifte Klammern mit drei Datenpunkten |
+| AIConverter | gegenläufige Pfeile mit Funken |
+| MCP | Stecker mit Kabel |
+| Bill | Beleg mit Zeilen und Summe |
+| Ticket | Ticket mit Abriss |
+| Booking | Kalender mit Häkchen |
+| Checklist | Liste mit Häkchen |
+| Absence | Person mit Minus |
 
 ## Im Code
 
