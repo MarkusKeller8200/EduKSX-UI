@@ -1,6 +1,6 @@
 # Projektstart – EduKSX-UI
 
-Stand: 2026-11-22 · Status: **OFFEN** – Grundgerüst erst nach Bestätigung durch Projektverantwortliche:r
+Stand: 2026-11-22 · Status: **BESTÄTIGT** am 22.11.2026 durch Projektverantwortliche:r (Chat); Verteilung zuerst über Git (Tag), später npm
 
 Steckbrief aus der Start-Checkliste (`start.py --ziel …` im GitHub-Blueprint). Er ist die Grundlage für das Grundgerüst
 und für die Konfiguration in `.github/blueprint.toml`. Änderungen hier festhalten und `start.py` erneut ausführen.
@@ -66,11 +66,11 @@ abgestimmt (Status je Punkt: BESCHLOSSEN, EMPFOHLEN, OFFEN, ZU PRÜFEN):
 
 | Punkt | Vorschlag | Status |
 |---|---|---|
-| Technik | JavaScript / TypeScript · React 19 + TypeScript, Tailwind 4, Vite (Bibliothek) | OFFEN |
-| Ordner | Quellcode, `tests/`, `docs/` | OFFEN |
-| Prüfungen | `npm run check` (Workflow «pruefungen») | OFFEN |
-| Version | `package.json` mit 0.1.0 | OFFEN |
-| Auslieferung | nur Quellcode | OFFEN |
+| Technik | JavaScript / TypeScript · React 19 + TypeScript, Tailwind 4, Vite (Bibliothek) | BESCHLOSSEN |
+| Ordner | Quellcode, `tests/`, `docs/` | BESCHLOSSEN |
+| Prüfungen | `npm run check` (Workflow «pruefungen») | BESCHLOSSEN |
+| Version | `package.json` mit 0.1.0 | BESCHLOSSEN |
+| Auslieferung | Quellcode; Module installieren über Git (Tag), später npmjs.com | BESCHLOSSEN |
 
 ## Erster Meilenstein: 0.1.0 – Grundgerüst
 
