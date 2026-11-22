@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img">
+  <title>EduKSX-Ops</title>
+  <rect x="2.75" y="4" width="18.5" height="12.5" rx="2" fill="none" stroke="#222222" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 20.5h6M12 16.5v4" fill="none" stroke="#222222" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5.8 11h3l1.6-3.2 2.4 6 1.8-3.8h3.6" fill="none" stroke="#FF8A00" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="17.9" cy="7" r="0.9" fill="#007EBB"/>
+</svg>

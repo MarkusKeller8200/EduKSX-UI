@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="de-CH"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Prüfseite zu Entscheid M7 (KONZEPT-MARKE 3.4). Lädt Inter Variable und JetBrains Mono von Google Fonts, nur zum Vergleichen;
+     Module hosten Schriften selbst. Lokal im Browser öffnen. -->
+<title>Inter-Gewichte im Vergleich</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: Steuerleiste oben, dann je Frage (Fliesstext, Titel, Rückfall) zwei Spalten «heute» gegen «Vorschlag», jeweils in einer hellen und einer dunklen EduKSX-Fläche. */
+:root {
+  /* Seite (folgt dem Theme der Betrachtenden) */
+  --bg: #f4f6f8; --fg: #222222; --muted: #5a6678; --line: #e2e8f0; --accent: #ff8a00; --link: #0272ad; --chip: #ffffff;
+  /* EduKSX-Tokens hell / dunkel, fest für die Vergleichsflächen */
+  --l-bg: #ffffff; --l-fg: #222222; --l-muted: #5a6678; --l-border: #e2e8f0; --l-link: #0272ad;
+  --d-bg: #151b24; --d-fg: #f2f5f8; --d-muted: #aab6c7; --d-border: #2d3746; --d-link: #32b8f2;
+  --violet-l: #7952b3; --blue-l: #007ebb; --violet-d: #b59aff; --blue-d: #32b8f2;
+  --sans: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --size: 16px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f141b; --fg: #f2f5f8; --muted: #aab6c7; --line: #2d3746; --accent: #ff8a00; --link: #32b8f2; --chip: #1b2330; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0f141b; --fg: #f2f5f8; --muted: #aab6c7; --line: #2d3746; --accent: #ff8a00; --link: #32b8f2; --chip: #1b2330; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 24px 48px; }
+.wrap { max-width: 1180px; margin: 0 auto; display: grid; gap: 28px; }
+header h1 { font-size: 26px; font-weight: 650; margin: 0 0 6px; text-wrap: balance; letter-spacing: -0.01em; }
+header p { margin: 0; color: var(--muted); max-width: 70ch; }
+.wm { font-weight: 650; white-space: nowrap; }
+.wm .e { color: var(--violet-l); } .wm .k { color: var(--accent); } .wm .sx { color: var(--blue-l); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .wm .e { color: var(--violet-d); } :root:not([data-theme="light"]) .wm .sx { color: var(--blue-d); } }
+:root[data-theme="dark"] .wm .e { color: var(--violet-d); } :root[data-theme="dark"] .wm .sx { color: var(--blue-d); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--chip); }
+.controls label { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+.controls output { font-variant-numeric: tabular-nums; color: var(--fg); min-width: 3.5ch; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { font: inherit; font-size: 13px; background: transparent; color: var(--fg); border: 0; padding: 6px 12px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: #222222; font-weight: 600; }
+.seg button:focus-visible, input:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+input[type=range] { accent-color: var(--accent); width: 140px; }
+
+section { display: grid; gap: 12px; }
+section > h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 650; color: var(--muted); margin: 0; }
+section > p.q { margin: 0; max-width: 75ch; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 760px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+.col-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 13px; color: var(--muted); padding: 0 2px; }
+.col-head b { color: var(--fg); font-weight: 650; }
+.tag { font-family: var(--mono); font-size: 12px; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--line); white-space: nowrap; }
+.tag.new { border-color: var(--accent); }
+.col { display: grid; gap: 8px; min-width: 0; }
+.pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+
+.panel { border-radius: 10px; padding: 18px 20px; font-size: var(--size); line-height: 1.6; min-width: 0; }
+.panel.light { background: var(--l-bg); color: var(--l-fg); border: 1px solid var(--l-border); }
+.panel.dark { background: var(--d-bg); color: var(--d-fg); border: 1px solid var(--d-border); }
+.panel .mode { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 8px; display: block; }
+.panel.light .mode, .panel.light .sec { color: var(--l-muted); }
+.panel.dark .mode, .panel.dark .sec { color: var(--d-muted); }
+.panel p { margin: 0 0 10px; max-width: 65ch; }
+.panel p:last-child { margin-bottom: 0; }
+.panel .sec { font-size: 0.875em; }
+.panel a { text-decoration: underline; text-underline-offset: 2px; }
+.panel.light a { color: var(--l-link); } .panel.dark a { color: var(--d-link); }
+.panel code { font-family: var(--mono); font-size: 0.875em; font-weight: 400; }
+.panel h3 { margin: 0 0 4px; line-height: 1.25; letter-spacing: -0.01em; text-wrap: balance; }
+.panel h3.t1 { font-size: 1.75em; } .panel h3.t2 { font-size: 1.25em; margin-top: 12px; }
+.panel .term { text-decoration: underline dotted; text-underline-offset: 3px; }
+.panel.light .term { text-decoration-color: var(--violet-l); } .panel.dark .term { text-decoration-color: var(--violet-d); }
+.panel table { border-collapse: collapse; font-size: 0.875em; font-variant-numeric: tabular-nums; width: 100%; margin-top: 4px; }
+.panel th, .panel td { text-align: left; padding: 4px 8px 4px 0; }
+.panel.light th, .panel.light td { border-bottom: 1px solid var(--l-border); }
+.panel.dark th, .panel.dark td { border-bottom: 1px solid var(--d-border); }
+.panel th { font-weight: inherit; }
+.tablewrap { overflow-x: auto; }
+
+.fallback .panel { font-family: system-ui, sans-serif; }
+.notes { border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; color: var(--muted); font-size: 14px; max-width: 80ch; }
+.notes b { color: var(--fg); font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head><body>
+
+<div class="wrap">
+  <header>
+    <h1>Inter-Gewichte für <span class="wm"><span class="e">E</span>du<span class="k">K</span><span class="sx">SX</span></span></h1>
+    <p>Vergleich für Entscheid M7 (entschieden 22.11.2026: 400/500/600/700, keine Zwischengewichte): Fliesstext 400 gegen 450, Titel 500/600 gegen 550, in den Farben des Standards «EduKSX» hell und dunkel. Geladen ist Inter Variable mit optischer Grösse; die Rückfallzeile zeigt, was ohne Inter geschieht.</p>
+  </header>
+
+  <div class="controls" role="group" aria-label="Darstellung">
+    <label for="size">Schriftgrösse <input id="size" type="range" min="13" max="20" step="1" value="16"><output id="sizeOut" for="size">16 px</output></label>
+    <span class="seg" role="group" aria-label="Fläche">
+      <button type="button" id="m-both" aria-pressed="true" data-mode="both">Hell und dunkel</button>
+      <button type="button" id="m-light" aria-pressed="false" data-mode="light">Nur hell</button>
+      <button type="button" id="m-dark" aria-pressed="false" data-mode="dark">Nur dunkel</button>
+    </span>
+  </div>
+
+  <section id="body-text">
+    <h2>1 · Fliesstext</h2>
+    <p class="q">Wirkt 450 am Bildschirm ruhiger und satter, ohne fett zu werden? Achte auf Sekundärtext und dunkle Fläche.</p>
+    <div class="grid" data-kind="body"></div>
+  </section>
+
+  <section id="titles">
+    <h2>2 · Titel</h2>
+    <p class="q">Heute 600 für Titel (500 für Zwischentitel) gegen 550 für beide. Die Wortmarke bleibt bei 600–700.</p>
+    <div class="grid" data-kind="title"></div>
+  </section>
+
+  <section id="fallback" class="fallback">
+    <h2>3 · Rückfall ohne Inter</h2>
+    <p class="q">Gleicher Text mit <code>system-ui</code>. Statische Systemschriften runden 450 auf 400 oder 500 und 550 auf 600; das Ergebnis bleibt lesbar.</p>
+    <div class="grid" data-kind="body"></div>
+  </section>
+
+  <div class="notes">
+    <div><b>Lesbarkeit:</b> 450 verstärkt den Strich um etwa ein Achtel, vor allem bei 13–15 px und auf Windows sichtbar.</div>
+    <div><b>Kontrast:</b> Die Farbwerte und damit das WCAG-Verhältnis ändern sich nicht; der Text wirkt aber kräftiger.</div>
+    <div><b>Voraussetzung:</b> 450 und 550 nur mit Inter Variable (selbst gehostet). Mit statischen Schnitten fallen sie auf 400/500 bzw. 600 zurück.</div>
+    <div><b>Code und IDs:</b> JetBrains Mono 400, z. B. <code style="font-family:var(--mono)">glossary.term.4711</code>.</div>
+  </div>
+</div>
+
+<script>
+const BODY = (w) => `
+  <p><span class="term">Lehrplan 21</span> ist der gemeinsame Lehrplan der 21 deutsch- und mehrsprachigen Kantone. Er beschreibt die Kompetenzen, die Schülerinnen und Schüler bis zum Ende der Volksschule erwerben, gegliedert in drei Zyklen.</p>
+  <p class="sec">Zuletzt geändert am 22.11.2026, 14:32 · Quelle: Bildungsdirektion · ID <code>glossary.term.4711</code></p>
+  <p>Verwandte Begriffe: <a href="#body-text">Zyklus</a>, <a href="#body-text">Kompetenzbereich</a>, <a href="#body-text">Modullehrplan Medien und Informatik</a>.</p>
+  <div class="tablewrap"><table><thead><tr><th>Zyklus</th><th>Stufe</th><th>Schuljahre</th></tr></thead>
+  <tbody><tr><td>1</td><td>Kindergarten bis 2. Klasse</td><td>4</td></tr><tr><td>2</td><td>3. bis 6. Klasse</td><td>4</td></tr><tr><td>3</td><td>Sekundarstufe I</td><td>3</td></tr></tbody></table></div>`;
+
+const TITLE = (h1, h2, body) => `
+  <h3 class="t1" style="font-weight:${h1}">Systematische Rechtssammlung</h3>
+  <p class="sec" style="font-weight:${body}">EduKSX-Codex · 148 Erlasse, 12 in Vernehmlassung</p>
+  <h3 class="t2" style="font-weight:${h2}">Personalreglement der Schule</h3>
+  <p style="font-weight:${body}">Gültig ab 01.08.2026. Ersetzt die Fassung vom 01.08.2022.</p>`;
+
+const VARIANTS = {
+  body: [
+    { label: 'Heute', tag: 'Text 400', render: () => BODY(), weight: 400 },
+    { label: 'Vorschlag', tag: 'Text 450', render: () => BODY(), weight: 450, isNew: true },
+  ],
+  title: [
+    { label: 'Heute', tag: 'Titel 600 · Zwischentitel 500', render: () => TITLE(600, 500, 400), weight: 400 },
+    { label: 'Vorschlag', tag: 'Titel 550 · Text 450', render: () => TITLE(550, 550, 450), weight: 450, isNew: true },
+  ],
+};
+
+function panel(mode, v) {
+  return `<div class="panel ${mode}" style="font-weight:${v.weight}"><span class="mode">${mode === 'light' ? 'Hell' : 'Dunkel'}</span>${v.render()}</div>`;
+}
+
+let mode = 'both';
+function draw() {
+  document.querySelectorAll('.grid').forEach((grid) => {
+    grid.innerHTML = VARIANTS[grid.dataset.kind].map((v) => `
+      <div class="col">
+        <div class="col-head"><b>${v.label}</b><span class="tag${v.isNew ? ' new' : ''}">${v.tag}</span></div>
+        <div class="pair">
+          ${mode !== 'dark' ? panel('light', v) : ''}
+          ${mode !== 'light' ? panel('dark', v) : ''}
+        </div>
+      </div>`).join('');
+  });
+}
+
+const size = document.getElementById('size');
+const sizeOut = document.getElementById('sizeOut');
+size.addEventListener('input', () => {
+  document.documentElement.style.setProperty('--size', size.value + 'px');
+  sizeOut.textContent = size.value + ' px';
+});
+document.querySelectorAll('.seg button').forEach((b) => b.addEventListener('click', () => {
+  mode = b.dataset.mode;
+  document.querySelectorAll('.seg button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  draw();
+}));
+draw();
+</script>
+</body></html>

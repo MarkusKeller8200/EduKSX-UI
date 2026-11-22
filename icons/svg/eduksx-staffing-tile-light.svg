@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img">
+  <title>EduKSX-Staffing</title>
+  <rect width="48" height="48" rx="11" fill="#F2F5F8"/>
+  <rect x="0.25" y="0.25" width="47.5" height="47.5" rx="10.75" fill="none" stroke="#222222" stroke-opacity=".1" stroke-width=".5"/>
+  <g transform="translate(9.0 9.0) scale(1.25)">
+  <circle cx="8.5" cy="7.8" r="3" fill="none" stroke="#FF8A00" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3 19.5c.6-3.4 2.8-5.4 5.5-5.4 1.4 0 2.6.5 3.6 1.5" fill="none" stroke="#FF8A00" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="13" y="12.5" width="8" height="8" rx="1.6" fill="none" stroke="#222222" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13 15.5h8" fill="none" stroke="#222222" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="17" cy="18" r="1" fill="#007EBB"/>
+  </g>
+</svg>

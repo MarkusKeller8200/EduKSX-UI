@@ -17,10 +17,11 @@ Schule sind neutralisiert.
 
 ## 1. Erscheinungsbild (White-Labeling, pro Instanz)
 
-- **Marke** links oben und auf der Anmeldeseite, eine von drei:
+- **Marke** links oben und auf der Anmeldeseite, eine von zwei (M3 in `KONZEPT-MARKE.md`, BESCHLOSSEN 22.11.2026):
   - **EduKSX** (Vorgabe): Produkt-Wortmarke und das freigegebene Produkt-Icon.
-  - **MarKusSXCH**: Dachmarke als Wortmarke, Icon wie EduKSX.
-  - **Eigenes Logo** der Instanz.
+  - **Eigenes Logo** der Instanz, ersetzt die Wortmarke.
+  - Die dritte Wahl des INTRANET, **MarKusSXCH** als Produktmarke, wird **nicht** übernommen: MarKusSXCH erscheint nur
+    in der Signatur «Developed by MarKusSXCH» (abschaltbar, M4).
 - Eigenes Logo: drei Dateien, **Logo für hellen Hintergrund**, optional **Logo für dunklen Hintergrund** und
   **Signet (quadratisch)**. Erlaubt SVG, PNG, JPEG, WebP, höchstens 1 MB je Datei. Ohne eigenes Logo gilt EduKSX.
 - **Name der Instanz** ist einstellbar.

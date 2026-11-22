@@ -12,6 +12,7 @@
 | `BrandWordmark` | im Beta-Test | 0.1.0 | KONZEPT-DESIGN 4, CI-Manual §10 |
 | `AppHeader`, `ModuleSwitcher` | im Beta-Test | 0.1.0 | KONZEPT-DESIGN 4, Plattform S7 |
 | `HistoryList` | im Beta-Test | 0.1.0 | KONZEPT-DESIGN 4, DB A7 |
+| `EduksxIcon` und Icon-Dateien `icons/` (#31) | im PR | 0.1.0 | KONZEPT-MARKE 6, 6.1 |
 
 ## Offen bzw. geplant
 
@@ -19,6 +20,7 @@
 - axe-core in der CI (#14, DS7 entschieden: serious/critical scheitern, Rest Warnung) und Musterseite (#15, 0.2)
 - Token für Schrift auf Fehlerfläche (#11, 0.2); ModuleSwitcher bei Fokusverlust (#12); Verlauf für Bildschirmleser (#13)
 - Glossary an geänderte Tokens anpassen (#16)
+- Flow-Icon entwerfen und freigeben (#30)
 - Veröffentlichung auf npmjs.com (Organisation «eduksx» anlegen)
 
 ## Technik
