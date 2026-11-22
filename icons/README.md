@@ -4,8 +4,8 @@
 **Status: freigegeben** am 09.11.2026 (12 Icons) und 13.11.2026 (Intranet, Timetable, Staffing, Ops) und 22.11.2026 (Flow, Planner; Shop als Einkaufswagen, Portal als Elternteil und Kind, neun neue Icons, #52) durch Markus
 Keller. Änderungen an Motiven oder Farben brauchen eine neue Freigabe.
 
-Übernommen aus dem Repo markussxch am 22.11.2026 (#31). **Massgeblich ist diese Kopie**; markussxch behält eine Kopie
-für die Website. Regeln: `docs/KONZEPT-MARKE.md` Abschnitt 6.
+Übernommen aus dem Repo markussxch am 22.11.2026 (#31). **Einzige Quelle** – andere Repos halten keine Kopien, Module
+erstellen keine eigenen Icons; welches Modul welche Icons nutzt, steht in `src/components/eduksx-icon-bundles.ts` (#54). Regeln: `docs/KONZEPT-MARKE.md` Abschnitt 6.
 
 ## Varianten je Icon
 

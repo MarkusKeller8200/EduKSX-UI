@@ -237,9 +237,8 @@ Signatur.
 
 ### 6.1 Dateien und Baustein (BESCHLOSSEN 22.11.2026)
 
-EduKSX-UI ist seit 22.11.2026 die **massgebliche Quelle** des Icon-Sets (übernommen aus markussxch; dort bleibt eine
-Kopie für die Website mit Vermerk «Quelle EduKSX-UI»). Module beziehen die Icons aus `@eduksx/ui`, nicht aus eigenen
-Kopien.
+EduKSX-UI ist seit 22.11.2026 die **einzige Quelle** des Icon-Sets (übernommen aus markussxch; dort und in allen
+anderen Repos gibt es keine Kopien mehr, §6.3). Module beziehen die Icons aus `@eduksx/ui`.
 
 | Datei | Verwendung |
 | --- | --- |
@@ -311,6 +310,22 @@ Symbole der **GUI-Bausteine** (Prüfseite und Dokumentation, Gruppen aus `UEBERN
 | Eingabe (`TextCursorInput`) | Button `MousePointerClick`, Knopfgruppe `Group`, Formularfelder `TextCursorInput`, Eingabegruppe `RectangleEllipsis`, Dropdown `ChevronsUpDown`, Optionsfelder `CircleDot`, Schalter `ToggleLeft`, Auswahl mit Suche `SearchCheck`, Mehrfachauswahl `ListChecks`, Datumsauswahl `CalendarDays`, Datei hochladen `FileUp`, Schieberegler `SlidersHorizontal`, Drag & Drop `Move`, Fragebogen `ClipboardList` |
 | Daten anzeigen (`Table2`) | Tabellen `Table2`, Typografie `Type`, Eintrag `Rows3`, Karten & Seitenkopf `PanelsTopLeft`, Badges & Status `Tag`, Akkordeon `ListCollapse`, Fortschritt `Gauge`, Diagramme `ChartColumn`, Zeitleiste `History`, Scrollbereich `ScrollText`, Codeblock `Code`, Begriff `BookA` |
 | Rückmeldung (`MessageSquareWarning`) | Meldungen & Dialoge `MessageSquareWarning`, Rückfrage `ShieldAlert`, Popover `MessageSquareMore`, Vorschaukarte `IdCard`, Banner `Flag`, Ladezustände `Loader` |
+
+### 6.3 Nur Icons aus EduKSX-UI, Bundles je Modul (BESCHLOSSEN 22.11.2026, Markus)
+
+- **Module erstellen keine eigenen Icons** – auch nicht für Zwecke, die nur ein Modul braucht. Jedes Icon entsteht in
+  EduKSX-UI (`icons/build.py`, mit Freigabe) und wird über `@eduksx/ui` bezogen (Baustein `EduksxIcon`, Dateien unter
+  `@eduksx/ui/icons/…`). Kopien in anderen Repos sind nicht erlaubt; Dateien, die als fester Pfad gebraucht werden
+  (Favicon, App-Icons), erzeugt das Modul beim Bauen aus dem Paket. Dokumentation verweist direkt auf
+  `EduKSX-UI/icons/svg` (öffentliches Repo).
+- **Bundle je Modul:** `src/components/eduksx-icon-bundles.ts` (`EDUKSX_ICON_BUNDLES`) listet je Modul, welche Icons es
+  benutzt; dazu Website (markussxch) und Prototypen als weitere Nutzer. Jedes Icon liegt nur einmal im Set
+  (Zuordnung, keine Ordner je Modul). **Gemeinsam genutzte Icons sind vorzuziehen** und stehen in mehreren Bundles.
+- Freigegebene Icons ohne Modul stehen im **Vorrat** (`EDUKSX_ICON_VORRAT`). Ein Test prüft, dass jedes Icon in einem
+  Bundle oder im Vorrat steht und Bundles nur bestehende Icons nennen. Die Testseite zeigt die Bundles.
+- Lucide-Bediensymbole nach §6.2 sind keine eigenen Icons und bleiben im Modul erlaubt.
+- Umgesetzt 22.11.2026: Kopien entfernt in markussxch (#23), EduKSX-Architektur (#92), EduKSX-Glossary (#500),
+  sek-intranet (#223), EduKSX-Prototyp (#73). Offen: Varianten für `favicon.ico` und Maskable-App-Icons (Intranet).
 
 ## 7. Gegenüberstellung je Repo (Stand 22.11.2026)
 

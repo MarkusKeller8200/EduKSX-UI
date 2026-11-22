@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 // Übernommen aus markussxch src/test/eduksx-icons.test.tsx.
 import { render, screen } from '@testing-library/react';
-import { EDUKSX_ICON_NAMES, EduksxIcon, eduksxIcons, type EduksxIconName } from '../src';
+import { EDUKSX_ICON_BUNDLES, EDUKSX_ICON_NAMES, EDUKSX_ICON_VORRAT, EduksxIcon, bundlesOfIcon, eduksxIcons, type EduksxIconName } from '../src';
 
 // Dateien über Vite einlesen (ohne @types/node)
 const svgFiles = import.meta.glob('../icons/svg/*.svg', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
@@ -62,3 +62,22 @@ describe('EduKSX-Icon-Set', () => {
         expect(screen.getByRole('img', { name: 'EduKSX-Codex' })).toBeInTheDocument();
     });
 });
+
+describe('Icon-Bundles je Modul (KONZEPT-MARKE §6.3)', () => {
+    it('nennen nur Icons, die es im Set gibt', () => {
+        for (const [bundle, b] of Object.entries(EDUKSX_ICON_BUNDLES)) {
+            for (const n of b.icons) expect(EDUKSX_ICON_NAMES, `${bundle}: ${n}`).toContain(n);
+        }
+        for (const n of EDUKSX_ICON_VORRAT) expect(EDUKSX_ICON_NAMES).toContain(n);
+    });
+
+    it('ordnen jedes Icon mindestens einem Bundle oder dem Vorrat zu, Vorrat ohne Bundle', () => {
+        for (const n of EDUKSX_ICON_NAMES) {
+            const inBundle = bundlesOfIcon(n).length > 0;
+            const imVorrat = EDUKSX_ICON_VORRAT.includes(n);
+            expect(inBundle || imVorrat, n).toBe(true);
+            expect(inBundle && imVorrat, n).toBe(false);
+        }
+    });
+});
+

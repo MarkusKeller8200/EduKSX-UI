@@ -18,6 +18,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Icon-Bundles je Modul (#54):** Module erstellen keine eigenen Icons mehr; alle kommen aus EduKSX-UI.
+  `EDUKSX_ICON_BUNDLES` listet je Modul (sowie Website und Prototypen), welche Icons es benutzt, `EDUKSX_ICON_VORRAT`
+  die noch nicht zugeordneten. Test und Testseite «Bundles je Modul»; Regel in `docs/KONZEPT-MARKE.md` §6.3.
 - **Icon-Set auf 27 Icons (#52):** neu WebSnapshot, API, AIConverter, MCP, Bill, Ticket, Booking, Checklist, Absence
   (Motive aus dem Entwurf «Icon-Set v2», im Stil des freigegebenen Sets neu gezeichnet); Shop zeigt den Einkaufswagen
   statt der Tasche, Portal (Elternportal) Elternteil und Kind statt des Torbogens. Alle Varianten als SVG und PNG,
