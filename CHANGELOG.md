@@ -12,6 +12,9 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
   schliesst die Liste. Muster bleibt «Disclosure» (kein ARIA-Menü, keine Pfeiltasten).
 - **Verlauf für Bildschirmleser (#13):** alte und neue Werte erhalten unsichtbar «vorher:» und «nachher:», der
   Pfeil wird nicht vorgelesen; sichtbar bleibt `alt → neu`.
+- **axe-core in der CI (#14, DS7):** jede Seite der Testseite wird in den Tests mit axe-core geprüft; «serious» und
+  «critical» lassen `npm run check` und die CI scheitern, «moderate»/«minor» nur Warnung. Neue Entwicklungsabhängigkeit
+  axe-core (MPL-2.0, nicht im Paket), eingetragen in `docs/third-party.json`.
 
 ### Neu
 
