@@ -135,7 +135,7 @@ deutsche Bezeichnung steht als Untertitel – auch Intranet, Stundenplan und Ein
 | `sign` | EduKSX-Sign | Unterschriften | EduKSX-Sign; Prototyp «Signatur / Persönliche Ablage» | Sign | – |
 | `portal` | EduKSX-Portal | Portal für Externe | EduKSX-Portal | Portal | – |
 | `intranet` | EduKSX-Intranet | Intranet | Register «Intranet»; Intranet selbst «EduKSX-Intranet» | Intranet | sek-intranet |
-| `planner` | EduKSX-Planner | Jahresplanung | neu (22.11.2026) | **OFFEN** (#49) | – |
+| `planner` | EduKSX-Planner | Jahresplanung | neu (22.11.2026) | Planner | – |
 | `services` | EduKSX-Services (reserviert) | – | – | Services | – |
 
 **Ohne Modulschlüssel, keine Produktoberfläche:** EduKSX-Architektur, EduKSX-UI (`@eduksx/ui`), EduKSX-Suite
@@ -207,12 +207,13 @@ Signatur.
 
 ## 6. Icons und Signets (BESCHLOSSEN, Icon-Set EduKSX, freigegeben 09.11., 13.11. und 22.11.2026)
 
-- 17 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
-  Intranet, Timetable, Staffing, Ops, Flow. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
+- 18 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
+  Intranet, Timetable, Staffing, Ops, Flow, Planner. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
   Sechseck mit Kern (Core), Ausweis (Ident), Tasche mit Häkchen (Shop), Schlüssel (Licence), Torbogen mit Pfeil
   (Portal), drei verbundene Knoten (Connect), Zahnrad (Services), Feder mit Unterschrift (Sign), Uhr (Time), Haus mit
   vier Bausteinen (Intranet), Raster mit Kalenderkopf (Timetable), Person mit Kalender (Staffing), Bildschirm mit Puls
-  (Ops), Flussdiagramm mit Entscheidungs-Raute (Flow).
+  (Ops), Flussdiagramm mit Entscheidungs-Raute (Flow),
+  Zeitbalken auf einer Achse (Planner, freigegeben 22.11.2026, #49).
 - Gestaltung: 24er-Raster, Strich 1,75, runde Enden und Ecken; Orange = Hauptakzent, Blau und Violett für Details,
   Neutral `#222222` / `#F2F5F8`; Kachel 48 × 48, Eckenradius 11, Kachelfläche hell `#F2F5F8` mit feinem Rand,
   dunkel `#222222` (Token `icon-tile`; bewusst nicht die Seitenfläche `#151B24`, so wie freigegeben).
@@ -413,3 +414,4 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
   frühere Vermerk «auch nicht im Prototyp» war falsch.
 - 22.11.2026: M1 entschieden – alle Module `EduKSX-<Begriff>` mit deutschem Untertitel. Neues Modul `planner`
   EduKSX-Planner «Jahresplanung» (Icon und Abgrenzung zu `flow` offen).
+- 22.11.2026: Planner-Icon (#49) Entwurf A «Zeitbalken» freigegeben und ins Icon-Set übernommen (18 Icons).

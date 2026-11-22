@@ -18,6 +18,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Planner-Icon (#49):** EduKSX-Planner erhält sein Icon (Zeitbalken auf einer Zeitachse), freigegeben 22.11.2026;
+  alle Varianten als SVG und PNG, Baustein `EduksxIcon name="planner"`.
 - **Modulnamen beschlossen (M1, #29):** alle Module heissen `EduKSX-<Begriff>` mit deutschem Untertitel, auch
   EduKSX-Intranet, EduKSX-Timetable und EduKSX-Staffing; neues Modul `planner` EduKSX-Planner «Jahresplanung»
   (`docs/KONZEPT-MARKE.md` §4, §9).
