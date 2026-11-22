@@ -20,6 +20,7 @@ vor (WCAG 2.1 AA, eCH-0059).
 | Icons | `<EduksxIcon name="glossary" variant="color\|mono\|tile" />`; Dateien (SVG, PNG) unter `@eduksx/ui/icons/…`, siehe `icons/README.md` |
 | Kopfzeile mit Modulwechsel | `<AppHeader product="Glossary" modules={…} currentModule="glossary" />` (Plattform S7) |
 | Verlauf | `<HistoryList entries={…} fieldLabels={…} />` für `data_changes` (DB-Standard A7) |
+| Grundbausteine (#27) | `Button`, `IconButton`, `Tooltip`, `Field` mit `Input`/`Textarea`/`NativeSelect`, `Checkbox`, `Table…`, `Dialog`, `AlertDialog` (Rückfrage), `Alert` (Hinweisbox) – Varianten wie shadcn/ui, siehe `docs/KONZEPT-BAUSTEINE.md` |
 
 ## Verwenden
 

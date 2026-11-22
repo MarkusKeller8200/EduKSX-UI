@@ -63,7 +63,7 @@ Neue Grundlagen (Tokens) oder Prüfseiten genauso; statische HTML-Prüfseiten zu
 | --- | --- | --- | --- |
 | TS1 | Werkzeug der Testseite | eigene Vite-Seite (React), kein Storybook | BESCHLOSSEN 22.11.2026 |
 | TS2 | Gerätegrössen der Pflicht-Ansichten | Handy 390 × 844, Tablet 820 × 1180 | EMPFOHLEN |
-| TS3 | GitHub Pages aktivieren (Source «GitHub Actions») | nach Freigabe durch Markus | OFFEN |
+| TS3 | GitHub Pages aktivieren (Source «GitHub Actions») | aktiviert durch Markus | BESCHLOSSEN 22.11.2026 |
 
 ## 6. Später
 

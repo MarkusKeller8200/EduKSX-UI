@@ -17,6 +17,14 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
   Schriften selbst gehostet (`site/public/fonts/`, auch für `docs/pruefseiten/schriftgewichte.html`, kein Google
   Fonts mehr). `npm run site` (lokal), `npm run site:build` (prüft auch auf fremde Schriftabrufe), Workflow
   `testseite.yml` baut bei PRs und rollt `main` auf GitHub Pages aus. Neue Bausteine ergänzen: `docs/TESTSEITE.md`.
+- **Grundbausteine (#27, `docs/KONZEPT-BAUSTEINE.md`):** `Button` (Haupt-, Neben-, Umriss-, Text-, Gefahr-Knopf,
+  Link; Grössen, mit Symbol, lädt, gesperrt), `IconButton` mit `aria-label` und Tooltip, `Tooltip` (WCAG 1.4.13),
+  Formularfelder `Field`, `Input`, `Textarea`, `NativeSelect`, `Checkbox` mit Hinweis und Fehler, einfache `Table`
+  mit Sortierknopf und `aria-sort`, `Dialog` und Rückfrage `AlertDialog` auf dem nativen `<dialog>`, Hinweisbox
+  `Alert` (Info, Erfolg, Warnung, Fehler). Ohne neue Abhängigkeit; 10 Symbolpfade aus Lucide (ISC). Zustände Normal,
+  Hover, Fokus, Gedrückt, Deaktiviert mit Kontrasttest hell/dunkel.
+- **Tokens `destructive-contrast` und `destructive-soft` (#11, #27):** Schrift auf der roten Fläche und Fläche der
+  Fehler-Hinweisbox, mit Prüfpaaren; `destructive-foreground` bleibt «Fehlertext auf Hintergrund».
 - **Typografie- und Basis-Tokens (#25, #26, `docs/KONZEPT-TOKENS.md`):** Schriftgrössen 12–30 px in rem mit
   Zeilenhöhen, Gewichte 400/500/600/700, Textrollen `typo-h1` … `typo-small` (H1 30/mobil 24, H2 20, H3 18, H4 16;
   Bedienung 14 px, Fliesstext 16 px – T1, T2), Abstandsraster 4 px, Radien sm–full, Schatten xs–lg hell/dunkel,
