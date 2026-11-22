@@ -6,6 +6,11 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ## [Unveröffentlicht]
 
+### CI
+
+- **Branch nach Merge automatisch löschen (22.11.2026):** neue Action `branch-aufraeumen.yml` löscht nach einem Merge in
+  main den Branch des PR. main, gh-pages, Fork-Branches, geschützte Branches und Branches mit neuen Commits bleiben.
+
 ### Barrierefreiheit
 
 - **Modulwechsel schliesst bei Fokusverlust (#12):** Verlässt der Fokus Knopf und Liste mit Tab oder Shift+Tab,
