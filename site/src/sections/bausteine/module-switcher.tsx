@@ -16,7 +16,7 @@ import { ModuleSwitcher } from '@eduksx/ui';
 
 <ModuleSwitcher modules={modules} current="codex" />   // modules aus GET /api/v1/me/modules
 `}
-            pruefen={['Enter/Leertaste öffnet, Escape schliesst und setzt den Fokus zurück', 'Aktuelles Modul ist hervorgehoben und als aria-current markiert', 'Bekannt: Liste bleibt bei Fokusverlust offen (#12)']}
+            pruefen={['Enter/Leertaste öffnet, Escape schliesst und setzt den Fokus zurück', 'Aktuelles Modul ist hervorgehoben und als aria-current markiert', 'Tab hinter das letzte Modul oder Shift+Tab vor den Knopf schliesst die Liste (#12)']}
         />
     );
 }
