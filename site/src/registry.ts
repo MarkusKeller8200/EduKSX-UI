@@ -2,6 +2,8 @@ import type { ComponentType } from 'react';
 import type { Status } from './ui';
 import { Farben } from './sections/farben';
 import { Kontrast } from './sections/kontrast';
+import { Guideline } from './sections/guideline';
+import { Themes } from './sections/themes';
 import { Typografie } from './sections/typografie';
 import { Abstaende } from './sections/abstaende';
 import { Ansichten } from './sections/ansichten';
@@ -13,6 +15,8 @@ import { EduksxIconSeite } from './sections/bausteine/eduksx-icon';
 import { AppHeaderSeite } from './sections/bausteine/app-header';
 import { ModuleSwitcherSeite } from './sections/bausteine/module-switcher';
 import { HistoryListSeite } from './sections/bausteine/history-list';
+import { ColorSchemeToggleSeite } from './sections/bausteine/color-scheme-toggle';
+import { ViewWidthToggleSeite } from './sections/bausteine/view-width-toggle';
 import { ButtonSeite } from './sections/bausteine/button';
 import { TooltipSeite } from './sections/bausteine/tooltip';
 import { FieldSeite } from './sections/bausteine/field';
@@ -43,8 +47,10 @@ export type Entry = {
 };
 
 export const ENTRIES: Entry[] = [
+    { id: 'guideline', title: 'Guideline', group: 'Grundlagen', status: 'beta', summary: 'Wann was eingesetzt wird: Farben, Bausteine, Seitenaufbau, GUI-Profile und Texte, mit Beispielen.', concept: { path: 'docs/GUIDELINE.md', label: 'GUIDELINE' }, issues: [28, 43], Page: Guideline },
     { id: 'farben', title: 'Farben', group: 'Grundlagen', status: 'freigegeben', summary: 'Alle Farb-Tokens hell und dunkel mit Wert und Verwendung.', concept: { path: 'docs/KONZEPT-MARKE.md', label: 'KONZEPT-MARKE §5' }, issues: [3], Page: Farben },
     { id: 'kontrast', title: 'Kontrast', group: 'Grundlagen', status: 'freigegeben', summary: 'Prüfpaare Schrift/Fläche 4,5 : 1 und Linien/Fokus 3 : 1, hell und dunkel nachgerechnet.', concept: { path: 'docs/KONZEPT-MARKE.md', label: 'KONZEPT-MARKE §5.2' }, issues: [4, 11], Page: Kontrast },
+    { id: 'themes', title: 'Themes', group: 'Grundlagen', status: 'beta', summary: 'Mitgelieferte Themes EduKSX, Hoher Kontrast und Violett mit Abweichungen und Kontrastprüfung.', concept: { path: 'https://github.com/MarkusKeller8200/EduKSX-Architektur/blob/main/docs/KONZEPT-DESIGN.md', label: 'KONZEPT-DESIGN 5, DS11' }, issues: [42], Page: Themes },
     { id: 'typografie', title: 'Typografie', group: 'Grundlagen', status: 'freigegeben', summary: 'Schriften Inter und JetBrains Mono (M6), Gewichte (M7), Grössen und Textrollen (T1, T2).', concept: { path: 'docs/KONZEPT-TOKENS.md', label: 'KONZEPT-TOKENS §2' }, issues: [25], Page: Typografie },
     { id: 'abstaende', title: 'Abstände, Radien, Schatten', group: 'Grundlagen', status: 'freigegeben', summary: '4-px-Raster, fünf Radien und vier Schatten (im Dunkelmodus kräftiger).', concept: { path: 'docs/KONZEPT-TOKENS.md', label: 'KONZEPT-TOKENS §3' }, issues: [26], Page: Abstaende },
     { id: 'ansichten', title: 'Breakpoints und Ansichten', group: 'Grundlagen', status: 'entwicklung', summary: 'Breakpoints, Variante desk, Seitenbreiten und die Pflicht-Ansichten Handy, Tablet und Desktop.', concept: { path: 'docs/KONZEPT-TOKENS.md', label: 'KONZEPT-TOKENS §4' }, issues: [26, 19], Page: Ansichten },
@@ -56,6 +62,8 @@ export const ENTRIES: Entry[] = [
     { id: 'app-header', title: 'AppHeader', group: 'Bausteine', status: 'beta', summary: 'Gemeinsame Kopfzeile aller Module mit Wortmarke und Modulwechsel.', concept: { path: 'https://github.com/MarkusKeller8200/EduKSX-Architektur/blob/main/docs/KONZEPT-DESIGN.md', label: 'KONZEPT-DESIGN 6, Plattform S7' }, issues: [6], Page: AppHeaderSeite },
     { id: 'module-switcher', title: 'ModuleSwitcher', group: 'Bausteine', status: 'beta', summary: 'Modulwechsel als Knopf mit Liste, per Tastatur bedienbar.', concept: { path: 'https://github.com/MarkusKeller8200/EduKSX-Architektur/blob/main/docs/KONZEPT-DESIGN.md', label: 'KONZEPT-DESIGN 6, Plattform S7' }, issues: [6, 12], Page: ModuleSwitcherSeite },
     { id: 'history-list', title: 'HistoryList', group: 'Bausteine', status: 'beta', summary: 'Ansicht «Verlauf», gleich in allen Modulen (DB A7).', concept: { path: 'https://github.com/MarkusKeller8200/EduKSX-Architektur/blob/main/docs/KONZEPT-DESIGN.md', label: 'KONZEPT-DESIGN 4, DB A7' }, issues: [7, 13], Page: HistoryListSeite },
+    { id: 'farbschema', title: 'ColorSchemeToggle', group: 'Bausteine', status: 'beta', summary: 'Umschalter Hell / Dunkel / Wie System mit Symbolen, Pflicht in allen Modulen.', concept: { path: 'https://github.com/MarkusKeller8200/EduKSX-Architektur/blob/main/docs/KONZEPT-DESIGN.md', label: 'KONZEPT-DESIGN 5, 6' }, issues: [17], Page: ColorSchemeToggleSeite },
+    { id: 'ansicht', title: 'ViewWidthToggle', group: 'Bausteine', status: 'beta', summary: 'Umschalter der Ansicht Mobil / Darstellungsoptimiert / Breit / Voll und Vollbild.', concept: { path: 'docs/KONZEPT-TOKENS.md', label: 'KONZEPT-TOKENS 4.3' }, issues: [19], Page: ViewWidthToggleSeite },
     { id: 'button', title: 'Button', group: 'Bausteine', status: 'beta', summary: 'Haupt-, Neben-, Umriss-, Text-, Gefahr-Knopf und Link, Symbol-Knöpfe mit Tooltip.', concept: { path: 'docs/KONZEPT-BAUSTEINE.md', label: 'KONZEPT-BAUSTEINE §2.1' }, issues: [27], Page: ButtonSeite },
     { id: 'tooltip', title: 'Tooltip', group: 'Bausteine', status: 'beta', summary: 'Zusatzinfo beim Darüberfahren und beim Fokus (WCAG 1.4.13).', concept: { path: 'docs/KONZEPT-BAUSTEINE.md', label: 'KONZEPT-BAUSTEINE §2.2' }, issues: [27], Page: TooltipSeite },
     { id: 'formularfelder', title: 'Formularfelder', group: 'Bausteine', status: 'beta', summary: 'Field mit Beschriftung, Hinweis und Fehler; Input, Textarea, NativeSelect, Checkbox.', concept: { path: 'docs/KONZEPT-BAUSTEINE.md', label: 'KONZEPT-BAUSTEINE §2.3' }, issues: [27], Page: FieldSeite },

@@ -23,7 +23,7 @@ import { AppHeader } from '@eduksx/ui';
     {/* rechts: Suche, Ansicht, Farbschema, Person */}
 </AppHeader>
 `}
-            pruefen={['Wortmarke ist Link zur Startseite, Fokus sichtbar', 'Handy hoch: Wortmarke bleibt ganz sichtbar (EduKSX-Glossary nicht abgeschnitten)']}
+            pruefen={['Wortmarke ist Link zur Startseite, Fokus sichtbar', 'Module öffnen, mit Tab hinter das letzte Modul oder Shift+Tab vor den Knopf: Liste schliesst (#12)', 'Handy hoch: Wortmarke bleibt ganz sichtbar (EduKSX-Glossary nicht abgeschnitten)']}
         />
     );
 }

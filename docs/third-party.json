@@ -68,6 +68,14 @@
       "url": "https://github.com/vitejs/vite-plugin-react"
     },
     {
+      "id": "axe-core",
+      "group": "entwicklung",
+      "name": "axe-core",
+      "use": "Barrierefreiheitsprüfung in den Tests (DS7, #14); nicht im Paket enthalten",
+      "license": "MPL-2.0",
+      "url": "https://github.com/dequelabs/axe-core"
+    },
+    {
       "id": "vitest",
       "group": "entwicklung",
       "name": "Vitest",

@@ -30,6 +30,33 @@ describe('AppHeader und Modulwechsel', () => {
         expect(button).toHaveFocus();
     });
 
+    it('schliesst, wenn der Fokus mit Tab oder Shift+Tab Knopf und Liste verlässt (#12)', async () => {
+        const user = userEvent.setup();
+        render(
+            <>
+                <button type="button">davor</button>
+                <AppHeader product="Glossary" modules={modules} currentModule="glossary" />
+                <button type="button">danach</button>
+            </>,
+        );
+        const button = screen.getByRole('button', { name: 'Module' });
+        button.focus();
+        await user.keyboard('{Enter}');
+        expect(button).toHaveAttribute('aria-expanded', 'true');
+        await user.tab();
+        expect(screen.getByRole('link', { name: 'EduKSX-Codex' })).toHaveFocus();
+        expect(button).toHaveAttribute('aria-expanded', 'true');
+        await user.tab();
+        expect(screen.getByRole('button', { name: 'danach' })).toHaveFocus();
+        expect(button).toHaveAttribute('aria-expanded', 'false');
+
+        button.focus();
+        await user.keyboard('{Enter}');
+        button.focus();
+        await user.tab({ shift: true });
+        expect(button).toHaveAttribute('aria-expanded', 'false');
+    });
+
     it('zeigt ohne Module keinen Modulwechsel', () => {
         render(<AppHeader product="Glossary" />);
         expect(screen.queryByRole('button', { name: 'Module' })).toBeNull();
@@ -60,6 +87,19 @@ describe('Verlauf', () => {
         expect(screen.getByText('geändert (Wert wird nicht angezeigt)')).toBeInTheDocument();
         expect(screen.getByText(/wiederhergestellt/)).toBeInTheDocument();
         expect(screen.getByText(/Wiederherstellung/)).toBeInTheDocument();
+    });
+
+    it('sagt alte und neue Werte für Bildschirmleser mit «vorher»/«nachher» an (#13)', () => {
+        render(
+            <HistoryList
+                entries={[{ event_id: '1', action: 'updated', occurred_at: '2026-11-22T10:00:00Z', changes: { titel: { old: 'alt', new: 'neu' } } }]}
+            />,
+        );
+        const dd = screen.getByText('titel').nextElementSibling as HTMLElement;
+        expect(dd.textContent).toBe('vorher: alt → nachher: neu');
+        expect(dd.querySelector('del .sr-only')?.textContent).toBe('vorher: ');
+        expect(dd.querySelector('ins .sr-only')?.textContent).toBe('nachher: ');
+        expect(dd.querySelector('[aria-hidden="true"]')?.textContent).toBe('→');
     });
 
     it('beschriftet alle vier Aktionen deutsch', () => {

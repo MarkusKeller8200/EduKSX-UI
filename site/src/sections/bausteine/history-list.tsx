@@ -21,7 +21,7 @@ import { HistoryList } from '@eduksx/ui';
 
 <HistoryList entries={entries} fieldLabels={{ short_description: 'Kurzbeschreibung' }} timeZone="Europe/Zurich" />
 `}
-            pruefen={['Personenbezogene Felder zeigen nur «geändert», nie den Wert', 'Datum TT.MM.JJJJ in Schweizer Zeit', 'Bekannt: Ansage für Bildschirmleser verbessern (#13)']}
+            pruefen={['Personenbezogene Felder zeigen nur «geändert», nie den Wert', 'Datum TT.MM.JJJJ in Schweizer Zeit', 'Bildschirmleser sagt «vorher: … nachher: …» an, der Pfeil wird nicht vorgelesen (#13)', 'Sichtbar bleibt «alt → neu»']}
         />
     );
 }

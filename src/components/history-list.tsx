@@ -66,7 +66,15 @@ export function HistoryList({ entries, fieldLabels = {}, timeZone }: HistoryList
                                             'geändert (Wert wird nicht angezeigt)'
                                         ) : (
                                             <>
-                                                <del className="text-muted-foreground">{show(change.old)}</del> → <ins className="no-underline">{show(change.new)}</ins>
+                                                <del className="text-muted-foreground">
+                                                    <span className="sr-only">vorher: </span>
+                                                    {show(change.old)}
+                                                </del>{' '}
+                                                <span aria-hidden="true">→</span>{' '}
+                                                <ins className="no-underline">
+                                                    <span className="sr-only">nachher: </span>
+                                                    {show(change.new)}
+                                                </ins>
                                             </>
                                         )}
                                     </dd>

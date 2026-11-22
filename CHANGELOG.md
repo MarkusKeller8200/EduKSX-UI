@@ -6,12 +6,38 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ## [Unveröffentlicht]
 
+### Barrierefreiheit
+
+- **Modulwechsel schliesst bei Fokusverlust (#12):** Verlässt der Fokus Knopf und Liste mit Tab oder Shift+Tab,
+  schliesst die Liste. Muster bleibt «Disclosure» (kein ARIA-Menü, keine Pfeiltasten).
+- **Verlauf für Bildschirmleser (#13):** alte und neue Werte erhalten unsichtbar «vorher:» und «nachher:», der
+  Pfeil wird nicht vorgelesen; sichtbar bleibt `alt → neu`.
+- **axe-core in der CI (#14, DS7):** jede Seite der Testseite wird in den Tests mit axe-core geprüft; «serious» und
+  «critical» lassen `npm run check` und die CI scheitern, «moderate»/«minor» nur Warnung. Neue Entwicklungsabhängigkeit
+  axe-core (MPL-2.0, nicht im Paket), eingetragen in `docs/third-party.json`.
+
 ### Neu
 
 - **GUI-Tester auf der Testseite (#44, DS13):** Baustein-Seiten mit Reitern Beispiele, Versionen & Status,
   Überarbeitung und Wünsche; Übersicht «Freigaben & Status». Versionen, Verlauf und Überarbeitungen in
   `site/src/versionen.ts` (Regeln aus dem INTRANET: Status Entwicklung → Prüfung → Freigegeben, SemVer je Baustein),
   Wünsche als GitHub-Ideen je Baustein. Alle Bausteine starten mit v1.0.0 in Prüfung.
+- **GUI-Guideline (#28, #43):** `docs/GUIDELINE.md` – wann welche Farbe, welcher Baustein, Seitenaufbau und Abstände,
+  GUI-Profile nach Modulart und Ansicht (DS12), Texte und Tonalität (de-CH), Prüfen vor dem Merge. Testseite: Seite
+  «Guideline» mit Beispielen «So» und «Nicht so».
+- **Mitgelieferte Themes Hoher Kontrast und Violett (#42, DS11):** `tokens/themes.json` (nur Abweichungen, Werte aus
+  den INTRANET-Vorlagen auf die EduKSX-Tokens angepasst); der Build schreibt sie als `[data-theme="…"]` hell und
+  dunkel in `tokens.css`, jeweils mit vollem Farbset, dazu `[data-theme="eduksx"]` für den Standard. `BUILTIN_THEMES`
+  im Paket; beide bestehen die Kontrastprüfung (`tests/themes.test.ts`). Testseite: Seite «Themes» und Auswahl
+  «Theme» in der Vorschau-Leiste.
+- **Farbschema-Umschalter `ColorSchemeToggle` (#17):** Hell / Dunkel / Wie System mit den Symbolen Sonne, Mond und
+  Sonne-Mond (Pfade aus Lucide, ISC), `aria-pressed`, `aria-label` und Tooltip; Hook `useColorScheme()` speichert die
+  Wahl je Browser (`eduksx:farbschema`), setzt `.dark` und folgt bei «Wie System» dem Betriebssystem. Pflicht in der
+  Kopfzeile aller Module. Testseite: Seite «ColorSchemeToggle».
+- **Ansicht-Umschalter `ViewWidthToggle` und `FullscreenButton` (#19):** Mobil, Darstellungsoptimiert, Breit, Voll
+  mit eigenen Symbolen (Lucide, ISC), Hook `useViewWidth()` (`eduksx:ansicht`) und `VIEW_WIDTH_CLASSES`; Vollbild ein
+  und aus. Testseite: Seite «ViewWidthToggle».
+- **`AppHeader` bricht auf schmalen Bildschirmen um** statt seitlich überzulaufen.
 - **Flow-Icon (#30):** EduKSX-Flow erhält sein Icon (Flussdiagramm mit Entscheidungs-Raute) aus dem
   Prototyp-Entwurf, freigegeben 22.11.2026; alle Varianten als SVG und PNG, Baustein `EduksxIcon name="flow"`.
 - **Grundbausteine auf der Testseite (#27, #15):** eigene Seiten für Button, Tooltip, Formularfelder, Tabelle,
