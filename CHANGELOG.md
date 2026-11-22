@@ -18,10 +18,18 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ### Neu
 
+- **Mitgelieferte Themes Hoher Kontrast und Violett (#42, DS11):** `tokens/themes.json` (nur Abweichungen, Werte aus
+  den INTRANET-Vorlagen auf die EduKSX-Tokens angepasst); der Build schreibt sie als `[data-theme="…"]` hell und
+  dunkel in `tokens.css`, jeweils mit vollem Farbset, dazu `[data-theme="eduksx"]` für den Standard. `BUILTIN_THEMES`
+  im Paket; beide bestehen die Kontrastprüfung (`tests/themes.test.ts`). Testseite: Seite «Themes» und Auswahl
+  «Theme» in der Vorschau-Leiste.
 - **Farbschema-Umschalter `ColorSchemeToggle` (#17):** Hell / Dunkel / Wie System mit den Symbolen Sonne, Mond und
   Sonne-Mond (Pfade aus Lucide, ISC), `aria-pressed`, `aria-label` und Tooltip; Hook `useColorScheme()` speichert die
   Wahl je Browser (`eduksx:farbschema`), setzt `.dark` und folgt bei «Wie System» dem Betriebssystem. Pflicht in der
   Kopfzeile aller Module. Testseite: Seite «ColorSchemeToggle».
+- **Ansicht-Umschalter `ViewWidthToggle` und `FullscreenButton` (#19):** Mobil, Darstellungsoptimiert, Breit, Voll
+  mit eigenen Symbolen (Lucide, ISC), Hook `useViewWidth()` (`eduksx:ansicht`) und `VIEW_WIDTH_CLASSES`; Vollbild ein
+  und aus. Testseite: Seite «ViewWidthToggle».
 - **`AppHeader` bricht auf schmalen Bildschirmen um** statt seitlich überzulaufen.
 - **Flow-Icon (#30):** EduKSX-Flow erhält sein Icon (Flussdiagramm mit Entscheidungs-Raute) aus dem
   Prototyp-Entwurf, freigegeben 22.11.2026; alle Varianten als SVG und PNG, Baustein `EduksxIcon name="flow"`.

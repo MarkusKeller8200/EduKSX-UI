@@ -1,0 +1,77 @@
+{
+  "$description": "Mitgelieferte Themes neben dem Standard EduKSX (DS11, #42). Nur Abweichungen von tokens.json, nur bekannte Farb-Tokens, #rrggbb. Werte übernommen aus dem INTRANET (Vorlagen «Hoher Kontrast» und «Violett», Stand 22.11.2026) und auf die Token-Namen von EduKSX-UI angepasst. Jedes Theme muss die Kontrastprüfung bestehen (tests/themes.test.ts).",
+  "themes": {
+    "hoher-kontrast": {
+      "name": "Hoher Kontrast",
+      "description": "Schwarze bzw. weisse Schrift, kräftigere Linien und Fokus – für schwierige Lichtverhältnisse und Sehschwäche.",
+      "light": {
+        "foreground": "#000000",
+        "card-foreground": "#000000",
+        "popover-foreground": "#000000",
+        "primary-foreground": "#000000",
+        "muted-foreground": "#3a3d40",
+        "border": "#8a9096",
+        "input": "#6b7177",
+        "ring": "#00507a",
+        "link": "#00507a",
+        "sidebar-foreground": "#000000",
+        "sidebar-primary-foreground": "#000000",
+        "sidebar-border": "#8a9096",
+        "sidebar-ring": "#00507a"
+      },
+      "dark": {
+        "background": "#000000",
+        "card": "#0d0d0d",
+        "popover": "#0d0d0d",
+        "foreground": "#ffffff",
+        "card-foreground": "#ffffff",
+        "popover-foreground": "#ffffff",
+        "primary-foreground": "#000000",
+        "muted-foreground": "#d0d4d8",
+        "border": "#6b7177",
+        "input": "#8a9096",
+        "ring": "#7fd4ff",
+        "link": "#7fd4ff",
+        "sidebar": "#000000",
+        "sidebar-foreground": "#ffffff",
+        "sidebar-primary-foreground": "#000000",
+        "sidebar-border": "#6b7177",
+        "sidebar-ring": "#7fd4ff"
+      }
+    },
+    "violett": {
+      "name": "Violett",
+      "description": "Violette Hauptfarbe statt Orange; Marke, Status und Links bleiben wie im Standard.",
+      "light": {
+        "primary": "#6d28d9",
+        "primary-foreground": "#ffffff",
+        "ring": "#7c3aed",
+        "secondary": "#f6f2fe",
+        "secondary-foreground": "#3b1a78",
+        "accent": "#f3eefe",
+        "accent-foreground": "#3b1a78",
+        "sidebar-primary": "#6d28d9",
+        "sidebar-primary-foreground": "#ffffff",
+        "sidebar-accent": "#f3eefe",
+        "sidebar-accent-foreground": "#3b1a78",
+        "sidebar-ring": "#7c3aed",
+        "chart-1": "#7c3aed"
+      },
+      "dark": {
+        "primary": "#a78bfa",
+        "primary-foreground": "#151b24",
+        "ring": "#a78bfa",
+        "secondary": "#261c42",
+        "secondary-foreground": "#ede9fe",
+        "accent": "#2e2250",
+        "accent-foreground": "#ede9fe",
+        "sidebar-primary": "#a78bfa",
+        "sidebar-primary-foreground": "#151b24",
+        "sidebar-accent": "#2e2250",
+        "sidebar-accent-foreground": "#ede9fe",
+        "sidebar-ring": "#a78bfa",
+        "chart-1": "#a78bfa"
+      }
+    }
+  }
+}

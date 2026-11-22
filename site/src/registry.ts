@@ -2,6 +2,7 @@ import type { ComponentType } from 'react';
 import type { Status } from './ui';
 import { Farben } from './sections/farben';
 import { Kontrast } from './sections/kontrast';
+import { Themes } from './sections/themes';
 import { Typografie } from './sections/typografie';
 import { Abstaende } from './sections/abstaende';
 import { Ansichten } from './sections/ansichten';
@@ -47,6 +48,7 @@ export type Entry = {
 export const ENTRIES: Entry[] = [
     { id: 'farben', title: 'Farben', group: 'Grundlagen', status: 'freigegeben', summary: 'Alle Farb-Tokens hell und dunkel mit Wert und Verwendung.', concept: { path: 'docs/KONZEPT-MARKE.md', label: 'KONZEPT-MARKE §5' }, issues: [3], Page: Farben },
     { id: 'kontrast', title: 'Kontrast', group: 'Grundlagen', status: 'freigegeben', summary: 'Prüfpaare Schrift/Fläche 4,5 : 1 und Linien/Fokus 3 : 1, hell und dunkel nachgerechnet.', concept: { path: 'docs/KONZEPT-MARKE.md', label: 'KONZEPT-MARKE §5.2' }, issues: [4, 11], Page: Kontrast },
+    { id: 'themes', title: 'Themes', group: 'Grundlagen', status: 'beta', summary: 'Mitgelieferte Themes EduKSX, Hoher Kontrast und Violett mit Abweichungen und Kontrastprüfung.', concept: { path: 'https://github.com/MarkusKeller8200/EduKSX-Architektur/blob/main/docs/KONZEPT-DESIGN.md', label: 'KONZEPT-DESIGN 5, DS11' }, issues: [42], Page: Themes },
     { id: 'typografie', title: 'Typografie', group: 'Grundlagen', status: 'freigegeben', summary: 'Schriften Inter und JetBrains Mono (M6), Gewichte (M7), Grössen und Textrollen (T1, T2).', concept: { path: 'docs/KONZEPT-TOKENS.md', label: 'KONZEPT-TOKENS §2' }, issues: [25], Page: Typografie },
     { id: 'abstaende', title: 'Abstände, Radien, Schatten', group: 'Grundlagen', status: 'freigegeben', summary: '4-px-Raster, fünf Radien und vier Schatten (im Dunkelmodus kräftiger).', concept: { path: 'docs/KONZEPT-TOKENS.md', label: 'KONZEPT-TOKENS §3' }, issues: [26], Page: Abstaende },
     { id: 'ansichten', title: 'Breakpoints und Ansichten', group: 'Grundlagen', status: 'entwicklung', summary: 'Breakpoints, Variante desk, Seitenbreiten und die Pflicht-Ansichten Handy, Tablet und Desktop.', concept: { path: 'docs/KONZEPT-TOKENS.md', label: 'KONZEPT-TOKENS §4' }, issues: [26, 19], Page: Ansichten },
