@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de-CH">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Testseite des EduKSX-Designsystems: Tokens, Marke und Bausteine hell und dunkel, in allen Pflicht-Ansichten." />
+        <title>EduKSX-UI – Testseite</title>
+        <link rel="icon" type="image/png" href="./favicon.png" />
+        <link rel="stylesheet" href="./fonts/fonts.css" />
+        <script>
+            // Farbschema vor dem ersten Zeichnen setzen, damit nichts aufblitzt (#17).
+            try {
+                var q = new URLSearchParams(location.search);
+                var s = q.get('schema') || localStorage.getItem('eduksx-testseite:schema') || 'system';
+                var v = q.get('vergleich') === '1' || localStorage.getItem('eduksx-testseite:vergleich') === '1';
+                var dark = !v && (s === 'dunkel' || (s === 'system' && matchMedia('(prefers-color-scheme: dark)').matches));
+                document.documentElement.classList.toggle('dark', dark);
+            } catch (e) {}
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="./src/main.tsx"></script>
+    </body>
+</html>

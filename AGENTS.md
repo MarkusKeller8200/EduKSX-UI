@@ -67,6 +67,8 @@ Aus dem GitHub-Blueprint, Details in `docs/GITHUB-ABLAUF.md`.
   Abweichungsregister (§8) nachgetragen.
 - Vor jedem neuen Meilenstein werden die Abweichungen gesichtet; übernommene Regeln machen die Abweichung im Modul
   obsolet.
+- **Visuell prüfbar:** Jeder grafische oder UI-Entscheid (Token, Markenregel, Baustein) wird im selben PR auf der
+  Testseite (`site/`, GitHub Pages) sichtbar gemacht, hell und dunkel, in allen Pflicht-Ansichten (`docs/TESTSEITE.md`).
 
 ## Ideen-Erfassung
 
