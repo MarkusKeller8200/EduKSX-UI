@@ -22,7 +22,7 @@ export const EDUKSX_ICON_BUNDLES = {
     intranet: {
         title: 'EduKSX-Intranet',
         repo: 'sek-intranet',
-        icons: ['intranet', 'eduksx', 'portal', 'glossary', 'ident', 'staffing', 'timetable', 'licence', 'shop', 'sign', 'services', 'connect'],
+        icons: ['intranet', 'eduksx', 'portal', 'glossary', 'ident', 'staffing', 'timetable', 'licence', 'shop', 'sign', 'services', 'connect', 'time'],
     },
     timetable: { title: 'EduKSX-Timetable', icons: ['timetable'] },
     connect: { title: 'EduKSX-Connect', repo: 'EduKSX-Connect', icons: ['connect'] },
