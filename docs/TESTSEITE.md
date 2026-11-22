@@ -66,8 +66,15 @@ Neue Grundlagen (Tokens) oder Prüfseiten genauso; statische HTML-Prüfseiten zu
 | TS2 | Gerätegrössen der Pflicht-Ansichten | Handy 390 × 844, Tablet 820 × 1180 | EMPFOHLEN |
 | TS3 | GitHub Pages aktivieren (Source «GitHub Actions») | aktiviert durch Markus | BESCHLOSSEN 22.11.2026 |
 
+## 5a. Automatische Prüfung mit axe-core (DS7, #14)
+
+`tests/barrierefreiheit.test.tsx` zeichnet jede Seite der Testseite in jsdom und prüft sie mit axe-core
+(`tests/a11y.ts`). Verstösse «serious» und «critical» lassen `npm run check` und damit die CI scheitern,
+«moderate» und «minor» erscheinen nur als Warnung im Protokoll. Nicht geprüft werden dort Kontrast (jsdom rechnet
+keine Farben, dafür gibt es die Kontrastprüfung) und eingebettete Iframes (Prüfseiten, im Browser prüfen). Neue
+Bausteine sind automatisch dabei, sobald ihre Seite in `site/src/registry.ts` steht.
+
 ## 6. Später
 
 - Ausbau zum GUI-Tester (#21): je Baustein Reiter Beispiele, Versionen & Status, Überarbeitung, Wünsche (#44).
-- axe-core auf der Testseite in der CI (#14, DS7: serious/critical lassen die CI scheitern).
 - Sprachwahl und Prüfseite der Übersetzungen (UEBERNAHME-INTRANET-GUI §4).

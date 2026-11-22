@@ -26,12 +26,12 @@ export function AppHeader({
     children,
 }: AppHeaderProps) {
     return (
-        <header className="flex items-center gap-4 border-b border-border bg-background px-4 py-2 text-foreground">
+        <header className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-border bg-background px-4 py-2 text-foreground">
             <a href={homeUrl} className="flex items-center gap-3 rounded-md focus-visible:outline-2 focus-visible:outline-ring">
                 <BrandWordmark brand={brand} suffix={product} className="text-lg" />
             </a>
             {organizationLogo && <img src={organizationLogo.src} alt={organizationLogo.alt} className="h-8 w-auto" />}
-            <div className="ml-auto flex items-center gap-2">
+            <div className="ml-auto flex flex-wrap items-center justify-end gap-2">
                 {children}
                 <ModuleSwitcher modules={modules} current={currentModule} />
             </div>
