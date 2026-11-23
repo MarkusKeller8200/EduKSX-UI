@@ -35,6 +35,7 @@ export const EDUKSX_ICON_BUNDLES = {
     flow: { title: 'EduKSX-Flow', repo: 'EduKSX-Flow', icons: ['flow'] },
     planner: { title: 'EduKSX-Planner', icons: ['planner'] },
     services: { title: 'EduKSX-Services', icons: ['services'] },
+    ai: { title: 'EduKSX-AI', icons: ['ai'] },
     website: {
         title: 'Website markussxch',
         repo: 'markussxch',

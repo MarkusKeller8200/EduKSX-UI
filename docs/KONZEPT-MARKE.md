@@ -207,14 +207,14 @@ Signatur.
 
 ## 6. Icons und Signets (BESCHLOSSEN, Icon-Set EduKSX, freigegeben 09.11., 13.11. und 22.11.2026)
 
-- 27 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
+- 28 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
   Intranet, Timetable, Staffing, Ops, Flow, Planner, WebSnapshot, API, AIConverter, MCP, Bill, Ticket, Booking,
-  Checklist, Absence. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
+  Checklist, Absence, AI. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
   Sechseck mit Kern (Core), Ausweis (Ident), Einkaufswagen mit Häkchen (Shop), Schlüssel (Licence), Elternteil und
   Kind (Portal = Elternportal), drei verbundene Knoten (Connect), Zahnrad (Services), Feder mit Unterschrift (Sign), Uhr (Time), Haus mit
   vier Bausteinen (Intranet), Raster mit Kalenderkopf (Timetable), Person mit Kalender (Staffing), Bildschirm mit Puls
   (Ops), Flussdiagramm mit Entscheidungs-Raute (Flow),
-  Zeitbalken auf einer Achse (Planner, freigegeben 22.11.2026, #49).
+  Zeitbalken auf einer Achse (Planner, freigegeben 22.11.2026, #49), drei Funken (AI, Motiv gewählt 23.11.2026, #61).
 - 22.11.2026 (#52): Shop zeigt den Einkaufswagen statt der Tasche, Portal (Elternportal) Elternteil und Kind statt des
   Torbogens. Neu, im UI-Stil nach den Motiven des Entwurfs «Icon-Set v2 (Umriss-Stil)»: Browserfenster mit Objektiv
   (WebSnapshot), Klammern mit Datenpunkten (API), gegenläufige Pfeile mit Funken (AIConverter), Stecker (MCP), Beleg
@@ -267,6 +267,24 @@ mit hell/dunkel:
 Ändern: Motiv in `icons/build.py`, dann `python3 icons/build.py` (SVG), `python3 icons/build.py --ts
 src/components/eduksx-icons.data.ts` (Baustein) und die Rasterdateien neu erzeugen
 (`node icons/raster.mjs --alle`). Ein Test prüft, dass Dateien und Baustein übereinstimmen. Jede Änderung braucht eine neue Freigabe.
+
+### 6.1a Logo 240 × 56 (Issue #59, Freigabe ausstehend im Beta-Test)
+
+Für Oberflächen mit einem Logo-Feld von 240 × 56 px: Icon **EduKSX** (vier Bausteine) und Wortmarke **EduKSX** in
+**Inter 700** (M6), als Pfade gesetzt – die Dateien brauchen keine Schrift. Farben aus den `brand-*`-Tokens (E violett ·
+du neutral · K orange · SX blau), dunkel mit den dunklen Werten und Hintergrund `background` dunkel (`#151B24`).
+Ersetzt den Entwurf in markussxch #14 (Space Grotesk).
+
+| Datei | Verwendung |
+| --- | --- |
+| `icons/logo/eduksx-logo-240x56-hell.svg/.png` | transparent, für helle Flächen |
+| `icons/logo/eduksx-logo-240x56-weiss.svg/.png` | weisser Hintergrund |
+| `icons/logo/eduksx-logo-240x56-dunkel.svg/.png` | dunkler Hintergrund, Farben für den Dunkelmodus |
+| `…@2x.png` | 480 × 112 für hochauflösende Bildschirme |
+| `icons/logo/build_logo.py`, `icons/logo/raster.mjs` | Generator (fontTools) bzw. PNG (Playwright), beide nicht im Paket |
+
+Im Paket unter `@eduksx/ui/icons/logo/…`. In der Kopfzeile gilt weiterhin `BrandWordmark` bzw. das eigene Logo der
+Instanz (M3); das Logo ist für fixe Logo-Felder (z. B. Anmeldeseite, Fremdsysteme).
 
 ### 6.2 Bediensymbole (BESCHLOSSEN 22.11.2026; aus Glossary und INTRANET, Idee #20)
 
@@ -441,3 +459,5 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
 - 22.11.2026: M1 entschieden – alle Module `EduKSX-<Begriff>` mit deutschem Untertitel. Neues Modul `planner`
   EduKSX-Planner «Jahresplanung» (Icon und Abgrenzung zu `flow` offen).
 - 22.11.2026: Planner-Icon (#49) Entwurf A «Zeitbalken» freigegeben und ins Icon-Set übernommen (18 Icons).
+- 23.11.2026: 6.1a Logo 240 × 56 in Inter neu in EduKSX-UI (#59); markussxch #14 (Space Grotesk) geschlossen.
+- 23.11.2026: Icon EduKSX-AI (#61), Motiv «drei Funken» von Markus gewählt; Bundle `ai`. Abnahme im Beta-Test.

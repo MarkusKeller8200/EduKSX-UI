@@ -5,3 +5,4 @@ dist-site/
 
 # Screenshots lokaler Prüfungen
 /*.png
+__pycache__/

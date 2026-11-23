@@ -1,5 +1,9 @@
 # EduKSX-UI – Projektstand
 
+> Stand 23.11.2026 (11:30): Release 0.1.0 veröffentlicht, Meilenstein 0.2.0 offen. PR #60 (Beta-Test): Logo 240 × 56 in
+> Inter (#59, ersetzt markussxch #14, dort geschlossen) und Icon EduKSX-AI «drei Funken» (#61, Bundle `ai`, Set 28 Icons).
+> Release 0.2.0 erst, wenn #59 und #61 abgehakt sind (Entscheid Markus).
+>
 > Stand 22.11.2026 (22:30): Icon-Set auf 27 Icons erweitert (#52, PR offen): neun neue Icons, Shop als Einkaufswagen,
 > Portal als Elternteil und Kind. Danach: Icon-Kopien in den anderen Repos durch Verweise auf `@eduksx/ui` ersetzen.
 >

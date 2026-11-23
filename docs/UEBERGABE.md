@@ -4,6 +4,16 @@ Stand: **22.11.2026 (03:50)** – Grundgerüst `@eduksx/ui` 0.1 im PR (Meilenste
 [PROJEKTSTAND.md](PROJEKTSTAND.md) (aktuell), Konzepte: EduKSX-Architektur `docs/KONZEPT-DESIGN.md`. Bei jeder Übergabe
 nachführen.
 
+## Nachtrag 23.11.2026 (11:30)
+
+- Release **0.1.0** veröffentlicht (Tag `v0.1.0`); Meilenstein «0.2.0» offen.
+- **#59 Logo 240 × 56** (Inter 700, hell/weiss/dunkel, `icons/logo/`) und **#61 Icon EduKSX-AI** (Motiv A «drei Funken»,
+  gewählt von Markus) im PR #60, Status `_3 Beta-Test`. markussxch #14 geschlossen, Branch `claude/eduksx-logo` dort
+  noch vorhanden (löschen nur nach Rückfrage).
+- **Release 0.2.0** erst nach abgehakter Testliste von #59 und #61.
+- Offen bei Markus: markussxch #22 (macht er selbst), Intranet PHP 8.5 (#210), npm-Updates mit roter CI (Glossary #477,
+  Intranet #211), LinkedIn-Branch in markussxch.
+
 ## Start nächster Chat (Übergabe 22.11.2026, 03:50)
 
 **Zuerst lesen:** CLAUDE.md → AGENTS.md → dieser Abschnitt → PROJEKTSTAND.md → KONZEPT-DESIGN in EduKSX-Architektur.

@@ -7,6 +7,12 @@ import { Block, Code, Example } from '../ui';
 const FILES = import.meta.glob('../../../icons/svg/*.svg', { eager: true, query: '?url', import: 'default' }) as Record<string, string>;
 const PNG = import.meta.glob('../../../icons/png/192/*.png', { eager: true, query: '?url', import: 'default' }) as Record<string, string>;
 const ICO = import.meta.glob('../../../icons/ico/*.ico', { eager: true, query: '?url', import: 'default' }) as Record<string, string>;
+const LOGO = import.meta.glob('../../../icons/logo/*.{svg,png}', { eager: true, query: '?url', import: 'default' }) as Record<string, string>;
+const LOGO_VARIANTEN = [
+    { v: 'hell', text: 'hell, transparent – für helle Flächen (hier auf #F2F5F8 gezeigt)' },
+    { v: 'weiss', text: 'weisser Hintergrund' },
+    { v: 'dunkel', text: 'dunkel, Hintergrund wie Seite dunkel (#151B24)' },
+] as const;
 const file = (glob: Record<string, string>, name: string) => Object.entries(glob).find(([k]) => k.endsWith(`/${name}`))?.[1];
 const base = (n: string) => (n === 'eduksx' ? 'eduksx' : `eduksx-${n}`);
 
@@ -18,6 +24,33 @@ export function Icons() {
                 Violett für Details. Neue Motive oder Farben brauchen eine eigene Freigabe. Module erstellen keine eigenen
                 Icons: alles kommt aus diesem Set, je Modul als Bundle (KONZEPT-MARKE §6.3).
             </p>
+            <Block
+                title="Logo 240 × 56"
+                note={
+                    <>
+                        Icon EduKSX und Wortmarke in Inter 700 als Pfade (#59). Für Oberflächen mit einem Logo-Feld von 240 × 56 px. Dateien unter{' '}
+                        <Code>@eduksx/ui/icons/logo/</Code>: SVG, PNG 240 × 56 und <Code>@2x</Code> 480 × 112. Erzeugt mit <Code>icons/logo/build_logo.py</Code>.
+                    </>
+                }
+            >
+                <ul className="space-y-4">
+                    {LOGO_VARIANTEN.map(({ v, text }) => (
+                        <li key={v} className="space-y-1">
+                            <div className="flex flex-wrap items-center gap-4">
+                                <div className={v === 'hell' ? 'rounded-md bg-[#f2f5f8]' : 'rounded-md'}>
+                                    <img src={file(LOGO, `eduksx-logo-240x56-${v}.svg`)} alt={`eduksx-logo-240x56-${v}.svg`} width={240} height={56} />
+                                </div>
+                                <div className={v === 'hell' ? 'rounded-md bg-[#f2f5f8]' : 'rounded-md'}>
+                                    <img src={file(LOGO, `eduksx-logo-240x56-${v}@2x.png`)} alt={`eduksx-logo-240x56-${v}@2x.png`} width={240} height={56} />
+                                </div>
+                            </div>
+                            <p className="text-xs text-muted-foreground">
+                                {text} · links SVG, rechts PNG 2×
+                            </p>
+                        </li>
+                    ))}
+                </ul>
+            </Block>
             <Block title="Baustein EduksxIcon" note="Farbig, einfarbig (Textfarbe) und als Kachel. Wechselt mit hell und dunkel.">
                 <Example label="Icons">
                     <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
