@@ -207,14 +207,14 @@ Signatur.
 
 ## 6. Icons und Signets (BESCHLOSSEN, Icon-Set EduKSX, freigegeben 09.11., 13.11. und 22.11.2026)
 
-- 27 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
+- 28 freigegebene Icons: EduKSX, Glossary, Codex, Core, Ident, Shop, Licence, Portal, Connect, Services, Sign, Time,
   Intranet, Timetable, Staffing, Ops, Flow, Planner, WebSnapshot, API, AIConverter, MCP, Bill, Ticket, Booking,
-  Checklist, Absence. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
+  Checklist, Absence, AI. Motive: vier Bausteine (EduKSX), offenes Buch mit A–Z (Glossary), Waage (Codex),
   Sechseck mit Kern (Core), Ausweis (Ident), Einkaufswagen mit Häkchen (Shop), Schlüssel (Licence), Elternteil und
   Kind (Portal = Elternportal), drei verbundene Knoten (Connect), Zahnrad (Services), Feder mit Unterschrift (Sign), Uhr (Time), Haus mit
   vier Bausteinen (Intranet), Raster mit Kalenderkopf (Timetable), Person mit Kalender (Staffing), Bildschirm mit Puls
   (Ops), Flussdiagramm mit Entscheidungs-Raute (Flow),
-  Zeitbalken auf einer Achse (Planner, freigegeben 22.11.2026, #49).
+  Zeitbalken auf einer Achse (Planner, freigegeben 22.11.2026, #49), drei Funken (AI, Motiv gewählt 23.11.2026, #61).
 - 22.11.2026 (#52): Shop zeigt den Einkaufswagen statt der Tasche, Portal (Elternportal) Elternteil und Kind statt des
   Torbogens. Neu, im UI-Stil nach den Motiven des Entwurfs «Icon-Set v2 (Umriss-Stil)»: Browserfenster mit Objektiv
   (WebSnapshot), Klammern mit Datenpunkten (API), gegenläufige Pfeile mit Funken (AIConverter), Stecker (MCP), Beleg
@@ -460,3 +460,4 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
   EduKSX-Planner «Jahresplanung» (Icon und Abgrenzung zu `flow` offen).
 - 22.11.2026: Planner-Icon (#49) Entwurf A «Zeitbalken» freigegeben und ins Icon-Set übernommen (18 Icons).
 - 23.11.2026: 6.1a Logo 240 × 56 in Inter neu in EduKSX-UI (#59); markussxch #14 (Space Grotesk) geschlossen.
+- 23.11.2026: Icon EduKSX-AI (#61), Motiv «drei Funken» von Markus gewählt; Bundle `ai`. Abnahme im Beta-Test.

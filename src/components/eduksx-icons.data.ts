@@ -282,6 +282,15 @@ export const eduksxIcons = {
       { tag: "circle", role: "sx", fill: true, attrs: {"cx": 18.7, "cy": 15.6, "r": 1.1} },
     ],
   },
+  "ai": {
+    name: "EduKSX-AI",
+    meaning: "Drei Funken: KI-Funktionen der Plattform",
+    elements: [
+      { tag: "path", role: "k", fill: true, attrs: {"d": "M10 5.5C10.1 9.6 9.5 11.9 2.5 13C9.5 14.1 10.1 16.4 10 20.5C10.1 16.4 10.7 14.1 17.5 13C10.7 11.9 10.1 9.6 10 5.5Z"} },
+      { tag: "path", role: "sx", fill: true, attrs: {"d": "M18 2.8C18.1 5.1 18.6 5.6 21.2 6C18.6 6.4 18.1 6.9 18 9.2C17.9 6.9 17.4 6.4 14.8 6C17.4 5.6 17.9 5.1 18 2.8Z"} },
+      { tag: "circle", role: "e", fill: true, attrs: {"cx": 18.5, "cy": 18.5, "r": 1.5} },
+    ],
+  },
 } satisfies Record<string, EduksxIconDef>;
 
 export type EduksxIconName = keyof typeof eduksxIcons;

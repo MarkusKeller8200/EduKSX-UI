@@ -11,12 +11,12 @@ const svgFile = (file: string) => svgFiles[`../icons/svg/${file}`];
 const fileSlug = (n: EduksxIconName) => (n === 'eduksx' ? 'eduksx' : `eduksx-${n}`);
 
 describe('EduKSX-Icon-Set', () => {
-    it('enthält die 27 freigegebenen Icons', () => {
+    it('enthält die 28 freigegebenen Icons', () => {
         expect(EDUKSX_ICON_NAMES).toEqual([
             'eduksx', 'glossary', 'codex', 'core', 'ident', 'shop', 'licence', 'portal',
             'connect', 'services', 'sign', 'time', 'intranet', 'timetable', 'staffing', 'ops', 'flow',
             'planner', 'websnapshot', 'api', 'aiconverter', 'mcp', 'bill', 'ticket', 'booking', 'checklist',
-            'absence',
+            'absence', 'ai',
         ]);
     });
 

@@ -1,6 +1,6 @@
 # EduKSX-Icon-Set
 
-27 Icons der Produktfamilie EduKSX in den Farben des CI MarKusSXCH (CI-Manual v1.0, Markenfortschreibung v1.1).
+28 Icons der Produktfamilie EduKSX in den Farben des CI MarKusSXCH (CI-Manual v1.0, Markenfortschreibung v1.1).
 **Status: freigegeben** am 09.11.2026 (12 Icons) und 13.11.2026 (Intranet, Timetable, Staffing, Ops) und 22.11.2026 (Flow, Planner; Shop als Einkaufswagen, Portal als Elternteil und Kind, neun neue Icons, #52) durch Markus
 Keller. Änderungen an Motiven oder Farben brauchen eine neue Freigabe.
 
@@ -22,7 +22,7 @@ erstellen keine eigenen Icons; welches Modul welche Icons nutzt, steht in `src/c
 
 Namen: `eduksx` (Familie) und `eduksx-<schlüssel>` für glossary, codex, core, ident, shop, licence, portal, connect,
 services, sign, time, intranet, timetable, staffing, ops, flow, planner, websnapshot, api, aiconverter, mcp, bill,
-ticket, booking, checklist, absence.
+ticket, booking, checklist, absence, ai.
 
 ## Gestaltung
 
@@ -60,6 +60,7 @@ ticket, booking, checklist, absence.
 | Booking | Kalender mit Häkchen |
 | Checklist | Liste mit Häkchen |
 | Absence | Person mit Minus |
+| AI | Drei Funken (gewählt 23.11.2026, #61) |
 
 ## Im Code
 
