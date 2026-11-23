@@ -6,6 +6,12 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ## [Unveröffentlicht]
 
+### Neu
+
+- **EduKSX-Logo 240 × 56 (#59):** Icon und Wortmarke in Inter 700 als Pfade, Varianten hell (transparent), weiss und
+  dunkel, je SVG und PNG 1× / 2× unter `@eduksx/ui/icons/logo/`; Generator `icons/logo/build_logo.py`, Testseite ›
+  Icons › Logo. Ersetzt den Entwurf markussxch #14 (Space Grotesk).
+
 ## [0.1.0] – 2026-11-22
 
 ### CI

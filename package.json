@@ -17,7 +17,9 @@
     "tokens",
     "icons/svg",
     "icons/png",
-    "icons/ico"
+    "icons/ico",
+    "icons/logo/*.svg",
+    "icons/logo/*.png"
   ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

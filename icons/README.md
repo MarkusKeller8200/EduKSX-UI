@@ -83,5 +83,8 @@ python3 icons/build.py --ts src/components/eduksx-icons.data.ts     # Daten für
 node icons/raster.mjs        # Maskable-PNG und ico/ (mit --alle auch alle Kachel-PNG); braucht Playwright mit Chromium
 ```
 
-Nach einer Änderung alle drei Schritte ausführen; der Test `tests/eduksx-icon.test.tsx` prüft, dass Dateien und
+Logo 240 × 56 (`logo/`, #59): `python3 icons/logo/build_logo.py` (braucht `pip install fonttools brotli`), danach
+`node icons/logo/raster.mjs` für PNG 1× und 2×. Regeln: `docs/KONZEPT-MARKE.md` §6.1a.
+
+Nach einer Änderung an den Icons alle drei Schritte ausführen; der Test `tests/eduksx-icon.test.tsx` prüft, dass Dateien und
 Baustein übereinstimmen.

@@ -268,6 +268,24 @@ mit hell/dunkel:
 src/components/eduksx-icons.data.ts` (Baustein) und die Rasterdateien neu erzeugen
 (`node icons/raster.mjs --alle`). Ein Test prüft, dass Dateien und Baustein übereinstimmen. Jede Änderung braucht eine neue Freigabe.
 
+### 6.1a Logo 240 × 56 (Issue #59, Freigabe ausstehend im Beta-Test)
+
+Für Oberflächen mit einem Logo-Feld von 240 × 56 px: Icon **EduKSX** (vier Bausteine) und Wortmarke **EduKSX** in
+**Inter 700** (M6), als Pfade gesetzt – die Dateien brauchen keine Schrift. Farben aus den `brand-*`-Tokens (E violett ·
+du neutral · K orange · SX blau), dunkel mit den dunklen Werten und Hintergrund `background` dunkel (`#151B24`).
+Ersetzt den Entwurf in markussxch #14 (Space Grotesk).
+
+| Datei | Verwendung |
+| --- | --- |
+| `icons/logo/eduksx-logo-240x56-hell.svg/.png` | transparent, für helle Flächen |
+| `icons/logo/eduksx-logo-240x56-weiss.svg/.png` | weisser Hintergrund |
+| `icons/logo/eduksx-logo-240x56-dunkel.svg/.png` | dunkler Hintergrund, Farben für den Dunkelmodus |
+| `…@2x.png` | 480 × 112 für hochauflösende Bildschirme |
+| `icons/logo/build_logo.py`, `icons/logo/raster.mjs` | Generator (fontTools) bzw. PNG (Playwright), beide nicht im Paket |
+
+Im Paket unter `@eduksx/ui/icons/logo/…`. In der Kopfzeile gilt weiterhin `BrandWordmark` bzw. das eigene Logo der
+Instanz (M3); das Logo ist für fixe Logo-Felder (z. B. Anmeldeseite, Fremdsysteme).
+
 ### 6.2 Bediensymbole (BESCHLOSSEN 22.11.2026; aus Glossary und INTRANET, Idee #20)
 
 Für Bedienung, Menü und Zustände – nicht für Modul-Icons – gilt:
@@ -441,3 +459,4 @@ Nach dem Entscheid: M3 ändert ggf. DS4 in `KONZEPT-DESIGN.md` (EduKSX-Architekt
 - 22.11.2026: M1 entschieden – alle Module `EduKSX-<Begriff>` mit deutschem Untertitel. Neues Modul `planner`
   EduKSX-Planner «Jahresplanung» (Icon und Abgrenzung zu `flow` offen).
 - 22.11.2026: Planner-Icon (#49) Entwurf A «Zeitbalken» freigegeben und ins Icon-Set übernommen (18 Icons).
+- 23.11.2026: 6.1a Logo 240 × 56 in Inter neu in EduKSX-UI (#59); markussxch #14 (Space Grotesk) geschlossen.
