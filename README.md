@@ -25,10 +25,10 @@ vor (WCAG 2.1 AA, eCH-0059).
 
 ## Verwenden
 
-Bis zur Veröffentlichung auf npm über Git (Tag):
+Bis zur Veröffentlichung auf npm über das gebaute Paket am Release (funktioniert auch mit `ignore-scripts=true`):
 
 ```bash
-npm install github:MarkusKeller8200/EduKSX-UI#v0.1.0
+npm install https://github.com/MarkusKeller8200/EduKSX-UI/releases/download/v0.1.0/eduksx-ui-0.1.0.tgz
 ```
 
 ```css
