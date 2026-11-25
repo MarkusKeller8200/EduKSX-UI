@@ -6,6 +6,11 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/), Versione
 
 ## [Unveröffentlicht]
 
+### Neu
+
+- **Paket als Release-Datei (#62):** Workflow `paket` hängt `eduksx-ui-X.Y.Z.tgz` an jedes Release; Module beziehen
+  `@eduksx/ui` über die Release-URL statt als git-Abhängigkeit (npm 11 führt `prepare` mit `ignore-scripts` nicht aus).
+
 ## [0.1.0] – 2026-11-22
 
 ### CI
