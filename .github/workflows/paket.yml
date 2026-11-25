@@ -1,0 +1,44 @@
+name: paket
+
+# Gebautes npm-Paket (eduksx-ui-X.Y.Z.tgz) an das Release hängen, damit Module @eduksx/ui ohne Skripte beim
+# Installieren beziehen können (npm 11 mit ignore-scripts führt prepare von git-Abhängigkeiten nicht aus).
+# Von Hand: Actions › paket › Run workflow mit dem Tag, z. B. v0.1.0.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag des Releases, z. B. v0.1.0"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paket-${{ github.event.release.tag_name || inputs.tag }}
+  cancel-in-progress: false
+
+jobs:
+  paket:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ env.TAG }}
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '26'
+      - name: Bauen und packen
+        run: |
+          npm ci
+          npm pack
+          ls -l eduksx-ui-*.tgz
+      - name: An das Release hängen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "$TAG" eduksx-ui-*.tgz --clobber --repo "$GITHUB_REPOSITORY"
